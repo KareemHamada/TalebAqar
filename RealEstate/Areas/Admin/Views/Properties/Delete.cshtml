@@ -1,0 +1,117 @@
+﻿@model PropertyVM
+
+@section Styles {
+	<!-- SweetAlert2 -->
+	<link rel="stylesheet" href="~/Admin/plugins/sweetalert2/sweetalert2.min.css">
+	<!-- Toastr -->
+	<link rel="stylesheet" href="~/Admin/plugins/toastr/toastr.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+	<style>
+		#imagePreview img {
+			max-width: 150px; /* Adjust width as needed */
+			margin-right: 10px; /* Spacing between images */
+			margin-bottom: 10px; /* Spacing below images */
+		}
+
+		.image-wrapper {
+			display: inline-block; /* Align images and buttons side by side */
+		}
+
+		#map {
+			width: 100%;
+			height: 400px;
+			margin-top: 10px;
+		}
+
+		.existing-image {
+			border: 1px solid #ddd;
+			padding: 10px;
+			border-radius: 5px;
+		}
+
+	</style>
+
+
+}
+<div class="content-wrapper" style="min-height: 1233.2px;">
+
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<div class="container-fluid">
+			<div class="row mb-2">
+				<div class="col-sm-6">
+					<h1>تعديل العقار</h1>
+				</div>
+			</div>
+		</div><!-- /.container-fluid -->
+	</section>
+	<!-- Main content -->
+	<section class="content">
+		<div class="container-fluid">
+
+			<div class="card card-primary card-outline">
+
+				<div class="card-body">
+					<h4 class="mt-2">Custom Content Above</h4>
+
+
+					<form role="form" method="post" asp-action="Delete">
+
+						<partial name="PartialViews/DetailsDeletePartial"></partial>
+
+						<div class="card-footer">
+							<button type="submit" class="btn btn-danger">حذف</button>
+							<a class="btn btn-info" asp-action="Index">إلغاء</a>
+						</div>
+					</form>
+
+
+				</div>
+				<!-- /.card -->
+			</div>
+			<!-- /.card -->
+		</div>
+		<!-- /.container-fluid -->
+	</section>
+	<!-- /.content -->
+
+
+</div>
+
+
+@section Scripts {
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+	<script>
+
+		// Initialize the map
+		const map = L.map('map').setView([0, 0], 2);
+		let marker = L.marker([0, 0]).addTo(map);
+
+		// Add OpenStreetMap tiles
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			maxZoom: 19,
+			attribution: '© OpenStreetMap'
+		}).addTo(map);
+
+
+
+		// Function to update the map based on input values
+		const lat = parseFloat(document.getElementById("latitude").value);
+		const lng = parseFloat(document.getElementById("longitude").value);
+		marker.setLatLng([lat, lng]);
+		map.setView([lat, lng], 10);
+
+	</script>
+		
+	<script>
+		// Make textarea visible and disabled
+		document.getElementById("textAreaId").style.display = "block";
+		document.getElementById("textAreaId").disabled = true;
+	</script>
+
+	<partial name="_ValidationScriptsPartial"></partial>
+
+
+}

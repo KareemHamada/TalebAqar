@@ -1,0 +1,121 @@
+﻿@model RegisterVM
+@{
+	ViewData["Title"] = "Register";
+	Layout = "~/Views/Shared/AuthLayout.cshtml";
+}
+
+
+<div class="register-box">
+	<div class="register-logo">
+		<a asp-controller="Home" asp-action="Index">Taleb Aqar</a>
+	</div>
+
+	<div class="card">
+		<div class="card-body register-card-body">
+			<p class="login-box-msg">إنشاء حساب جديد</p>
+
+			<form asp-action="Register" method="post">
+				<div asp-validation-summary="All"></div>
+				<div class="input-group">
+
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-user"></span>
+						</div>
+					</div>
+
+					<input type="text" class="form-control" placeholder="الاسم الاول" asp-for="FirstName" required>
+					
+				</div>
+				<span asp-validation-for="FirstName" class="text-danger d-block"></span>
+
+				<div class="input-group mt-3">
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-user"></span>
+						</div>
+					</div>
+					<input type="text" class="form-control" placeholder="الاسم الاخير" asp-for="LastName" required>
+					
+				</div>
+				<span asp-validation-for="LastName" class="text-danger"></span>
+
+				<div class="input-group mt-3">
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-user"></span>
+						</div>
+					</div>
+					<input type="text" class="form-control" placeholder="الاسم كامل بدون مسافات" asp-for="UserName" required>
+					
+				</div>
+				<span asp-validation-for="UserName" class="text-danger"></span>
+
+				<div class="input-group mt-3">
+					
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-envelope"></span>
+						</div>
+					</div>
+					<input type="email" class="form-control" placeholder="الاميل" asp-for="Email" required>
+					
+				</div>
+				<span asp-validation-for="Email" class="text-danger"></span>
+
+				<div class="input-group mt-3">
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-lock"></span>
+						</div>
+					</div>
+					<input type="password" class="form-control" placeholder="الباسورد" asp-for="Password" required>
+					
+				</div>
+				<span asp-validation-for="Password" class="text-danger"></span>
+
+				<div class="input-group mt-3">
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-lock"></span>
+						</div>
+					</div>
+					<input type="password" class="form-control" placeholder="تاكيد الباسورد" asp-for="ConfirmPassword" required>
+					
+				</div>
+				<span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+
+
+				@* <div class="input-group mt-3">
+
+					<div class="icheck-primary">
+
+						<label for="agreeTerms">أوافق على الشروط والاحكام</label>
+
+						<input type="checkbox" id="agreeTerms" asp-for="IAgree" required>
+					</div>
+				</div> *@
+
+				<div class="input-group mt-3">
+					<button type="submit" class="btn btn-primary btn-block btn-flat">إنشاء</button>
+				</div>
+			</form>
+
+
+			<p class="text-center">هل تريد الرجوع إلى القائمة الرئيسية؟<a asp-area="Admin" asp-controller="Home" asp-action="Index">رجوع</a></p>
+
+
+
+@* 			<p class="text-center">هل لديك حساب بالفعل ؟<a asp-action="Login">دخول</a></p>
+ *@        </div>
+		<!-- /.form-box -->
+	</div><!-- /.card -->
+</div>
+
+
+@section Scripts {
+		<partial name="_ValidationScriptsPartial"></partial>
+}
+
+
+

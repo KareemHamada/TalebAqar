@@ -1,0 +1,19 @@
+﻿@model StatusVM
+
+<div class="card-body">
+
+
+	<input type="hidden" asp-for="StatusId" />
+	<span class="text-danger" class="text-danger" asp-validation-for="StatusId"></span>
+
+	<input type="hidden" asp-for="CurrentState" />
+
+
+	<div class="form-group">
+		<label asp-for="StatusName" for="exampleInputText">الحالة</label>
+		<input asp-for="StatusName" type="text" class="form-control" id="exampleInputText" placeholder="أدخل الحالة">
+		<span class="text-danger" class="text-danger" asp-validation-for="StatusName"></span>
+	</div>
+
+	
+</div>

@@ -1,0 +1,13 @@
+﻿@model GovernorateVM
+
+<div class="card-body">
+
+	<input type="hidden" asp-for="GovernorateId" />
+	<input type="hidden" asp-for="CurrentState" />
+
+	<div class="form-group">
+		<label for="exampleInputText">المحافظة</label>
+		<input asp-for="GovernorateName" type="text" class="form-control" id="exampleInputText" placeholder="أدخل اسم المحافظة">
+		<span class="text-danger" class="text-danger" asp-validation-for="GovernorateName"></span>
+	</div>
+</div>

@@ -1,0 +1,57 @@
+﻿@model ResetPassordVM
+@{
+    ViewData["Title"] = "ResetPassord";
+    Layout = "~/Views/Shared/AuthLayout.cshtml";
+}
+
+<h1>ResetPassord</h1>
+<div class="register-box">
+    <div class="register-logo">
+        <a asp-controller="Home" asp-action="Index"><b>Taleb</b>Aqar</a>
+    </div>
+
+    <div class="card">
+        <div class="card-body register-card-body">
+            <p class="login-box-msg">Register a new membership</p>
+
+            <form asp-action="ResetPassord" method="post">
+
+                <input hidden asp-for="Email" />
+                <input hidden asp-for="Token" />
+
+                <div asp-validation-summary="All"></div>
+                
+                <div class="input-group mt-3">
+                    <input type="password" class="form-control" placeholder="Password" asp-for="Password" required>
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+                </div>
+                <span asp-validation-for="Password" class="text-danger"></span>
+
+                <div class="input-group mt-3">
+                    <input type="password" class="form-control" placeholder="Retype password" asp-for="ConfirmPassword" required>
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+                </div>
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+
+                <br />
+               <input type="submit" class="btn btn-primary" value="Change Passwoerd"/>
+
+            </form>
+            <p class="text-center"><a asp-action="Login"> Cancel </a></p>
+        </div>
+        <!-- /.form-box -->
+    </div><!-- /.card -->
+</div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"></partial>
+}

@@ -1,0 +1,29 @@
+﻿@model CityVM
+
+<div class="card-body">
+
+
+	<input type="hidden" asp-for="CityId" />
+	<span class="text-danger" class="text-danger" asp-validation-for="CityId"></span>
+
+	<input type="hidden" asp-for="CurrentState" />
+
+
+	<div class="form-group">
+		<label asp-for="CityName" for="exampleInputText">المدينة</label>
+		<input asp-for="CityName" type="text" class="form-control" id="exampleInputText" placeholder="أدخل اسم المدينة">
+		<span class="text-danger" class="text-danger" asp-validation-for="CityName"></span>
+	</div>
+
+
+	<div class="form-group">
+		<label asp-for="GovernorateId" for="exampleInputGovernorate">المحافظة</label>
+
+		<select asp-for="GovernorateId" asp-items="ViewBag.Governorates" class="custom-select" id="exampleInputGovernorate">
+			<option value="@null" class="text-center">اختر المحافظة</option>
+		</select>
+		<span class="text-danger" asp-validation-for="GovernorateId"></span>
+	</div>
+
+	
+</div>

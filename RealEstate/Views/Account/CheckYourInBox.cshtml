@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "CheckYourInBox";
+    Layout = "~/Views/Shared/AuthLayout.cshtml";
+}
+
+<div class="register-box">
+
+    <div class="card">
+        <div class="card-body register-card-body">
+
+            <p>من فضلك تاكد من الاميل</p>
+
+            <br />
+
+            <p class="text-center"><a asp-action="Login"> تسجيل الدخول</a></p>
+
+        </div>
+        <!-- /.form-box -->
+    </div><!-- /.card -->
+</div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"></partial>
+}
+

@@ -1,0 +1,21 @@
+﻿@model CityVM
+
+<div class="card-body">
+	<span class="text-danger" class="text-danger" asp-validation-for="CityId"></span>
+
+	<div class="form-group">
+		<label asp-for="CityName" for="exampleInputText">المدينة</label>
+		<input asp-for="CityName" type="text" class="form-control" id="exampleInputText" disabled>
+	</div>
+
+
+
+	<div class="form-group">
+		<label asp-for="GovernorateId" for="exampleInputGovernorate">المحافظة</label>
+
+		<select asp-for="GovernorateId" asp-items="ViewBag.Governorates" class="custom-select" id="exampleInputGovernorate" disabled>
+
+		</select>
+	</div>
+
+</div>

@@ -1,0 +1,9 @@
+﻿global using BLL.Interfaces;
+global using DAL.Data;
+global using Microsoft.EntityFrameworkCore;
+global using DAL.Models;
+global using System;
+global using System.Collections.Generic;
+global using System.Linq;
+global using System.Text;
+global using System.Threading.Tasks;

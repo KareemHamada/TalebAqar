@@ -1,0 +1,14 @@
+﻿@model RoleVM
+
+<div class="card-body">
+	<input type="hidden" asp-for="Id" />
+	<span class="text-danger" class="text-danger" asp-validation-for="Id"></span>
+
+
+
+	<div class="form-group">
+		<label asp-for="Name" for="exampleInputText">الحالة</label>
+		<input asp-for="Name" type="text" class="form-control" id="exampleInputText" placeholder="أدخل نوع الصلاحية">
+		<span class="text-danger" class="text-danger" asp-validation-for="Name"></span>
+	</div>
+</div>

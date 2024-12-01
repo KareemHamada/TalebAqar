@@ -1,0 +1,742 @@
+﻿@model HomeVM
+
+  <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+	<!-- Content Header (Page header) -->
+	<div class="content-header">
+		<div class="container-fluid">
+			<div class="row mb-2">
+				<div class="col-sm-6">
+					<h1 class="m-0 text-dark">لوحة التحكم</h1>
+				</div><!-- /.col -->
+				<div class="col-sm-6">
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+		</div><!-- /.container-fluid -->
+	</div>
+	<!-- /.content-header -->
+	<!-- Main content -->
+	<section class="content">
+		<div class="container-fluid">
+
+			<!-- DIRECT CHAT -->
+			<div class="card direct-chat direct-chat-primary">
+				<div class="card-header">
+					<h3 class="card-title ml-2">الارباح</h3>
+
+					<div class="card-tools">
+						<button type="button" class="btn btn-tool" data-card-widget="collapse">
+							<i class="fas fa-minus"></i>
+						</button>
+
+						<button type="button" class="btn btn-tool" data-card-widget="remove">
+							<i class="fas fa-times"></i>
+						</button>
+					</div>
+				</div>
+				<!-- /.card-header -->
+				<div class="card-body p-5">
+					<!-- Small boxes (Stat box) -->
+					<div class="row">
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box">
+								<span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">إجمالى قيمة إعلانات البيع</span>
+									<span class="info-box-number">
+										@Model.TotalSalesProfit
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+						<!-- fix for small devices only -->
+						<div class="clearfix hidden-md-up"></div>
+
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">أعلى قيمة إعلان بيع</span>
+									<span class="info-box-number">
+										@Model.MaximumSalesProfit
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">أقل قيمة إعلان بيع</span>
+									<span class="info-box-number">
+										@Model.MinimumSalesProfit
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+						<!-- /.col -->
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">إجمالى قيمة إعلانات الإيجار</span>
+									<span class="info-box-number">
+										@Model.TotalRentalsProfit
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+
+
+						<!-- /.col -->
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">أعلى قيمة إعلان إيجار</span>
+									<span class="info-box-number">
+										@Model.MaximumRentalsProfit
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+
+
+						<!-- /.col -->
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">أقل قيمة إعلان إيجار</span>
+									<span class="info-box-number">
+										@Model.MinimumRentalsProfit
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+					</div>
+
+					<!-- /.row -->
+
+				</div>
+
+			</div>
+			<!--/.direct-chat -->
+
+
+
+			<!-- DIRECT CHAT -->
+			<div class="card direct-chat direct-chat-primary">
+				<div class="card-header">
+					<h3 class="card-title ml-2">إعلانات البيع</h3>
+
+					<div class="card-tools">
+						<button type="button" class="btn btn-tool" data-card-widget="collapse">
+							<i class="fas fa-minus"></i>
+						</button>
+
+						<button type="button" class="btn btn-tool" data-card-widget="remove">
+							<i class="fas fa-times"></i>
+						</button>
+					</div>
+				</div>
+				<!-- /.card-header -->
+				<div class="card-body p-5">
+					<!-- Small boxes (Stat box) -->
+					<div class="row">
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box">
+								<span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">إجمالى العدد</span>
+									<span class="info-box-number">
+										@Model.NumOfTotalSales
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">ما تم بيعه</span>
+									<span class="info-box-number">
+										@Model.NumOfRealySold
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+						<!-- fix for small devices only -->
+						<div class="clearfix hidden-md-up"></div>
+
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">المتاح للبيع حاليا</span>
+									<span class="info-box-number">
+										@Model.NumOfForSale
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">ما لم يتم بيعه وقد حذف</span>
+									<span class="info-box-number">
+										@Model.NumOfDeletedSales
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+					</div>
+
+					<!-- /.row -->
+
+				</div>
+
+			</div>
+			<!--/.direct-chat -->
+			<!-- DIRECT CHAT -->
+			<div class="card direct-chat direct-chat-primary">
+				<div class="card-header">
+					<h3 class="card-title ml-2">إعلانات الإيجار</h3>
+					<div class="card-tools">
+						<button type="button" class="btn btn-tool" data-card-widget="collapse">
+							<i class="fas fa-minus"></i>
+						</button>
+
+						<button type="button" class="btn btn-tool" data-card-widget="remove">
+							<i class="fas fa-times"></i>
+						</button>
+					</div>
+				</div>
+				<!-- /.card-header -->
+				<div class="card-body p-5">
+					<!-- Small boxes (Stat box) -->
+					<div class="row">
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box">
+								<span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">إجمالى العدد</span>
+									<span class="info-box-number">
+										@Model.NumOfTotalRentals
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">ما تم إيجارة</span>
+									<span class="info-box-number">
+										@Model.NumOfRealyRentaled
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+						<!-- fix for small devices only -->
+						<div class="clearfix hidden-md-up"></div>
+
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">المتاح للإيجار حاليا</span>
+									<span class="info-box-number">
+										@Model.NumOfForRental
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">ما لم يتم تأجيرة وقد حذف</span>
+									<span class="info-box-number">
+										@Model.NumOfDeletedRentals
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+					</div>
+
+					<!-- /.row -->
+
+				</div>
+
+			</div>
+			<!--/.direct-chat -->
+			<!-- DIRECT CHAT -->
+			<div class="card direct-chat direct-chat-primary">
+				<div class="card-header">
+					<h3 class="card-title ml-2">إحصائيات البيع</h3>
+					<div class="card-tools">
+						<button type="button" class="btn btn-tool" data-card-widget="collapse">
+							<i class="fas fa-minus"></i>
+						</button>
+
+						<button type="button" class="btn btn-tool" data-card-widget="remove">
+							<i class="fas fa-times"></i>
+						</button>
+					</div>
+				</div>
+				<!-- /.card-header -->
+				<div class="card-body p-5">
+					<!-- Small boxes (Stat box) -->
+					<div class="row">
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box">
+								<span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">إجمالى قيمة العقارات التى تم بيعها</span>
+									<span class="info-box-number">
+										@Model.TotalPriceSales
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">أعلى سعر لعقار تم بيعه</span>
+									<span class="info-box-number">
+										@Model.HighestPriceSold
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+						<!-- fix for small devices only -->
+						<div class="clearfix hidden-md-up"></div>
+
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">أقل سعر لعقار تم بيعه</span>
+									<span class="info-box-number">
+										@Model.LowestPriceSold
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">أعلى سعر متاح للبيع حاليا</span>
+									<span class="info-box-number">
+										@Model.HighestPriceAvaliableForSale
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">أقل سعر متاح للبيع حاليا</span>
+									<span class="info-box-number">
+										@Model.LowestPriceAvaliableForSale
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+					</div>
+
+					<!-- /.row -->
+
+				</div>
+
+			</div>
+			<!--/.direct-chat -->
+			<!-- DIRECT CHAT -->
+			<div class="card direct-chat direct-chat-primary">
+				<div class="card-header">
+					<h3 class="card-title ml-2">إحصائيات الإيجار</h3>
+					<div class="card-tools">
+						<button type="button" class="btn btn-tool" data-card-widget="collapse">
+							<i class="fas fa-minus"></i>
+						</button>
+
+						<button type="button" class="btn btn-tool" data-card-widget="remove">
+							<i class="fas fa-times"></i>
+						</button>
+					</div>
+				</div>
+				<!-- /.card-header -->
+				<div class="card-body p-5">
+					<!-- Small boxes (Stat box) -->
+					<div class="row">
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box">
+								<span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">إجمالى قيمة العقارات التى تم تأجيرها</span>
+									<span class="info-box-number">
+										@Model.TotalPriceRentals
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">أعلى سعر لعقار تم تأجيرة</span>
+									<span class="info-box-number">
+										@Model.HighestPriceRentaled
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+						<!-- fix for small devices only -->
+						<div class="clearfix hidden-md-up"></div>
+
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">أقل سعر لعقار تم تأجيرة</span>
+									<span class="info-box-number">
+										@Model.LowestPriceRentaled
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">أعلى سعر متاح للإيجار حاليا</span>
+									<span class="info-box-number">
+										@Model.HighestPriceAvaliableForRent
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">أقل سعر متاح للإيجار حاليا</span>
+									<span class="info-box-number">
+										@Model.LowestPriceAvaliableForRent
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+					</div>
+
+					<!-- /.row -->
+
+				</div>
+
+			</div>
+			<!--/.direct-chat -->
+			<!-- DIRECT CHAT -->
+			<div class="card direct-chat direct-chat-primary">
+				<div class="card-header">
+					<h3 class="card-title ml-2">إحصائيات المحافظات</h3>
+
+					<div class="card-tools">
+						<button type="button" class="btn btn-tool" data-card-widget="collapse">
+							<i class="fas fa-minus"></i>
+						</button>
+
+						<button type="button" class="btn btn-tool" data-card-widget="remove">
+							<i class="fas fa-times"></i>
+						</button>
+					</div>
+				</div>
+				<!-- /.card-header -->
+				<div class="card-body p-5">
+					<!-- Small boxes (Stat box) -->
+					<div class="row">
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box">
+								<span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">إجمالى عدد المحافظات</span>
+									<span class="info-box-number">
+										@Model.TotalGovernorates
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">
+										أكبر المحافظات بيعاً <span>
+											@Model.BiggestSellingGovernorate
+										</span>
+									</span>
+									<span class="info-box-number">
+										@Model.NumOfPropertiesForBiggestSellingGovernorate
+										عقار
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+						<!-- /.col -->
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">
+										أكبر المحافظات إيجاراً <span>
+											@Model.BiggestRentalGovernorate
+										</span>
+									</span>
+									<span class="info-box-number">
+										@Model.NumOfPropertiesForBiggestRentalGovernorate
+										عقار
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+					</div>
+
+					<!-- /.row -->
+
+				</div>
+
+			</div>
+			<!--/.direct-chat -->
+			<!-- DIRECT CHAT -->
+			<div class="card direct-chat direct-chat-primary">
+				<div class="card-header">
+					<h3 class="card-title ml-2">إحصائيات المدن</h3>
+
+					<div class="card-tools">
+						<button type="button" class="btn btn-tool" data-card-widget="collapse">
+							<i class="fas fa-minus"></i>
+						</button>
+
+						<button type="button" class="btn btn-tool" data-card-widget="remove">
+							<i class="fas fa-times"></i>
+						</button>
+					</div>
+				</div>
+				<!-- /.card-header -->
+				<div class="card-body p-5">
+					<!-- Small boxes (Stat box) -->
+					<div class="row">
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box">
+								<span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">إجمالى عدد المدن</span>
+									<span class="info-box-number">
+										@Model.TotalCities
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">
+										أكبر المدن بيعاً <span>
+											@Model.BiggestSellingCity
+										</span>
+									</span>
+									<span class="info-box-number">
+										@Model.NumOfPropertiesForBiggestSellingCity
+										عقار
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+						<!-- /.col -->
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">
+										أكبر المدن إيجاراً <span>
+											@Model.BiggestRentalCity
+										</span>
+									</span>
+									<span class="info-box-number">
+										@Model.NumOfPropertiesForBiggestRentalCity
+										عقار
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+						<!-- /.col -->
+					</div>
+					<!-- /.row -->
+				</div>
+			</div>
+			<!--/.direct-chat -->
+			<!-- DIRECT CHAT -->
+			<div class="card direct-chat direct-chat-primary">
+				<div class="card-header">
+					<h3 class="card-title ml-2">إحصائيات الملاك</h3>
+
+					<div class="card-tools">
+						<button type="button" class="btn btn-tool" data-card-widget="collapse">
+							<i class="fas fa-minus"></i>
+						</button>
+
+						<button type="button" class="btn btn-tool" data-card-widget="remove">
+							<i class="fas fa-times"></i>
+						</button>
+					</div>
+				</div>
+				<!-- /.card-header -->
+				<div class="card-body p-5">
+					<!-- Small boxes (Stat box) -->
+					<div class="row">
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="info-box">
+								<span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+
+								<div class="info-box-content">
+									<span class="info-box-text">إجمالى عدد الملاك</span>
+									<span class="info-box-number">
+										@Model.NumOfOwners
+									</span>
+								</div>
+								<!-- /.info-box-content -->
+							</div>
+							<!-- /.info-box -->
+						</div>
+
+					</div>
+					<!-- /.row -->
+				</div>
+			</div>
+			<!--/.direct-chat -->
+		</div><!-- /.container-fluid -->
+	</section>
+	<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

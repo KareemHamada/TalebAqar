@@ -1,0 +1,257 @@
+﻿@model PropertyVM
+
+
+
+<ul class="nav nav-tabs" id="custom-content-above-tab" role="tablist">
+	<li class="nav-item">
+		<a class="nav-link active" id="custom-content-above-description-tab" data-toggle="pill" href="#custom-content-above-description" role="tab" aria-controls="custom-content-above-description" aria-selected="true">الوصف</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" id="custom-content-above-media-tab" data-toggle="pill" href="#custom-content-above-media" role="tab" aria-controls="custom-content-above-media" aria-selected="false">الوسائط</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" id="custom-content-above-location-tab" data-toggle="pill" href="#custom-content-above-location" role="tab" aria-controls="custom-content-above-location" aria-selected="false">الموقع</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" id="custom-content-above-details-tab" data-toggle="pill" href="#custom-content-above-details" role="tab" aria-controls="custom-content-above-details" aria-selected="false">التفاصيل</a>
+	</li>
+
+	<li class="nav-item">
+		<a class="nav-link" id="custom-content-above-logs-tab" data-toggle="pill" href="#custom-content-above-logs" role="tab" aria-controls="custom-content-above-logs" aria-selected="false">سجل المستخدمين</a>
+	</li>
+</ul>
+<div class="tab-custom-content">
+</div>
+<div class="tab-content" id="custom-content-above-tabContent">
+	<div class="tab-pane fade show active" id="custom-content-above-description" role="tabpanel" aria-labelledby="custom-content-above-description-tab">
+
+		@*start of details*@
+
+		<input readonly type="hidden" asp-for="PropertyId" />
+		<span class="text-danger" class="text-danger" asp-validation-for="PropertyId"></span>
+
+
+		<div class="form-group">
+			<label asp-for="Description" for="exampleInputEmail1">وصف العقار</label>
+
+			<textarea asp-for="Description" id="textAreaId" class="textarea" placeholder="وصف العقار" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid rgb(221, 221, 221); padding: 10px; display: none;">
+			<span class="text-danger" asp-validation-for="Description" disabled></span>
+
+			</textarea>
+		</div>
+
+		<div class="form-group">
+			<label asp-for="Price" for="exampleInputText">سعر بيع او تاجير العقار</label>
+			<input readonly asp-for="Price" type="number" class="form-control" id="exampleInputText" min="0" step="0.01" />
+		</div>
+
+
+		<div class="form-group">
+			<label asp-for="Negotiable">قابل للتفاوض</label>
+			<select asp-for="Negotiable" class="form-control" id="Negotiable" disabled>
+				<option value="false">لا</option>
+				<option value="true">نعم</option>
+			</select>
+		</div>
+
+
+		<div class="form-group">
+			<label asp-for="CostPrice" for="exampleInputText">سعر الاعلان</label>
+			<input readonly asp-for="CostPrice" type="number" class="form-control" id="exampleInputText" min="0" step="0.01" />
+		</div>
+
+
+		<div class="form-group">
+			<label asp-for="StatusId" for="exampleInputText">الحالة</label>
+
+			<select asp-for="StatusId" asp-items="ViewBag.Statuses" class="custom-select" id="exampleInputText" disabled>
+				<option value="@null" class="text-center">اختر حالة العقار</option>
+			</select>
+		</div>
+
+
+		<div class="form-group">
+			<label asp-for="TypeId" for="exampleInputText">النوع</label>
+
+			<select asp-for="TypeId" asp-items="ViewBag.Types" class="custom-select" id="exampleInputText" disabled>
+				<option value="@null" class="text-center">اختر نوع العقار</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label asp-for="OwnerId" for="exampleInputText">المالك</label>
+
+			<select asp-for="OwnerId" asp-items="ViewBag.Owners" class="custom-select" id="exampleInputText" disabled>
+				<option value="@null" class="text-center">اختر المالك</option>
+			</select>
+		</div>
+
+
+
+		<div class="form-check">
+			<input disabled asp-for="IsSoldOrRenteled" type="checkbox" class="form-check-input" id="exampleCheck1">
+			<label asp-for="IsSoldOrRenteled" class="form-check-label" for="exampleCheck1" checked="IsSoldOrRenteled ?? false">هل تم الايجار او البيع</label>
+		</div>
+
+
+		<div class="form-group">
+			<label asp-for="SoldOrRenteledDate" for="exampleInputText">تاريخ بيع او تاجير العقار</label>
+
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+				</div>
+				<input readonly asp-for="SoldOrRenteledDate" type="datetime-local" class="form-control" />
+			</div>
+		</div>
+
+
+
+		<div class="form-check">
+			<input disabled asp-for="CurrentState" type="checkbox" class="form-check-input" id="exampleCheck1">
+			<label asp-for="CurrentState" class="form-check-label" for="exampleCheck1" checked="CurrentState ?? false">حالة الاعلان(نشط او غير نشط)</label>
+		</div>
+
+		<div class="form-group">
+			<label asp-for="Notes" for="exampleInputText">ملاحظات</label>
+			<input readonly asp-for="Notes" type="text" class="form-control" id="exampleInputText" />
+		</div>
+
+		@* end of details *@
+
+	</div>
+	<div class="tab-pane fade" id="custom-content-above-media" role="tabpanel" aria-labelledby="custom-content-above-media-tab">
+
+
+
+		<div class="form-group">
+
+
+
+			<h5 class="text-center">الصور الحالية</h5>
+
+			<div class="row">
+				@foreach (var image in Model.PropertyImages)
+				{
+					<div class="col-md-3 col-sm-4 col-6 mb-4 text-center existing-image">
+						<img src="@image.ImageUrl" alt="Property Image" class="img-fluid rounded" style="width: 100%; max-width: 150px; height: auto;" />
+
+					</div>
+				}
+			</div>
+
+
+		</div>
+
+	</div>
+	<div class="tab-pane fade" id="custom-content-above-location" role="tabpanel" aria-labelledby="custom-content-above-location-tab">
+
+		<div class="form-group">
+			<label asp-for="GovernorateId" for="exampleInputText">المحافظة</label>
+
+			<select asp-for="GovernorateId" asp-items="ViewBag.Governorates" class="custom-select" id="exampleInputText" disabled>
+				<option value="@null" class="text-center">اختر المحافظة</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label asp-for="CityId" for="exampleInputText">المدينة</label>
+
+			<select asp-for="CityId" asp-items="ViewBag.Cities" class="custom-select" id="exampleInputText" disabled>
+				<option value="@null" class="text-center">اختر المدينة</option>
+			</select>
+		</div>
+
+
+		<div class="form-group">
+			<label asp-for="AddressId" for="exampleInputText">العنوان</label>
+
+			<select asp-for="AddressId" asp-items="ViewBag.Addresses" class="custom-select" id="exampleInputText" disabled>
+				<option value="@null" class="text-center">اختر العنوان</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label asp-for="Longitude">Longitude</label>
+			<input readonly asp-for="Longitude" type="number" class="form-control" id="longitude" />
+		</div>
+
+
+		<div class="form-group">
+			<label asp-for="Latitude">Latitude</label>
+			<input readonly asp-for="Latitude" id="latitude" type="number" class="form-control" />
+		</div>
+
+		<!-- Map Container -->
+		<div id="map"></div>
+
+	</div>
+	<div class="tab-pane fade" id="custom-content-above-details" role="tabpanel" aria-labelledby="custom-content-above-details-tab">
+
+		<div class="form-group">
+			<label asp-for="NumOfAdvertisement" for="exampleInputText">رقم الاعلان</label>
+			<input readonly asp-for="NumOfAdvertisement" type="number" class="form-control" id="exampleInputText" />
+		</div>
+
+		<div class="form-group">
+			<label asp-for="NumOfViews" for="exampleInputText">عدد مرات المشاهده</label>
+			<input readonly asp-for="NumOfViews" type="number" class="form-control" id="exampleInputText" />
+		</div>
+
+
+		<div class="form-group">
+			<label asp-for="Area" for="exampleInputText">المساحة(M^2)</label>
+			<input readonly asp-for="Area" type="number" class="form-control" id="exampleInputText" />
+		</div>
+
+		<div class="form-group">
+			<label asp-for="Bedrooms" for="exampleInputText">عدد الغرف</label>
+			<input readonly asp-for="Bedrooms" type="number" class="form-control" id="exampleInputText" />
+		</div>
+
+		<div class="form-group">
+			<label asp-for="Bathrooms" for="exampleInputText">عدد الحمامات</label>
+			<input readonly asp-for="Bathrooms" type="number" class="form-control" id="exampleInputText" />
+		</div>
+
+		<div class="form-group">
+			<label asp-for="Furnished">مفروش</label>
+			<select asp-for="Furnished" class="form-control" id="Furnished" disabled>
+				<option value="false">لا</option>
+				<option value="true">نعم</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label asp-for="FloorNum" for="exampleInputText">رقم الدور</label>
+			<input readonly asp-for="FloorNum" type="number" class="form-control" id="exampleInputText" />
+		</div>
+
+		<div class="form-group">
+			<label asp-for="Insurance" for="exampleInputText">التامين</label>
+			<input readonly asp-for="Insurance" type="number" class="form-control" id="exampleInputText" />
+		</div>
+	</div>
+
+	<div class="tab-pane fade" id="custom-content-above-logs" role="tabpanel" aria-labelledby="custom-content-above-logs-tab">
+
+		<div class="form-group">
+			<label asp-for="CreatedByUser.UserName" for="exampleInputText">تم انشاء العقار بواسطة</label>
+			<input readonly asp-for="CreatedByUser.UserName" type="text" class="form-control" id="exampleInputText" />
+		</div>
+
+		<div class="form-group">
+			<label asp-for="CreatedDate" for="exampleInputText">تاريخ الإنشاء</label>
+			<input readonly asp-for="CreatedDate" type="datetime-local" class="form-control" id="exampleInputText" />
+		</div>
+		<div class="form-group">
+			<label asp-for="UpdatedByUser.UserName" for="exampleInputText">تم تعديل العقار بواسطة</label>
+			<input readonly asp-for="UpdatedByUser.UserName" type="text" class="form-control" id="exampleInputText" />
+		</div>
+
+		<div class="form-group">
+			<label asp-for="UpdatedDate" for="exampleInputText">تاريخ التعديل</label>
+			<input readonly asp-for="UpdatedDate" type="datetime-local" class="form-control" id="exampleInputText" />
+		</div>
+	</div>
+</div>

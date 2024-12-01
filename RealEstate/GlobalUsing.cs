@@ -1,0 +1,15 @@
+﻿global using BLL.Interfaces;
+global using BLL.Repositories;
+global using DAL.Data;
+global using Microsoft.EntityFrameworkCore;
+global using DAL.Models;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.AspNetCore.Mvc.Rendering;
+global using RealEstate.Areas.Admin.ViewModels;
+global using AutoMapper;
+global using System.ComponentModel.DataAnnotations;
+global using RealEstate.Models;
+global using System.Diagnostics;
+global using Microsoft.AspNetCore.Identity;
+global using RealEstate.ViewModels;
+global using RealEstate.Utilities;

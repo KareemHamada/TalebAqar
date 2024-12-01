@@ -1,0 +1,233 @@
+﻿@model SettingVM
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+
+	<div class="content-wrapper" style="min-height: 1017.2px;">
+		<!-- Content Header (Page header) -->
+		<section class="content-header">
+			<div class="container-fluid">
+				<div class="row mb-2">
+					<div class="col-sm-6">
+						<h1>الإعدادات</h1>
+					</div>
+				</div>
+			</div><!-- /.container-fluid -->
+		</section>
+
+		<!-- Main content -->
+		<section class="content">
+			<div class="container-fluid">
+				<div class="row">
+					<!-- left column -->
+					<div class="col-md-6">
+						<!-- general form elements -->
+						<div class="card card-primary">
+							<div class="card-header">
+							</div>
+							<!-- /.card-header -->
+							<!-- form start -->
+							<form role="form" method="post" asp-action="Edit" enctype="multipart/form-data">
+
+								<input type="hidden" asp-for="SettingId" />
+							<span class="text-danger" class="text-danger" asp-validation-for="SettingId"></span>
+
+								<div class="form-group">
+									<label asp-for="WebsiteDescription" for="exampleInputText">اسم الموقع</label>
+									<input asp-for="WebsiteName" type="text" class="form-control" id="exampleInputText" placeholder="أدخل اسم الموقع">
+									<span class="text-danger" class="text-danger" asp-validation-for="WebsiteName"></span>
+								</div>
+
+
+								<div class="form-group">
+									<label asp-for="WebsiteDescription" for="exampleInputText">وصف الموقع</label>
+									<input asp-for="WebsiteDescription" type="text" class="form-control" id="exampleInputText" placeholder="أدخل وصف الموقع">
+									<span class="text-danger" class="text-danger" asp-validation-for="WebsiteDescription"></span>
+								</div>
+
+
+								<div class="form-group">
+									<label asp-for="Address" for="exampleInputText">العنوان</label>
+									<input asp-for="Address" type="text" class="form-control" id="exampleInputText" placeholder="أدخل العنوان">
+									<span class="text-danger" class="text-danger" asp-validation-for="Address"></span>
+								</div>
+
+
+								<div class="form-group">
+									<label asp-for="ContactNumber" for="exampleInputText">رقم التليفون</label>
+									<input asp-for="ContactNumber" type="number" class="form-control" id="exampleInputText" placeholder="أدخل رقم التليفون">
+									<span class="text-danger" class="text-danger" asp-validation-for="ContactNumber"></span>
+								</div>
+
+
+
+								<div class="form-group">
+									<label asp-for="Email" for="exampleInputText">الاميل</label>
+									<input asp-for="Email" type="email" class="form-control" id="exampleInputText" placeholder="أدخل الاميل">
+									<span class="text-danger" class="text-danger" asp-validation-for="Email"></span>
+								</div>
+
+								@* logo *@
+								<div class="form-group">
+									<label for="Logo">اللوجو</label>
+									<input type="file" name="Logo" id="Logo" accept="image/*" class="form-control-file" />
+								</div>
+
+
+								@* MainPanner *@
+
+								<div class="form-group">
+									<label for="MainPanner">البانر الاساسى</label>
+									<input type="file" name="MainPanner" id="MainPanner" accept="image/*" class="form-control-file" />
+								</div>
+
+								@* PropertyDetailsPanner *@
+								<div class="form-group">
+									<label for="PropertyDetailsPanner">بانر صفحة تفاصيل العقار</label>
+									<input type="file" name="PropertyDetailsPanner" id="PropertyDetailsPanner" accept="image/*" class="form-control-file" />
+								</div>
+
+
+								<div class="form-group">
+									<label asp-for="FacebookLink" for="exampleInputText">لينك Facebook</label>
+									<input asp-for="FacebookLink" type="text" class="form-control" id="exampleInputText" placeholder="أدخل لينك Facebook">
+									<span class="text-danger" class="text-danger" asp-validation-for="FacebookLink"></span>
+								</div>
+
+
+
+								<div class="form-group">
+									<label asp-for="TwitterLink" for="exampleInputText">لينك Twitter</label>
+									<input asp-for="TwitterLink" type="text" class="form-control" id="exampleInputText" placeholder="أدخل لينك Twitter">
+									<span class="text-danger" class="text-danger" asp-validation-for="TwitterLink"></span>
+								</div>
+
+								<div class="form-group">
+									<label asp-for="InstgramLink" for="exampleInputText">لينك Instgram</label>
+									<input asp-for="InstgramLink" type="text" class="form-control" id="exampleInputText" placeholder="أدخل لينك Instgram">
+									<span class="text-danger" class="text-danger" asp-validation-for="InstgramLink"></span>
+								</div>
+
+								<div class="form-group">
+									<label asp-for="LinkedinLink" for="exampleInputText">لينك Linkedin</label>
+									<input asp-for="LinkedinLink" type="text" class="form-control" id="exampleInputText" placeholder="أدخل لينك Linkedin">
+									<span class="text-danger" class="text-danger" asp-validation-for="LinkedinLink"></span>
+								</div>
+								<div class="form-group">
+									<label asp-for="YoutubeLink" for="exampleInputText">لينك Youtube</label>
+									<input asp-for="YoutubeLink" type="text" class="form-control" id="exampleInputText" placeholder="أدخل لينك Youtube">
+									<span class="text-danger" class="text-danger" asp-validation-for="YoutubeLink"></span>
+								</div>
+
+								<div class="card-footer">
+									<button type="submit" class="btn btn-primary">حفظ</button>
+									<a class="btn btn-danger" asp-action="Index">إلغاء</a>
+								</div>
+							</form>
+						</div>
+
+					</div>
+
+					<div class="col-md-6">
+						<div class="card card-primary">
+							<div class="mt-4">
+								<h4>اللوجو</h4>
+							<img id="LogoImage" src="@Model.Logo" alt="اللوجو" style="width: 200px;height: 200px;" />
+
+								
+							</div>
+
+
+							<div class="mt-4">
+								<h4>البانر الاساسى</h4>
+									<img id="MainPannerImage" src="@Model.MainPanner" alt="البانر الاساسى" style="max-width: 100%; height: 300px;" />
+
+							</div>
+
+							<div class="mt-4">
+								<h4>بانر صفحة تفاصيل العقار</h4>
+									<img id="PropertyDetailsPannerImage" src="@Model.PropertyDetailsPanner" alt="بانر صفحة تفاصيل العقار" style="max-width: 100%; height: 300px;" />
+								
+							</div>
+						</div>
+
+						
+					
+					</div>
+
+				</div>
+				<!-- /.row -->
+			</div><!-- /.container-fluid -->
+		</section>
+		<!-- /.content -->
+	</div>
+
+
+
+
+
+@section Scripts {
+
+	<script>
+		$(document).ready(function () {
+			// Preview the uploaded Logo before submission
+			$('#Logo').change(function (e) {
+				const file = e.target.files[0];
+				const reader = new FileReader();
+
+				reader.onload = function (event) {
+					$('#LogoImage')
+						.attr('src', event.target.result)
+						.show();
+				}
+
+				if (file) {
+					reader.readAsDataURL(file);
+				}
+			});
+
+
+
+			//MainPanner
+			$('#MainPanner').change(function (e) {
+				const file = e.target.files[0];
+				const reader = new FileReader();
+
+				reader.onload = function (event) {
+					$('#MainPannerImage')
+						.attr('src', event.target.result)
+						.show();
+				}
+
+				if (file) {
+					reader.readAsDataURL(file);
+				}
+			});
+
+			//PropertyDetailsPanner
+
+			$('#PropertyDetailsPanner').change(function (e) {
+				const file = e.target.files[0];
+				const reader = new FileReader();
+
+				reader.onload = function (event) {
+					$('#PropertyDetailsPannerImage')
+						.attr('src', event.target.result)
+						.show();
+				}
+
+				if (file) {
+					reader.readAsDataURL(file);
+				}
+			});
+		});
+	</script>
+
+	<partial name="_ValidationScriptsPartial"></partial>
+
+
+}

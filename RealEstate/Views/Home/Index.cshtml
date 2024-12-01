@@ -1,0 +1,554 @@
+﻿@model MainHomeVM;
+
+@{
+	//ViewData["Title"] = "Login";
+	Layout = "~/Views/Shared/HomeLayout.cshtml";
+}
+
+
+@section Styles {
+	<style>
+		.range-form {
+			width: 400px;
+			margin: auto;
+			padding: 50px;
+		}
+
+		.range-slider {
+			-webkit-appearance: none;
+			/* Override default CSS styles */
+			appearance: none;
+			width: 100%;
+			/* Full-width */
+			height: 10px;
+			border-radius: 5px;
+			/* Specified height */
+			background: #d3d3d3;
+			/* Grey background */
+			outline: none;
+			/* Remove outline */
+			opacity: 0.7;
+			/* Set transparency (for mouse-over effects on hover) */
+			-webkit-transition: .2s;
+			/* 0.2 seconds transition on hover */
+			transition: opacity .2s;
+		}
+
+			.range-slider:hover {
+				opacity: 1;
+				/* Fully shown on mouse-over */
+			}
+
+			.range-slider::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				/* Override default look */
+				appearance: none;
+				width: 18px;
+				/* Set a specific slider handle width */
+				height: 18px;
+				/* Slider handle height */
+				background: #FF5A3C;
+				/* Green background */
+				cursor: pointer;
+				/* Cursor on hover */
+				border-radius: 50%;
+			}
+
+			.range-slider::-moz-range-thumb {
+				width: 18px;
+				/* Set a specific slider handle width */
+				height: 18px;
+				/* Slider handle height */
+				background: #FF5A3C;
+				/* Green background */
+				cursor: pointer;
+				/* Cursor on hover */
+			}
+
+
+		/* Mouse-over effects */
+
+		/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+	</style>
+
+}
+
+<!-- SLIDER AREA START (slider-4) -->
+<div class="ltn__slider-area ltn__slider-4">
+	<div class="ltn__slide-one-active----- slick-slide-arrow-1----- slick-slide-dots-1----- arrow-white----- ltn__slide-animation-active">
+		<!-- ltn__slide-item -->
+		<div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-4 bg-image bg-overlay-theme-black-60" data-bs-bg="@Model.Setting.MainPanner">
+			<div class="ltn__slide-item-inner text-left">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 align-self-center">
+							<div class="slide-item-car-dealer-form">
+								<div class="ltn__car-dealer-form-tab">
+									<div class="ltn__tab-menu  text-uppercase">
+										<div class="nav">
+											<a class="active show" data-bs-toggle="tab" href="#ltn__form_tab_1_1"><i class="fas fa-home"></i>للإيجار</a>
+											<a data-bs-toggle="tab" href="#ltn__form_tab_1_2" class=""><i class="fas fa-home"></i>للبيع</a>
+										</div>
+									</div>
+									<div class="tab-content">
+										<div class="tab-pane fade active show" id="ltn__form_tab_1_1">
+											<div class="car-dealer-form-inner">
+												@* for rent *@
+
+												<form method="get" asp-action="Search" class="ltn__car-dealer-form-box row">
+
+													<input type="hidden" name="statusId" value="2" />
+
+													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-4 col-md-6">
+														<select name="typeId" class="nice-select" asp-items="ViewBag.Types">
+															<option value="@null">نوع العقار</option>
+														</select>
+													</div>
+													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-car col-lg-4 col-md-6">
+														<select id="governorate" name="governorateId" class="nice-select" asp-items="ViewBag.Governorates" onchange="ClsProperties.GetAllCitiesForRent()">
+															<option value="@null">المحافظة</option>
+														</select>
+													</div>
+													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-meter col-lg-4 col-md-6">
+														<select id="city" name="cityId" class="nice-select">
+															<option value="">المدينة</option>
+														</select>
+													</div>
+													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-ring col-lg-4 col-md-6">
+														<select name="bedrooms" class="nice-select">
+															<option value=" ">عدد الغرف</option>
+															<option value="1">1</option>
+															<option value="2">2</option>
+															<option value="3">3</option>
+															<option value="4">4</option>
+														</select>
+													</div>
+
+													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-cog col-lg-4 col-md-6">
+														<div class="input-item input-item-name ltn__custom-icon">
+															<div class="col-md-9">
+																<label for="formControlRange">السعر :</label>
+																<p>أقل سعر متاح : <span> @Model.MinAvaliableRentPrice </span></p>
+
+																<input type="range" value="@Model.MinAvaliableRentPrice" min="@Model.MinAvaliableRentPrice" max="2000000" class="form-control-range range-slider" id="myRange" name="price" step="100">
+															</div>
+															<div class="col-md-3">
+																<span id="demo">@Model.MinAvaliableRentPrice</span>
+															</div>
+														</div>
+													</div>
+
+													<div class="col-lg-12">
+														<div class="btn-wrapper text-center">
+															<!-- <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">Search Inventory</button> -->
+															<button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">بحث</button>
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div class="tab-pane fade" id="ltn__form_tab_1_2">
+											<div class="car-dealer-form-inner">
+												<form method="get" asp-action="Search" class="ltn__car-dealer-form-box row">
+													<input type="hidden" name="statusId" value="1" />
+
+													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-4 col-md-6">
+														<select name="typeId" class="nice-select" asp-items="ViewBag.Types">
+															<option value="@null">نوع العقار</option>
+														</select>
+													</div>
+													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-car col-lg-4 col-md-6">
+														<select id="governorate2" name="governorateId" class="nice-select" asp-items="ViewBag.Governorates" onchange="ClsProperties.GetAllCitiesForSale()">
+															<option value="@null">المحافظة</option>
+														</select>
+													</div>
+													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-meter col-lg-4 col-md-6">
+														<select id="city2" name="cityId" class="nice-select">
+															<option value="">المدينة</option>
+														</select>
+													</div>
+													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-ring col-lg-4 col-md-6">
+														<select name="bedrooms" class="nice-select">
+															<option value=" ">عدد الغرف</option>
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+														</select>
+													</div>
+
+													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-cog col-lg-4 col-md-6">
+														<div class="input-item input-item-name ltn__custom-icon">
+															<div class="col-md-9">
+																<label for="formControlRange">السعر :</label>
+																<p>أقل سعر متاح : <span> @Model.MinAvaliableSalePrice </span></p>
+
+																<input type="range" min="@Model.MinAvaliableSalePrice" max="20000000" class="form-control-range range-slider" id="myRange2" name="price" step="2000">
+															</div>
+															<div class="col-md-3">
+																<span id="demo2">@Model.MinAvaliableSalePrice</span>
+															</div>
+														</div>
+													</div>
+
+													<div class="col-lg-12">
+														<div class="btn-wrapper text-center">
+															<!-- <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">Search Inventory</button> -->
+															<button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">بحث</button>
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- SLIDER AREA END -->
+
+
+
+<!-- PRODUCT SLIDER AREA START -->
+<div class="ltn__product-slider-area ltn__product-gutter pt-115 pb-70">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="section-title-area ltn__section-title-2--- text-center">
+					<h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">العقارات</h6>
+					<h1 class="section-title">العقارات المنشورة حديثاً</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row ltn__product-slider-item-three-active--- slick-arrow-1">
+
+			@if (Model.LatestProperties.Any())
+			{
+				@foreach (var item in Model.LatestProperties)
+				{
+
+					<!-- ltn__product-item -->
+					<div class="col-xl-4 col-sm-6 col-12">
+						<div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
+							<div class="product-img">
+								<a asp-action="PropertyDetails" asp-route-id="@item.PropertyId"><img src="@item.PropertyImages.FirstOrDefault().ImageUrl" alt="#"></a>
+							</div>
+							<div class="product-info">
+								<div class="product-badge">
+									<ul>
+										<li class="sale-badg">@item.Status?.StatusName</li>
+									</ul>
+								</div>
+								<div class="product-description">
+									@Html.Raw(item.Description)
+
+								</div>
+								<div class="product-img-location">
+									<ul>
+										<li>
+											<a asp-action="PropertyDetails" asp-route-id="@item.PropertyId"><i class="flaticon-pin"></i>  @item.Governorate?.GovernorateName, @item.City?.CityName</a>
+										</li>
+									</ul>
+								</div>
+								<ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
+									<li>
+										<span>@item.Bedrooms</span>
+										غرف
+									</li>
+									<li>
+										<span>@item.Bathrooms</span>
+										حمام
+									</li>
+									<li>
+										<span>@item.Area</span>
+										المساحة
+									</li>
+								</ul>
+								<div class="product-hover-action">
+									<ul>
+										<li>
+											<a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+												<i class="flaticon-expand"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
+												<i class="flaticon-heart-1"></i>
+											</a>
+										</li>
+										<li>
+											<a href="product-details.html" title="Product Details">
+												<i class="flaticon-add"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="product-info-bottom">
+								<div class="product-price">
+									<span>@item.Price  <label>/جنية</label></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				}
+			}
+			else
+			{
+				<div class="col-lg-12">
+					<div class="section-title-area ltn__section-title-2--- text-center">
+						<h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">العقارات</h6>
+						<h1 class="section-title">لا توجد عقارات</h1>
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+</div>
+<!-- PRODUCT SLIDER AREA END -->
+
+
+
+<!-- PRODUCT SLIDER AREA START -->
+<div class="ltn__product-slider-area ltn__product-gutter pt-115 pb-90 plr--7">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="section-title-area ltn__section-title-2--- text-center">
+					<h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">العقارات</h6>
+					<h1 class="section-title">العقارات المميزة</h1>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="row ltn__product-slider-item-four-active-full-width slick-arrow-1">
+			@if (Model.FeaturedProperties.Any())
+			{
+				@foreach (var item in Model.FeaturedProperties)
+				{
+					<div class="col-lg-12">
+
+						<!-- ltn__product-item -->
+						<div class="ltn__product-item ltn__product-item-4 text-center---">
+							<div class="product-img">
+								<a href="product-details.html"><img src="@item.PropertyImages.FirstOrDefault()?.ImageUrl" alt="property"></a>
+								<div class="product-badge">
+									<ul>
+										<li class="sale-badge bg-green">@item.Status?.StatusName</li>
+									</ul>
+								</div>
+								<div class="product-img-location-gallery">
+									<div class="product-img-location">
+										<ul>
+											<li>
+												<a href="locations.html"><i class="flaticon-pin"></i> @item.Governorate?.GovernorateName, @item.City?.CityName</a>
+											</li>
+										</ul>
+									</div>
+									<div class="product-img-gallery">
+										<ul>
+											<li>
+												<a href="product-details.html"><i class="fas fa-camera"></i> @item.PropertyImages.Count()</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="product-info">
+								<div class="product-price">
+									<span>@item.Price<label>جنية</label></span>
+								</div>
+								<h2 class="product-title"><a href="product-details.html">New Apartment Nice View</a></h2>
+								<div class="product-description">
+									@Html.Raw(item.Description)
+
+								</div>
+								<ul class="ltn__list-item-2 ltn__list-item-2-before">
+									<li>
+										<span>@item.Bedrooms <i class="flaticon-bed"></i></span>
+										غرف
+									</li>
+									<li>
+										<span>@item.Bathrooms <i class="flaticon-clean"></i></span>
+										حمام
+									</li>
+									<li>
+										<span>@item.Area <i class="flaticon-square-shape-design-interface-tool-symbol"></i></span>
+										المساحة
+									</li>
+								</ul>
+							</div>
+							<div class="product-info-bottom">
+								<div class="real-estate-agent">
+									<div class="agent-img">
+										<a href="team-details.html"><img src="img/blog/author.jpg" alt="#"></a>
+									</div>
+									<div class="agent-brief">
+										<h6><a href="team-details.html">William Seklo</a></h6>
+										<small>Estate Agents</small>
+									</div>
+								</div>
+								<div class="product-hover-action">
+									<ul>
+										<li>
+											<a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+												<i class="flaticon-expand"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
+												<i class="flaticon-heart-1"></i>
+											</a>
+										</li>
+										<li>
+											<a href="product-details.html" title="Product Details">
+												<i class="flaticon-add"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				}
+
+			}
+
+
+		</div>
+	</div>
+</div>
+<!-- PRODUCT SLIDER AREA END -->
+
+
+
+
+<!-- COUNTER UP AREA START -->
+<div class="ltn__counterup-area section-bg-1 pt-120 pb-70">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-3 col-sm-6 align-self-center">
+				<div class="ltn__counterup-item text-color-white---">
+					<div class="counter-icon">
+						<i class="flaticon-office"></i>
+					</div>
+					<h1><span class="counter animated fadeInDownBig">@Model.NumOfForSale</span><span class="counterUp-icon">+</span> </h1>
+					<h6>عدد العقارات المتاحة للبيع</h6>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6 align-self-center">
+				<div class="ltn__counterup-item text-color-white---">
+					<div class="counter-icon">
+						<i class="flaticon-office"></i>
+					</div>
+					<h1><span class="counter animated fadeInDownBig">@Model.NumOfForRental</span><span class="counterUp-icon">+</span> </h1>
+					<h6>عدد العقارات المتاحة للإيجار</h6>
+				</div>
+			</div>
+
+
+			<div class="col-md-3 col-sm-6 align-self-center">
+				<div class="ltn__counterup-item text-color-white---">
+					<div class="counter-icon">
+						<i class="flaticon-office"></i>
+					</div>
+					<h1><span class="counter animated fadeInDownBig">@Model.NumOfRealySold</span><span class="counterUp-icon">+</span> </h1>
+					<h6>عدد العقارات التى تم بيعها</h6>
+				</div>
+			</div>
+
+
+			<div class="col-md-3 col-sm-6 align-self-center">
+				<div class="ltn__counterup-item text-color-white---">
+					<div class="counter-icon">
+						<i class="flaticon-office"></i>
+					</div>
+					<h1><span class="counter animated fadeInDownBig">@Model.NumOfRealySold</span><span class="counterUp-icon">+</span> </h1>
+					<h6>عدد االعقارات التى تم تأجيرها</h6>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<!-- COUNTER UP AREA END -->
+
+
+
+
+<!-- BANNER AREA START ( Banner - 4 ) -->
+<div class="ltn__banner-area pt-120">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="section-title-area ltn__section-title-2--- text-center">
+					<h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">العقارات</h6>
+					<h1 class="section-title">أنواع العقارت المتاحة</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			@if (Model.PropertyTypes.Any())
+			{
+				@foreach (var item in Model.PropertyTypes)
+				{
+					<div class="col-lg-4 col-md-6">
+						<div class="ltn__banner-item ltn__banner-style-4 text-color-white bg-image" data-bs-bg="@item.TypeImage" style="background-image: url(&quot;img/gallery/3.jpg&quot;);">
+							<div class="ltn__banner-info">
+								<h3 class="animated fadeIn"><a href="shop.html">@item.Type</a></h3>
+								<p> العروض المتاحة</p>
+								<mark>@item.Count عقارات</mark>
+							</div>
+						</div>
+					</div>
+				}
+			}
+		</div>
+	</div>
+</div>
+<!-- BANNER AREA END -->
+
+
+@* for collect citeis *@
+@section Scripts {
+
+
+	<script src="~/modules/helper.js"></script>
+	<script src="~/modules/properties.js"></script>
+
+
+
+	<script>
+		var slider = document.getElementById("myRange");
+		var output = document.getElementById("demo");
+		output.innerHTML = slider.value; // Display the default slider value
+
+		// Update the current slider value (each time you drag the slider handle)
+		slider.oninput = function () {
+			output.innerHTML = this.value;
+		}
+
+
+
+		var slider2 = document.getElementById("myRange2");
+		var output2 = document.getElementById("demo2");
+		output2.innerHTML = slider2.value; // Display the default slider value
+
+		// Update the current slider value (each time you drag the slider handle)
+		slider2.oninput = function () {
+			output2.innerHTML = this.value;
+		}
+	</script>
+
+}

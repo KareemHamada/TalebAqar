@@ -1,0 +1,72 @@
+﻿@model LoginVM
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/AuthLayout.cshtml";
+}
+
+<div class="register-box">
+    <div class="register-logo">
+        <a asp-controller="Home" asp-action="Index">Taleb Aqar</a>
+    </div>
+
+    <div class="card">
+        <div class="card-body register-card-body">
+            <p class="login-box-msg">تسجيل الدخول</p>
+
+            <form asp-action="Login" method="post">
+                <div asp-validation-summary="All"></div>
+
+                <div class="input-group mt-3">
+
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-envelope"></span>
+                        </div>
+                    </div>
+
+                    <input type="email" class="form-control" placeholder="الاميل" asp-for="Email" required>
+                    
+                </div>
+                <span asp-validation-for="Email" class="text-danger"></span>
+
+                <div class="input-group mt-3">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+
+
+                    <input type="password" class="form-control" placeholder="الباسورد" asp-for="Password" required>
+                    
+                </div>
+                <span asp-validation-for="Password" class="text-danger"></span>
+
+                <div class="input-group mt-3">
+                    <div class="icheck-primary">
+                        <label for="agreeTerms"> تذكرنى</label>
+                        <input type="checkbox" id="agreeTerms" asp-for="RememberMe">
+                    </div>
+
+                </div>
+
+
+                <div class="input-group mt-3">
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">دخول</button>
+                </div>
+
+            </form>
+            <p class="text-center">ليس لدي حساب<a asp-action="Register"> إنشاء حساب جديد</a></p>
+            <p class="text-center"> <a asp-action="ForgetPassword"> نسيت كلمة السر</a></p>
+
+        </div>
+        <!-- /.form-box -->
+    </div><!-- /.card -->
+</div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"></partial>
+}
+
+

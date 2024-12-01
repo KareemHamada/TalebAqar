@@ -1,0 +1,29 @@
+﻿@model AddressVM
+
+<div class="card-body">
+	<span class="text-danger" class="text-danger" asp-validation-for="AddressId"></span>
+
+	<div class="form-group">
+		<label asp-for="AddressName" for="exampleInputText">العنوان</label>
+		<input asp-for="AddressName" type="text" class="form-control" id="exampleInputText" disabled>
+	</div>
+
+
+
+	<div class="form-group">
+		<label asp-for="CityId" for="exampleInputGovernorate">المحافظة</label>
+
+		<select asp-for="CityId" asp-items="ViewBag.Cities" class="custom-select" id="exampleInputGovernorate" disabled>
+
+		</select>
+	</div>
+
+
+@* 
+	<div class="form-group">
+		<label asp-for="Governorate.GovernorateName" for="exampleInputText">المدينة</label>
+		<input asp-for="Governorate.GovernorateName" type="text" class="form-control" id="exampleInputText" disabled>
+	</div> *@
+
+
+</div>

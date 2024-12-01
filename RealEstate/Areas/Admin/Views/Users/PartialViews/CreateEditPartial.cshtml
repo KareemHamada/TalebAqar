@@ -1,0 +1,35 @@
+﻿@model UserVM
+
+<div class="card-body">
+	 
+
+	<input type="hidden" asp-for="Id" />
+	<span class="text-danger" class="text-danger" asp-validation-for="Id"></span>
+
+
+	<div class="form-group">
+		<label asp-for="FirstName" for="exampleInputText">الاسم الاول</label>
+		<input asp-for="FirstName" type="text" class="form-control" id="exampleInputText" placeholder="أدخل الاسم الاول">
+		<span class="text-danger" class="text-danger" asp-validation-for="FirstName"></span>
+	</div>
+
+	<div class="form-group">
+		<label asp-for="LastName" for="exampleInputText">أدخل الاسم الاخير</label>
+		<input asp-for="LastName" type="text" class="form-control" id="exampleInputText" placeholder="أدخل الاسم الاخير">
+		<span class="text-danger" class="text-danger" asp-validation-for="LastName"></span>
+	</div>
+
+	<div class="form-group">
+		<label asp-for="UserName" for="exampleInputText">أدخل الاسم الكامل</label>
+		<input asp-for="UserName" type="text" class="form-control" id="exampleInputText" placeholder="أدخل الاسم الكامل">
+		<span class="text-danger" class="text-danger" asp-validation-for="UserName"></span>
+	</div>
+
+
+	<div class="form-group">
+		<label asp-for="Email" for="exampleInputText">أدخل الاميل</label>
+		<input asp-for="Email" type="Email" class="form-control" id="exampleInputText" placeholder="أدخل الاميل" readonly>
+		<span class="text-danger" class="text-danger" asp-validation-for="Email"></span>
+	</div>
+
+</div>

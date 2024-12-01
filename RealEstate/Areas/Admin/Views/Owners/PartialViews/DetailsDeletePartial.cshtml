@@ -1,0 +1,28 @@
+﻿@model OwnerVM
+
+<div class="card-body">
+	<span class="text-danger" class="text-danger" asp-validation-for="OwnerId"></span>
+
+	<div class="form-group">
+		<label asp-for="FullName" for="exampleInputText">الاسم الاول</label>
+		<input asp-for="FullName" type="text" class="form-control" id="exampleInputText" placeholder="أدخل الاسم الاول" disabled>
+	</div>
+
+
+
+	<div class="form-group">
+		<label asp-for="Email" for="exampleInputText">الاميل</label>
+		<input asp-for="Email" type="email" class="form-control" id="exampleInputText" placeholder="أدخل الاميل" disabled>
+	</div>
+
+	<div class="form-group">
+		<label asp-for="PhoneNumber" for="exampleInputText">التليفون</label>
+		<input asp-for="PhoneNumber" type="number" class="form-control" id="exampleInputText" placeholder="أدخل التليفون" disabled>
+	</div>
+
+	<div class="form-group">
+		<label asp-for="Address" for="exampleInputText">العنوان</label>
+		<input asp-for="Address" type="text" class="form-control" id="exampleInputText" placeholder="أدخل العنوان" disabled>
+	</div>
+
+</div>
