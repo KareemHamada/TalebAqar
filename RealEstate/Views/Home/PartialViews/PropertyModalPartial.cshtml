@@ -1,0 +1,30 @@
+﻿@model PropertyVM
+
+<div class="product-hover-action">
+	<ul>
+		<li>
+			<a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal"
+			   data-property-id="@Model.PropertyId"
+			   data-property-price="@Model.Price"
+			   data-property-description="@Model.Description"
+			   data-property-description="@Html.Raw(Model.Description)"
+			   data-property-image="@Model.PropertyImages.FirstOrDefault()?.ImageUrl"
+			   data-property-type="@Model.Type?.TypeName"
+			   data-property-status="@Model.Status?.StatusName">
+
+
+				<i class="flaticon-expand"></i>
+			</a>
+		</li>
+		<li>
+			<a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
+				<i class="flaticon-heart-1"></i>
+			</a>
+		</li>
+		<li>
+			<a href="product-details.html" title="Product Details">
+				<i class="flaticon-add"></i>
+			</a>
+		</li>
+	</ul>
+</div>

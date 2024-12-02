@@ -272,25 +272,8 @@
 										المساحة
 									</li>
 								</ul>
-								<div class="product-hover-action">
-									<ul>
-										<li>
-											<a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
-												<i class="flaticon-expand"></i>
-											</a>
-										</li>
-										<li>
-											<a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-												<i class="flaticon-heart-1"></i>
-											</a>
-										</li>
-										<li>
-											<a href="product-details.html" title="Product Details">
-												<i class="flaticon-add"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
+								<partial name="PartialViews/PropertyModalPartial" model="@item"></partial>
+
 							</div>
 							<div class="product-info-bottom">
 								<div class="product-price">
