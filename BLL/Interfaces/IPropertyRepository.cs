@@ -9,6 +9,7 @@
         public Task<IEnumerable<TbProperty>> FeaturedPropertiesAsync(int count);
 
         public Task<IEnumerable<TbProperty>> LatestPropertiesAsync(int count);
+        public Task<IEnumerable<TbProperty>> PropertiesInTheSameGovernorate(int? govornorate);
 
 
     }

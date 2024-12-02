@@ -77,5 +77,17 @@
                 .Include(p => p.Type)
                 .ToListAsync();
 
+
+        public async Task<IEnumerable<TbProperty>> PropertiesInTheSameGovernorate(int? govornorate) => await _dbSet.Where(x => x.GovernorateId == govornorate && x.CurrentState == true)
+               .Take(5)
+               .Include(p => p.Address)
+               .Include(p => p.City)
+               .Include(p => p.Governorate)
+               .Include(p => p.Owner)
+               .Include(p => p.Status)
+               .Include(p => p.PropertyImages)
+               .Include(p => p.Type)
+               .ToListAsync();
+
     }
 }

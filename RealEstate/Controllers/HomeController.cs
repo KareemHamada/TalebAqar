@@ -32,13 +32,10 @@ namespace RealEstate.Controllers
             //mainHomeVM.Setting = await _realEstateContext.TbSettings.FirstOrDefaultAsync();
 
 
-
-
             mainHomeVM.NumOfRealySold = await _realEstateContext.TbProperties.CountAsync(a => a.StatusId == 1 && a.IsSoldOrRenteled);
             mainHomeVM.NumOfForSale = await _realEstateContext.TbProperties.CountAsync(a => a.StatusId == 1 && a.IsSoldOrRenteled == false && a.CurrentState);
             mainHomeVM.NumOfRealyRentaled = await _realEstateContext.TbProperties.CountAsync(a => a.StatusId == 2 && a.IsSoldOrRenteled);
             mainHomeVM.NumOfForRental = await _realEstateContext.TbProperties.CountAsync(a => a.StatusId == 2 && a.IsSoldOrRenteled == false && a.CurrentState == true);
-
 
 
             mainHomeVM.PropertyTypes = await _realEstateContext.TbProperties
@@ -90,11 +87,7 @@ namespace RealEstate.Controllers
 
         public async Task<IActionResult> PropertiesGrid()
         {
-            MainHomeVM mainHomeVM = new();
-
-            mainHomeVM.Setting = await _realEstateContext.TbSettings.FirstOrDefaultAsync();
-
-            return View(mainHomeVM);
+            return View();
         }
 
 
@@ -103,19 +96,13 @@ namespace RealEstate.Controllers
             if (!id.HasValue)
                 return BadRequest();
 
+            PropertyDetailsVM vm = new();
 
-
-
-
-            return View(_mapper.Map<TbProperty, PropertyVM>(await _unitOfWork.Properties.GetWithNamesAsync(id.Value)));
+            vm.propertyVM = _mapper.Map<TbProperty, PropertyVM>(await _unitOfWork.Properties.GetWithNamesAsync(id.Value));
+            vm.PropertiesInTheSameGovernorate = _mapper.Map<IEnumerable<TbProperty>, IEnumerable<PropertyVM>>(await _unitOfWork.Properties.PropertiesInTheSameGovernorate(vm.propertyVM.GovernorateId));
+            return View(vm);
 
         }
-
-        public IActionResult Map()
-        {
-            return View();
-        }
-
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
