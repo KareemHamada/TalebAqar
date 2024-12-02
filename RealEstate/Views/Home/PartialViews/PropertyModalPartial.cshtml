@@ -6,7 +6,6 @@
 			<a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal"
 			   data-property-id="@Model.PropertyId"
 			   data-property-price="@Model.Price"
-			   data-property-description="@Model.Description"
 			   data-property-description="@Html.Raw(Model.Description)"
 			   data-property-image="@Model.PropertyImages.FirstOrDefault()?.ImageUrl"
 			   data-property-type="@Model.Type?.TypeName"
@@ -17,7 +16,14 @@
 			</a>
 		</li>
 		<li>
-			<a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
+			<a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal"
+			   data-id="@Model.PropertyId"
+			   data-NOfAdvertisement="@Model.NumOfAdvertisement"
+			   data-image="@Model.PropertyImages.FirstOrDefault()?.ImageUrl"
+			   data-price="@Model.Price"
+			   data-status="@Model.Status?.StatusName"
+			   data-type="@Model.Type?.TypeName"
+			   onclick="addToWishlist(this.dataset.id,this.dataset.NumOfAdvertisement,this.dataset.image,this.dataset.price,this.dataset.status,this.dataset.type)">
 				<i class="flaticon-heart-1"></i>
 			</a>
 		</li>

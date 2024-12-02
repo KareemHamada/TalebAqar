@@ -73,7 +73,7 @@
                         <div class="col ltn__header-options ltn__header-options-2 mb-sm-20">
                             <!-- mini-cart -->
                             <div class="mini-cart-icon">
-                                <a href="#ltn__utilize-cart-menu" class="ltn__utilize-toggle">
+                                <a href="/home/Wishlist">
                                     <i class="fas fa-heart"></i>
                                     <sup>2</sup>
                                 </a>
@@ -97,70 +97,6 @@
         </header>
         <!-- HEADER AREA END -->
 
-
-        <!-- Utilize Cart Menu Start -->
-        <div id="ltn__utilize-cart-menu" class="ltn__utilize ltn__utilize-cart-menu">
-            <div class="ltn__utilize-menu-inner ltn__scrollbar">
-                <div class="ltn__utilize-menu-head">
-                    <span class="ltn__utilize-menu-title">Cart</span>
-                    <button class="ltn__utilize-close">×</button>
-                </div>
-                <div class="mini-cart-product-area ltn__scrollbar">
-                    <div class="mini-cart-item clearfix">
-                        <div class="mini-cart-img">
-                            <a href="#"><img src="img/product/1.png" alt="Image"></a>
-                            <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
-                        </div>
-                        <div class="mini-cart-info">
-                            <h6><a href="#">Wheel Bearing Retainer</a></h6>
-                            <span class="mini-cart-quantity">1 x $65.00</span>
-                        </div>
-                    </div>
-                    <div class="mini-cart-item clearfix">
-                        <div class="mini-cart-img">
-                            <a href="#"><img src="img/product/2.png" alt="Image"></a>
-                            <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
-                        </div>
-                        <div class="mini-cart-info">
-                            <h6><a href="#">3 Rooms Manhattan</a></h6>
-                            <span class="mini-cart-quantity">1 x $85.00</span>
-                        </div>
-                    </div>
-                    <div class="mini-cart-item clearfix">
-                        <div class="mini-cart-img">
-                            <a href="#"><img src="img/product/3.png" alt="Image"></a>
-                            <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
-                        </div>
-                        <div class="mini-cart-info">
-                            <h6><a href="#">OE Replica Wheels</a></h6>
-                            <span class="mini-cart-quantity">1 x $92.00</span>
-                        </div>
-                    </div>
-                    <div class="mini-cart-item clearfix">
-                        <div class="mini-cart-img">
-                            <a href="#"><img src="img/product/4.png" alt="Image"></a>
-                            <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
-                        </div>
-                        <div class="mini-cart-info">
-                            <h6><a href="#">Shock Mount Insulator</a></h6>
-                            <span class="mini-cart-quantity">1 x $68.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="mini-cart-footer">
-                    <div class="mini-cart-sub-total">
-                        <h5>Subtotal: <span>$310.00</span></h5>
-                    </div>
-                    <div class="btn-wrapper">
-                        <a href="cart.html" class="theme-btn-1 btn btn-effect-1">View Cart</a>
-                        <a href="cart.html" class="theme-btn-2 btn btn-effect-2">Checkout</a>
-                    </div>
-                    <p>Free Shipping on All Orders Over $100!</p>
-                </div>
-
-            </div>
-        </div>
-        <!-- Utilize Cart Menu End -->
         <!-- Utilize Mobile Menu Start -->
         <div id="ltn__utilize-mobile-menu" class="ltn__utilize ltn__utilize-mobile-menu">
             <div class="ltn__utilize-menu-inner ltn__scrollbar">
@@ -194,7 +130,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="wishlist.html" title="Wishlist">
+                            <a href="/home/wishlist" title="Wishlist">
                                 <span class="utilize-btn-icon">
                                     <i class="far fa-heart"></i>
                                     <sup>3</sup>
@@ -612,6 +548,76 @@
         });
     </script>
 
+
+    // Add to Wishlist
+    <script>
+        function addToWishlist(propertyId,NOfAdvertisement,imageUrl, price, status,type) {
+            // Retrieve current wishlist from local storage
+            let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+            // Check if the property is already in the wishlist
+            if (!wishlist.some(item => item.id === propertyId)) {
+                wishlist.push({
+                    id: propertyId,
+                    NOfAdvertisement: NOfAdvertisement,
+                    image: imageUrl,
+                    price: price,
+                    status: status,
+                    type: type
+                });
+
+                // Save updated wishlist back to local storage
+                localStorage.setItem("wishlist", JSON.stringify(wishlist));
+                alert("Added to wishlist!");
+            } else {
+                alert("Item is already in the wishlist!");
+            }
+        }
+
+        // Load Wishlist and Render Table
+        function loadWishlist() {
+            let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+            let tableBody = document.querySelector(".shoping-cart-table tbody");
+            tableBody.innerHTML = ""; // Clear existing rows
+
+            wishlist.forEach(item => {
+                let row = `
+                    <tr>
+                        <td class="cart-product-remove">
+                            <a href="#" onclick="removeFromWishlist(${item.id})">x</a>
+                        </td>
+                        <td class="cart-product-image"><a href="#"><img src="${item.image}" alt="image"></a></td>
+                        <td class="cart-product-type">${item.type} </td>
+                        <td class="cart-product-status">${item.status} </td>
+                        <td class="cart-product-NOfAdvertisement">${item.NOfAdvertisement} </td>
+                        <td class="cart-product-price">${item.price}</td>
+                    </tr>
+                `;
+                tableBody.innerHTML += row;
+            });
+        }
+
+        // Remove from Wishlist
+        function removeFromWishlist(propertyId) {
+               console.log("Attempting to remove item with Id =", propertyId);
+
+        let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+        console.log("Wishlist Before Removal:", wishlist);
+
+        // Convert propertyId to match type (number or string)
+        wishlist = wishlist.filter(item => parseInt(item.id) !== propertyId && parseInt(item.id) !== parseInt(propertyId));
+
+        console.log("Wishlist After Removal:", wishlist);
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+        loadWishlist(); // Refresh table
+
+        alert("Item removed from wishlist!");
+        }
+        // // Load wishlist when the wishlist modal opens
+        //         document.querySelector('[data-bs-target="#liton_wishlist_modal"]').addEventListener("click", loadWishlist);
+
+    </script>
     @RenderSection("Scripts", required: false)
 
 </body>

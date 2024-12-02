@@ -85,11 +85,14 @@ namespace RealEstate.Controllers
             return View(model);
         }
 
-        public async Task<IActionResult> PropertiesGrid()
+        public IActionResult PropertiesGrid()
         {
             return View();
         }
-
+        public IActionResult Wishlist()
+        {
+            return View();
+        }
 
         public async Task<IActionResult> PropertyDetails(int? id)
         {
