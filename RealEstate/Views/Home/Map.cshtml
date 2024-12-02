@@ -1,89 +1,39 @@
-﻿@section Styles{
-     <style>
-        #map {
-            height: 500px;
-            width: 100%;
-        }
+﻿
 
-        #search-box {
-            margin: 10px;
-            padding: 10px;
-            font-size: 16px;
-            width: 300px;
+@section Styles {
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+    <style>
+        #map {
+            width: 100%;
+            height: 500px;
         }
-     </style>
+    </style>
 }
 
 <div id="map"></div>
-<input id="search-box" type="text" placeholder="ابحث عن مكان..." />
 
-<script>
-    let map;
-    let markers = [];
 
-    function initMap() {
-        const cairo = { lat: 30.0444, lng: 31.2357 }; // Default location: Cairo, Egypt
+@section Scripts {
 
-        // Initialize the map
-        map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 10,
-            center: cairo,
-        });
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js" > </script>
 
-        // Add the search box
-        const input = document.getElementById("search-box");
-        const searchBox = new google.maps.places.SearchBox(input);
+        <script>
+            // Access token from Mapbox
+            mapboxgl.accessToken = 'YOUR_ACCESS_TOKEN';
 
-        // Bias search results to map's current bounds
-        map.addListener("bounds_changed", () => {
-            searchBox.setBounds(map.getBounds());
-        });
-
-        // Listen for search results
-        searchBox.addListener("places_changed", () => {
-            const places = searchBox.getPlaces();
-
-            if (places.length === 0) {
-                return;
-            }
-
-            // Clear old markers
-            markers.forEach((marker) => marker.setMap(null));
-            markers = [];
-
-            const bounds = new google.maps.LatLngBounds();
-
-            // Loop through search results and create markers
-            places.forEach((place) => {
-                if (!place.geometry || !place.geometry.location) {
-                    console.log("Returned place contains no geometry");
-                    return;
-                }
-
-                markers.push(
-                    new google.maps.Marker({
-                        map,
-                        title: place.name,
-                        position: place.geometry.location,
-                    })
-                );
-
-                if (place.geometry.viewport) {
-                    // Extend bounds for viewport
-                    bounds.union(place.geometry.viewport);
-                } else {
-                    bounds.extend(place.geometry.location);
-                }
+            // Initialize the map
+            const map = new mapboxgl.Map({
+                container: 'map', // HTML container ID
+                style: 'mapbox://styles/mapbox/streets-v12', // Map style
+                center: [-74.5, 40], // Longitude, Latitude
+                zoom: 9 // Initial zoom level
             });
 
-            map.fitBounds(bounds);
-        });
-    }
-</script>
+            // Add a marker
+            new mapboxgl.Marker()
+                .setLngLat([-74.5, 40])
+                .setPopup(new mapboxgl.Popup().setHTML('<h3>Hello Mapbox!</h3>'))
+                .addTo(map);
+        </script>
 
-
-</script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBm2TzuOD1Rdg3iP84QnOw7PmA2a-aBSLw&callback=initMap&language=ar&region=EG">
-</script>
-
+}

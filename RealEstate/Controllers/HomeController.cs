@@ -20,52 +20,7 @@ namespace RealEstate.Controllers
 
         }
 
-        [HttpGet]
-        public async Task<IActionResult> de()
-        {
-            MainHomeVM mainHomeVM = new();
-            mainHomeVM.FeaturedProperties = _mapper.Map<IEnumerable<TbProperty>, IEnumerable<PropertyVM>>(await _unitOfWork.Properties.FeaturedPropertiesAsync(10));
-            mainHomeVM.LatestProperties = _mapper.Map<IEnumerable<TbProperty>, IEnumerable<PropertyVM>>(await _unitOfWork.Properties.LatestPropertiesAsync(6));
-
-            mainHomeVM.Setting = await _realEstateContext.TbSettings.FirstOrDefaultAsync();
-
-
-
-
-            mainHomeVM.NumOfRealySold = await _realEstateContext.TbProperties.CountAsync(a => a.StatusId == 1 && a.IsSoldOrRenteled);
-            mainHomeVM.NumOfForSale = await _realEstateContext.TbProperties.CountAsync(a => a.StatusId == 1 && a.IsSoldOrRenteled == false && a.CurrentState);
-            mainHomeVM.NumOfRealyRentaled = await _realEstateContext.TbProperties.CountAsync(a => a.StatusId == 2 && a.IsSoldOrRenteled);
-            mainHomeVM.NumOfForRental = await _realEstateContext.TbProperties.CountAsync(a => a.StatusId == 2 && a.IsSoldOrRenteled == false && a.CurrentState == true);
-
-
-
-            mainHomeVM.PropertyTypes = await _realEstateContext.TbProperties
-                .Where(p => p.CurrentState == true)
-                .Include(p => p.Type)
-                .GroupBy(p => new { p.Type.TypeName, p.Type.TypeImage }) // Group by both TypeName and TypeImage //.GroupBy(p => p.Type.TypeName) 
-                .Select(g => new PropertyTypeCount
-                {
-                    Type = g.Key.TypeName,
-                    Count = g.Count(),
-                    TypeImage = g.Key.TypeImage // Get the property type image
-
-                })
-                .ToListAsync();
-
-
-            ViewBag.Governorates = new SelectList(await _unitOfWork.Governorates.GetAllAsync(), "GovernorateId", "GovernorateName");
-            ViewBag.Types = new SelectList(await _unitOfWork.Types.GetAllAsync(), "TypeId", "TypeName");
-
-
-
-            // minimum abaliable sale and rent prices
-            mainHomeVM.MinAvaliableRentPrice = await _realEstateContext.TbProperties.Where(a => a.CurrentState == true && a.StatusId == 2).MinAsync(a => a.Price);
-            mainHomeVM.MinAvaliableSalePrice = await _realEstateContext.TbProperties.Where(a => a.CurrentState == true && a.StatusId == 1).MinAsync(a => a.Price);
-
-
-
-            return View(mainHomeVM);
-        }
+      
 
         [HttpGet]
         public async Task<IActionResult> Index()
@@ -74,7 +29,7 @@ namespace RealEstate.Controllers
             mainHomeVM.FeaturedProperties = _mapper.Map<IEnumerable<TbProperty>, IEnumerable<PropertyVM>>(await _unitOfWork.Properties.FeaturedPropertiesAsync(10));
             mainHomeVM.LatestProperties = _mapper.Map<IEnumerable<TbProperty>, IEnumerable<PropertyVM>>(await _unitOfWork.Properties.LatestPropertiesAsync(6));
 
-            mainHomeVM.Setting = await _realEstateContext.TbSettings.FirstOrDefaultAsync();
+            //mainHomeVM.Setting = await _realEstateContext.TbSettings.FirstOrDefaultAsync();
 
 
 
@@ -105,9 +60,13 @@ namespace RealEstate.Controllers
 
 
 
-            // minimum abaliable sale and rent prices
+            // minimum and maximum abaliable sale and rent prices
             mainHomeVM.MinAvaliableRentPrice = await _realEstateContext.TbProperties.Where(a=>a.CurrentState == true && a.StatusId == 2).MinAsync(a=>a.Price);
+            mainHomeVM.MaxAvaliableRentPrice = await _realEstateContext.TbProperties.Where(a => a.CurrentState == true && a.StatusId == 2).MaxAsync(a => a.Price);
+
+
             mainHomeVM.MinAvaliableSalePrice = await _realEstateContext.TbProperties.Where(a => a.CurrentState == true && a.StatusId == 1).MinAsync(a => a.Price);
+            mainHomeVM.MaxAvaliableSalePrice = await _realEstateContext.TbProperties.Where(a => a.CurrentState == true && a.StatusId == 1).MaxAsync(a => a.Price);
 
 
 
@@ -129,21 +88,13 @@ namespace RealEstate.Controllers
             return View(model);
         }
 
-   
-        [HttpGet]
-        public JsonResult GetCities(int governorateId)
+        public async Task<IActionResult> PropertiesGrid()
         {
-            var cities = _realEstateContext.TbCities
-                                 .Where(c => c.GovernorateId == governorateId)
-                                 .Select(c => new { c.CityId, c.CityName })
-                                 .ToList();
-            return Json(cities); 
-        }
+            MainHomeVM mainHomeVM = new();
 
+            mainHomeVM.Setting = await _realEstateContext.TbSettings.FirstOrDefaultAsync();
 
-        public IActionResult PropertiesGrid()
-        {
-            return View();
+            return View(mainHomeVM);
         }
 
 
@@ -151,6 +102,10 @@ namespace RealEstate.Controllers
         {
             if (!id.HasValue)
                 return BadRequest();
+
+
+
+
 
             return View(_mapper.Map<TbProperty, PropertyVM>(await _unitOfWork.Properties.GetWithNamesAsync(id.Value)));
 

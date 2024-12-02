@@ -276,7 +276,7 @@ namespace RealEstate.Areas.Admin.Controllers
         {
             ViewBag.Governorates = new SelectList(await _unitOfWork.Governorates.GetAllAsync(), "GovernorateId", "GovernorateName");
             ViewBag.Cities = new SelectList(await _unitOfWork.Cities.GetAllAsync(), "CityId", "CityName");
-            ViewBag.Owners = new SelectList(await _unitOfWork.Owners.GetAllAsync(), "OwnerId", "FirstName");
+            ViewBag.Owners = new SelectList(await _unitOfWork.Owners.GetAllAsync(), "OwnerId", "FullName");
             ViewBag.Statuses = new SelectList(await _unitOfWork.Statuses.GetAllAsync(), "StatusId", "StatusName");
             ViewBag.Types = new SelectList(await _unitOfWork.Types.GetAllAsync(), "TypeId", "TypeName");
             ViewBag.Addresses = new SelectList(await _unitOfWork.Addresses.GetAllAsync(), "AddressId", "AddressName");

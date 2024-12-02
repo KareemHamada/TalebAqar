@@ -1153,3 +1153,4 @@ F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\refi
 F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\RealEstate.pdb
 F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\RealEstate.genruntimeconfig.cache
 F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\ref\RealEstate.dll
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\RealEstate.sourcelink.json

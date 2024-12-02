@@ -2,7 +2,7 @@
 
 @{
 	//ViewData["Title"] = "Login";
-	Layout = "~/Views/Shared/HomeLayout.cshtml";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 
@@ -26,8 +26,7 @@
 			background: #d3d3d3;
 			/* Grey background */
 			outline: none;
-			/* Remove outline */
-			opacity: 0.7;
+	
 			/* Set transparency (for mouse-over effects on hover) */
 			-webkit-transition: .2s;
 			/* 0.2 seconds transition on hover */
@@ -77,7 +76,7 @@
 <div class="ltn__slider-area ltn__slider-4">
 	<div class="ltn__slide-one-active----- slick-slide-arrow-1----- slick-slide-dots-1----- arrow-white----- ltn__slide-animation-active">
 		<!-- ltn__slide-item -->
-		<div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-4 bg-image bg-overlay-theme-black-60" data-bs-bg="@Model.Setting.MainPanner">
+		<div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-4 bg-image bg-overlay-theme-black-60" data-bs-bg="@SiteSettings.Value.MainPanner">
 			<div class="ltn__slide-item-inner text-left">
 				<div class="container">
 					<div class="row">
@@ -124,19 +123,22 @@
 														</select>
 													</div>
 
-													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-cog col-lg-4 col-md-6">
+													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-cog col-lg-8 col-md-12">
 														<div class="input-item input-item-name ltn__custom-icon">
-															<div class="col-md-9">
-																<label for="formControlRange">السعر :</label>
-																<p>أقل سعر متاح : <span> @Model.MinAvaliableRentPrice </span></p>
-
-																<input type="range" value="@Model.MinAvaliableRentPrice" min="@Model.MinAvaliableRentPrice" max="2000000" class="form-control-range range-slider" id="myRange" name="price" step="100">
-															</div>
-															<div class="col-md-3">
-																<span id="demo">@Model.MinAvaliableRentPrice</span>
+															<div class="row">
+																<div class="col-lg-4 col-md-12">
+																	<h4 class="ltn__widget-title ltn__widget-title-border---">السعر : <p>أقل سعر متاح : <span> @Model.MinAvaliableRentPrice </span></p></h4>
+																</div>
+																<div class="col-lg-8 col-md-12">
+																	<input type="range" value="@Model.MinAvaliableRentPrice" min="@Model.MinAvaliableRentPrice" max="@Model.MaxAvaliableRentPrice" class="form-control-range range-slider" id="myRange" name="price" step="100">
+																	<span id="demo">@Model.MinAvaliableRentPrice</span>
+																</div>
 															</div>
 														</div>
 													</div>
+
+													
+
 
 													<div class="col-lg-12">
 														<div class="btn-wrapper text-center">
@@ -177,16 +179,17 @@
 														</select>
 													</div>
 
-													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-cog col-lg-4 col-md-6">
-														<div class="input-item input-item-name ltn__custom-icon">
-															<div class="col-md-9">
-																<label for="formControlRange">السعر :</label>
-																<p>أقل سعر متاح : <span> @Model.MinAvaliableSalePrice </span></p>
 
-																<input type="range" min="@Model.MinAvaliableSalePrice" max="20000000" class="form-control-range range-slider" id="myRange2" name="price" step="2000">
-															</div>
-															<div class="col-md-3">
-																<span id="demo2">@Model.MinAvaliableSalePrice</span>
+													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-cog col-lg-8 col-md-12">
+														<div class="input-item input-item-name ltn__custom-icon">
+															<div class="row">
+																<div class="col-lg-4 col-md-12">
+																	<h4 class="ltn__widget-title ltn__widget-title-border---">السعر : <p>أقل سعر متاح : <span> @Model.MinAvaliableSalePrice </span></p></h4>
+																</div>
+																<div class="col-lg-8 col-md-12">
+																	<input type="range" value="@Model.MinAvaliableSalePrice" min="@Model.MinAvaliableSalePrice" max="@Model.MaxAvaliableSalePrice" class="form-control-range range-slider" id="myRange2" name="price" step="5000">
+																	<span id="demo2">@Model.MinAvaliableSalePrice</span>
+																</div>
 															</div>
 														</div>
 													</div>
@@ -551,4 +554,29 @@
 		}
 	</script>
 
+
+
+	<script>
+
+	document.addEventListener("DOMContentLoaded", function () {
+		// Get the amount input field
+		const priceAmount = document.querySelector('.price_slider_amount .amount');
+    
+		// Get the slider handles (assuming the slider library updates their positions)
+		const sliderHandles = document.querySelectorAll('.slider-range .ui-slider-handle');
+
+		// Extract values on a specific event (e.g., button click or slider update)
+		document.querySelector('input[type="submit"]').addEventListener('click', function () {
+			const enteredPrice = priceAmount.value; // The value in the "amount" input field
+			const sliderMin = sliderHandles[0].style.left; // Position of the first handle
+			const sliderMax = sliderHandles[1].style.left; // Position of the second handle
+
+			// Log or use these values
+			console.log("Entered Price:", enteredPrice);
+			console.log("Slider Min:", sliderMin);
+					console.log("Slider Max:", sliderMax);
+		});
+	});
+
+	</script>
 }

@@ -19,6 +19,7 @@
         public decimal MinAvaliableRentPrice { get; set; }
         public decimal MinAvaliableSalePrice { get; set; }
 
-
+        public decimal MaxAvaliableRentPrice { get; set; }
+        public decimal MaxAvaliableSalePrice { get; set; }
     }
 }

@@ -2087,8 +2087,9 @@ wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 wwwroot\Modules\Helper.js
 wwwroot\Modules\Properties.js
-wwwroot\Uploads\DefaultImages\22.jpg
+wwwroot\Uploads\DefaultImages\14.jpg
 wwwroot\Uploads\DefaultImages\default-image.png
+wwwroot\Uploads\DefaultImages\logo.png
 wwwroot\Uploads\Properties\0c237bd6-5d45-4922-a56f-d40a8fca9a2e202410292.jpg
 wwwroot\Uploads\Properties\130223183-240x180_1a31392d-8d54-42e0-a0b0-18da247ea8c6.webp
 wwwroot\Uploads\Properties\130223183-240x180_2c05ce8b-cc2b-481a-9703-f5008ca622ea.webp

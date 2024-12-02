@@ -1,3 +1,4 @@
+using DAL.Models;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace RealEstate
@@ -34,21 +35,31 @@ namespace RealEstate
 			builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
 
-            //// using Access Denied
-            //builder.Services.ConfigureApplicationCookie(options =>
-            //{
-            //    options.AccessDeniedPath = "/Users/AccessDenied";
-            //    options.Cookie.Name = "Cookie";
-            //    options.Cookie.HttpOnly = true;
-            //    options.ExpireTimeSpan = TimeSpan.FromMinutes(720);
-            //    options.LoginPath = "/Account/Login";
-            //    options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
-            //    options.SlidingExpiration = true;
-            //});
-            //// end of Access Denied
+            // Retrieve logo path from the database
+            using (var scope = builder.Services.BuildServiceProvider().CreateScope())
+            {
+                var context = scope.ServiceProvider.GetRequiredService<RealEstateContext>();
+                var settingsData = context.TbSettings.FirstOrDefault();
+
+                builder.Configuration["SiteSettings:Logo"] = settingsData?.Logo ?? "/Uploads/DefaultImages/logo.jpg";
+                builder.Configuration["SiteSettings:WebsiteName"] = settingsData?.WebsiteName;
+                builder.Configuration["SiteSettings:WebsiteDescription"] = settingsData?.WebsiteDescription;
+                builder.Configuration["SiteSettings:FacebookLink"] = settingsData?.FacebookLink;
+                builder.Configuration["SiteSettings:TwitterLink"] = settingsData?.TwitterLink;
+                builder.Configuration["SiteSettings:InstgramLink"] = settingsData?.InstgramLink;
+                builder.Configuration["SiteSettings:LinkedinLink"] = settingsData?.LinkedinLink;
+                builder.Configuration["SiteSettings:YoutubeLink"] = settingsData?.YoutubeLink;
+                builder.Configuration["SiteSettings:Address"] = settingsData?.Address;
+                builder.Configuration["SiteSettings:ContactNumber"] = settingsData?.ContactNumber;
+                builder.Configuration["SiteSettings:Email"] = settingsData?.Email;
+                builder.Configuration["SiteSettings:MainPanner"] = settingsData?.MainPanner;
+                builder.Configuration["SiteSettings:PropertyDetailsPanner"] = settingsData?.PropertyDetailsPanner;
+
+            }
+            builder.Services.Configure<SiteSettings>(builder.Configuration.GetSection("SiteSettings"));
 
 
-            
+
 
 
             var app = builder.Build();

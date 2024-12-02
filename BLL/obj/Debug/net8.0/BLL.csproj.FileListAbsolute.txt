@@ -29,3 +29,4 @@ F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\obj\Debug\net8.0\BLL.dll
 F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\obj\Debug\net8.0\refint\BLL.dll
 F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\obj\Debug\net8.0\BLL.pdb
 F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\obj\Debug\net8.0\ref\BLL.dll
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\obj\Debug\net8.0\BLL.sourcelink.json

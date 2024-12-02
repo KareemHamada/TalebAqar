@@ -23,3 +23,4 @@ F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\DAL\obj\Debug\net8.0\DAL.dll
 F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\DAL\obj\Debug\net8.0\refint\DAL.dll
 F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\DAL\obj\Debug\net8.0\DAL.pdb
 F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\DAL\obj\Debug\net8.0\ref\DAL.dll
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\DAL\obj\Debug\net8.0\DAL.sourcelink.json

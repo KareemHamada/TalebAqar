@@ -340,18 +340,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3NvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Home/de.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxkZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Home/Dummy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEdW1teS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Home/dummy2.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxkdW1teTIuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -386,14 +374,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Shared/HomeLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEhvbWVMYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Shared/PartialViews/_PropertyList.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxWaWV3c1xfUHJvcGVydHlMaXN0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Shared/PartialViews/_PropertyList2.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxWaWV3c1xfUHJvcGVydHlMaXN0Mi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Shared/_ValidationScriptsPartial.cshtml]
