@@ -10,20 +10,17 @@
 			   data-property-image="@Model.PropertyImages.FirstOrDefault()?.ImageUrl"
 			   data-property-type="@Model.Type?.TypeName"
 			   data-property-status="@Model.Status?.StatusName">
-
-
 				<i class="flaticon-expand"></i>
 			</a>
 		</li>
 		<li>
 			<a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal"
 			   data-id="@Model.PropertyId"
-			   data-NOfAdvertisement="@Model.NumOfAdvertisement"
 			   data-image="@Model.PropertyImages.FirstOrDefault()?.ImageUrl"
 			   data-price="@Model.Price"
 			   data-status="@Model.Status?.StatusName"
 			   data-type="@Model.Type?.TypeName"
-			   onclick="addToWishlist(this.dataset.id,this.dataset.NumOfAdvertisement,this.dataset.image,this.dataset.price,this.dataset.status,this.dataset.type)">
+			   onclick="addToWishlist(this.dataset.id,this.dataset.image,this.dataset.price,this.dataset.status,this.dataset.type)">
 				<i class="flaticon-heart-1"></i>
 			</a>
 		</li>
