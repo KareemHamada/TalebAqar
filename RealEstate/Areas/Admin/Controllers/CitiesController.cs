@@ -1,7 +1,11 @@
-﻿namespace RealEstate.Areas.Admin.Controllers
-{ 
-	[Area("Admin")]
-	
+﻿using Microsoft.AspNetCore.Authorization;
+
+namespace RealEstate.Areas.Admin.Controllers
+{
+
+
+    [Authorize(Roles = "Admin,Data Entry")]
+    [Area("Admin")]
 	public class CitiesController : Controller
 	{
 		private readonly IUnitOfWork _unitOfWork;

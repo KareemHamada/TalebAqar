@@ -17,7 +17,7 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="~/Admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                <img src="@SiteSettings.Value.Logo" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
                 <a href="#" class="d-block">
@@ -48,6 +48,91 @@
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             خصائص العقار
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                    العقارات
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a asp-area="Admin" asp-controller="Properties" asp-action="Index" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>عرض العقارات</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-area="Admin" asp-controller="Properties" asp-action="Create" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>إضافة عقار جديد </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                    الحالات
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a asp-area="Admin" asp-controller="Statuses" asp-action="Index" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>عرض الحالات</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-area="Admin" asp-controller="Statuses" asp-action="Create" class="nav-link">
+                                        <i class="nav-icon fas fa-edit"></i>
+                                        <p>إضافة حالة جديدة</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                    الانواع
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a asp-area="Admin" asp-controller="Types" asp-action="Index" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>عرض الانواع</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-area="Admin" asp-controller="Types" asp-action="Create" class="nav-link">
+                                        <i class="nav-icon fas fa-edit"></i>
+                                        <p>إضافة نوع جديد</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                       
+                    </ul>
+                </li>
+                
+                <li class="nav-item has-treeview menu-open">
+                    <a href="#" class="nav-link active">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            المواقع
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
@@ -125,184 +210,120 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-copy"></i>
-                                <p>
-                                    الحالات
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
+                    </ul>
+                </li>
+
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            مالكى العقارات
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a asp-area="Admin" asp-controller="Owners" asp-action="Index" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>عرض الملاك</p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a asp-area="Admin" asp-controller="Statuses" asp-action="Index" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>عرض الحالات</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a asp-area="Admin" asp-controller="Statuses" asp-action="Create" class="nav-link">
-                                        <i class="nav-icon fas fa-edit"></i>
-                                        <p>إضافة حالة جديدة</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
-
-
-                        <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-copy"></i>
-                                <p>
-                                    الانواع
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
+                        <li class="nav-item">
+                            <a asp-area="Admin" asp-controller="Owners" asp-action="Create" class="nav-link">
+                                <i class="nav-icon fas fa-edit"></i>
+                                <p>إضافة مالك جديد</p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a asp-area="Admin" asp-controller="Types" asp-action="Index" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>عرض الانواع</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a asp-area="Admin" asp-controller="Types" asp-action="Create" class="nav-link">
-                                        <i class="nav-icon fas fa-edit"></i>
-                                        <p>إضافة نوع جديد</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-copy"></i>
-                                <p>
-                                    مالكى العقارات
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a asp-area="Admin" asp-controller="Owners" asp-action="Index" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>عرض الملاك</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a asp-area="Admin" asp-controller="Owners" asp-action="Create" class="nav-link">
-                                        <i class="nav-icon fas fa-edit"></i>
-                                        <p>إضافة مالك جديد</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-copy"></i>
-                                <p>
-                                    الاعدادات
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a asp-area="Admin" asp-controller="Settings" asp-action="Details" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>عرض الاعدادات</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a asp-area="Admin" asp-controller="Settings" asp-action="Edit" class="nav-link">
-                                        <i class="nav-icon fas fa-edit"></i>
-                                        <p>تعديل الاعدادات</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                     </ul>
                 </li>
+
                 
                 
-                    <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-copy"></i>
-                            <p>
-                                المستخدمين
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a asp-area="Admin" asp-controller="Users" asp-action="Index" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>عرض المستخدين</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a asp-area="" asp-controller="Account" asp-action="Register" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>إضافة مستخدم جديد</p>
-                                </a>
-                            </li>
+                
+                
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            المستخدمين
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a asp-area="Admin" asp-controller="Users" asp-action="Index" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>عرض المستخدين</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-area="" asp-controller="Account" asp-action="Register" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>إضافة مستخدم جديد</p>
+                            </a>
+                        </li>
 
-                        </ul>
-                    </li>
-
-
-                    <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-copy"></i>
-                            <p>
-                                الصلاحيات
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a asp-area="Admin" asp-controller="Roles" asp-action="Index" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>عرض الصلاحيات</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a asp-area="Admin" asp-controller="Roles" asp-action="Create" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>إضافة صلاحية جديدة</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                     
-                    
-                    @if(User.IsInRole("Admin")){
-                    }
+                    </ul>
+                </li>
 
 
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
-                            العقارات
+                            الصلاحيات
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a asp-area="Admin" asp-controller="Properties" asp-action="Index" class="nav-link">
+                            <a asp-area="Admin" asp-controller="Roles" asp-action="Index" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>عرض العقارات</p>
+                                <p>عرض الصلاحيات</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a asp-area="Admin" asp-controller="Properties" asp-action="Create" class="nav-link">
+                            <a asp-area="Admin" asp-controller="Roles" asp-action="Create" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>إضافة عقار جديد </p>
+                                <p>إضافة صلاحية جديدة</p>
                             </a>
                         </li>
                     </ul>
                 </li>
+                    
+               
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            الاعدادات
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a asp-area="Admin" asp-controller="Settings" asp-action="Details" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>عرض الاعدادات</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-area="Admin" asp-controller="Settings" asp-action="Edit" class="nav-link">
+                                <i class="nav-icon fas fa-edit"></i>
+                                <p>تعديل الاعدادات</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                @if (User.IsInRole("Admin"))
+                {
+
+
+                }
+
+
+
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

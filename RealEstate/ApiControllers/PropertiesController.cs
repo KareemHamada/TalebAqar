@@ -62,12 +62,12 @@ namespace RealEstate.ApiControllers
             }).ToListAsync();
         }
 
-
-        public async Task<IEnumerable<PropertyDTO>> Get([FromQuery] string? sortOrder)
+        [HttpGet("GetPropertiesForSale")]
+        public async Task<IEnumerable<PropertyDTO>> GetPropertiesForSale([FromQuery] string? sortOrder)
         {
 
             var query = _realEstateContext.TbProperties
-                .Where(x => x.CurrentState == true)
+                .Where(x => x.CurrentState == true && x.StatusId == 1)
                 .Select(p => new PropertyDTO
                 {
                     PropertyId = p.PropertyId,
@@ -97,6 +97,41 @@ namespace RealEstate.ApiControllers
             return await query.ToListAsync();
         }
 
+
+        [HttpGet("GetPropertiesForRent")]
+        public async Task<IEnumerable<PropertyDTO>> GetPropertiesForRent([FromQuery] string? sortOrder)
+        {
+
+            var query = _realEstateContext.TbProperties
+                .Where(x => x.CurrentState == true && x.StatusId == 2)
+                .Select(p => new PropertyDTO
+                {
+                    PropertyId = p.PropertyId,
+                    Area = p.Area,
+                    Bedrooms = p.Bedrooms,
+                    Bathrooms = p.Bathrooms,
+                    Price = p.Price,
+                    Negotiable = p.Negotiable,
+                    CreatedDate = p.CreatedDate,
+                    Description = p.Description,
+                    Status = p.Status.StatusName,
+                    Type = p.Type.TypeName,
+                    Address = p.Address.AddressName,
+                    City = p.City.CityName,
+                    Governorate = p.Governorate.GovernorateName,
+                    Image = p.PropertyImages.FirstOrDefault().ImageUrl,
+                });
+
+            query = sortOrder switch
+            {
+                "price_asc" => query.OrderBy(p => p.Price),
+                "price_desc" => query.OrderByDescending(p => p.Price),
+                "date_asc" => query.OrderBy(p => p.CreatedDate),
+                "date_desc" => query.OrderByDescending(p => p.CreatedDate),
+                _ => query // Default, no sorting
+            };
+            return await query.ToListAsync();
+        }
 
 
         [HttpGet("GetCities")]

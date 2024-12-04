@@ -1,10 +1,11 @@
 ﻿using DAL.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 
 namespace RealEstate.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("Admin")]
-
     public class SettingsController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

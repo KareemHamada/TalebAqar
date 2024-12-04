@@ -1,10 +1,12 @@
 ﻿using DAL.Data;
+using Microsoft.AspNetCore.Authorization;
 using NuGet.Configuration;
 using RealEstate.Areas.Admin.ViewModels;
 
 namespace RealEstate.Areas.Admin.Controllers
 {
-	[Area("Admin")]
+    [Authorize(Roles = "Admin")]
+    [Area("Admin")]
 	public class TypesController : Controller
 	{
 		private readonly IUnitOfWork _unitOfWork;

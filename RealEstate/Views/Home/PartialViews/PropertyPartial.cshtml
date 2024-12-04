@@ -13,7 +13,7 @@
 						<a href="/home/PropertyDetails/@item.PropertyId"><img src="@item.PropertyImages.FirstOrDefault()?.ImageUrl" alt="property"></a>
 						<div class="product-badge">
 							<ul>
-								<li class="sale-badge bg-green">@item.Status?.StatusName</li>
+								<li class="sale-badge @(item.Status?.StatusName == "للبيع" ? "bg-green---": "bg-green")">@item.Status?.StatusName</li>
 							</ul>
 						</div>
 						<div class="product-img-location-gallery">
@@ -36,7 +36,7 @@
 					</div>
 					<div class="product-info">
 						<div class="product-price">
-							<span>@item.Price <label>جنية /</label></span>
+							<span>@item.Price <label> /جنية</label></span>
 						</div>
 						<h2 class="product-title"><a href="/home/PropertyDetails/@item.PropertyId" tabindex="0">@item.Type?.TypeName</a></h2>
 

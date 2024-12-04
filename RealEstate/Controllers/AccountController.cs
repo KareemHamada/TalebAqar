@@ -1,6 +1,9 @@
-﻿namespace RealEstate.Controllers
+﻿using Microsoft.AspNetCore.Authorization;
+
+namespace RealEstate.Controllers
 {
-	public class AccountController : Controller
+    [Authorize(Roles = "Admin,Data Entry")]
+    public class AccountController : Controller
 	{
 		private readonly UserManager<ApplicationUser> _userManager;
 		private readonly SignInManager<ApplicationUser> _signInManager;
@@ -10,12 +13,14 @@
 			_userManager = userManager;
 			_signInManager = signInManager;
 		}
-
-		public IActionResult Register()
+        [Authorize(Roles = "Admin")]
+        public IActionResult Register()
 		{
 			return View();
 		}
-		[HttpPost]
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost]
 		public IActionResult Register(RegisterVM model)
 		{
 			if (!ModelState.IsValid) 
@@ -41,12 +46,14 @@
 			return View();
 		}
 
-
-		public IActionResult Login()
+        [Authorize(Roles = "Admin,Data Entry")]
+        public IActionResult Login()
 		{
 			return View();
 		}
-		[HttpPost]
+
+        [Authorize(Roles = "Admin,Data Entry")]
+        [HttpPost]
 		public IActionResult Login(LoginVM model)
 		{
 			// server side validation
@@ -78,20 +85,27 @@
             return View(model);
 		}
 
+        [Authorize(Roles = "Admin,Data Entry")]
 
-		public new IActionResult SignOut()
+        public new IActionResult SignOut()
 		{
 			_signInManager.SignOutAsync();
 
 			return RedirectToAction(nameof(Login));
 		}
 
-		public IActionResult ForgetPassword()
+
+
+        [Authorize(Roles = "Admin")]
+        public IActionResult ForgetPassword()
 		{
 			return View();
 		}
 
-		[HttpPost]
+
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost]
 		public IActionResult ForgetPassword(ForgetPasswordVM model)
 		{
 			// server side validation
@@ -124,12 +138,16 @@
 			ModelState.AddModelError(string.Empty, "User not found");
 			return View(model);
 		}
-		public IActionResult CheckYourInBox()
+
+        [Authorize(Roles = "Admin")]
+        public IActionResult CheckYourInBox()
 		{
 			return View();
 		}
 
-		public IActionResult ResetPassord(string email, string token)
+
+        [Authorize(Roles = "Admin")]
+        public IActionResult ResetPassord(string email, string token)
 		{
 			if (email is null || token is null)
 				return BadRequest();
@@ -139,8 +157,9 @@
 			return View();
 		}
 
+        [Authorize(Roles = "Admin")]
 
-		public IActionResult ResetPassord(ResetPassordVM model)
+        public IActionResult ResetPassord(ResetPassordVM model)
 		{
 			model.Token = TempData["Token"]?.ToString() ?? string.Empty;
 			model.Email = TempData["Email"]?.ToString() ?? string.Empty;
@@ -164,5 +183,12 @@
 			return View(model);
 		}
 
-	}
+        [Authorize(Roles = "Admin,Data Entry")]
+
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+
+    }
 }

@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿
+using Microsoft.AspNetCore.Authorization;
 
 namespace RealEstate.Areas.Admin.Controllers
 {
-	[Area("Admin")]
-
+    [Authorize(Roles = "Admin,Data Entry")]
+    [Area("Admin")]
 	public class OwnersController : Controller
 	{
 		private readonly IUnitOfWork _unitOfWork;

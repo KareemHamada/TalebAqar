@@ -1,11 +1,13 @@
 ﻿using DAL.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using System.Threading.Channels;
 
 namespace RealEstate.Areas.Admin.Controllers
-{ 
-	[Area("Admin")]
+{
+    [Authorize(Roles = "Admin,Data Entry")]
+    [Area("Admin")]
 	public class PropertiesController : Controller
 	{
         private readonly IUnitOfWork _unitOfWork;

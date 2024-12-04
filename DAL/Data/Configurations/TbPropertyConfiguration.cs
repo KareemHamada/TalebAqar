@@ -9,11 +9,9 @@
 			entity.Property(e => e.IsSoldOrRenteled).HasDefaultValue(false);
 
 			entity.Property(e=>e.NumOfAdvertisement).HasDefaultValue(1000);
+            entity.Property(e => e.NumOfViews).HasDefaultValue(0);
 
-			////////
-			//entity.Property(e => e.NumOfAdvertisement).ValueGeneratedOnAdd();
-
-			entity.HasOne(d => d.Address).WithMany(p => p.TbProperties).HasForeignKey(f => f.AddressId);
+              entity.HasOne(d => d.Address).WithMany(p => p.TbProperties).HasForeignKey(f => f.AddressId);
 
 			entity.HasOne(d => d.City).WithMany(p => p.TbProperties).HasForeignKey(f => f.CityId);
 

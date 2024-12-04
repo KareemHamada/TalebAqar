@@ -38,14 +38,14 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
 
-        <partial name="_NavBarPartial"></partial>
-        <partial name="_SideBarPartial"></partial>
+        <partial name="~/Areas/Admin/Views/Shared/_NavBarPartial.cshtml"></partial>
+        <partial name="~/Areas/Admin/Views/Shared/_SideBarPartial.cshtml"></partial>
 
         @RenderBody()
       
         <footer class="main-footer float-right">
-            
-                <strong>Copyright &copy;2024 <a href="/">Taleb Aqar</a>.</strong>
+
+            <strong>Copyright &copy;@DateTime.Now.Year <a href="/">Taleb Aqar</a>.</strong>
                 All rights reserved
         </footer>
 

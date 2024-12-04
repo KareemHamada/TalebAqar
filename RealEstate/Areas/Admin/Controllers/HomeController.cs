@@ -1,8 +1,11 @@
 ﻿using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RealEstate.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin,Data Entry")]
     [Area("Admin")]
+
     public class HomeController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc.ViewEngines;
+using Microsoft.EntityFrameworkCore;
 using RealEstate.ViewModels;
 
 namespace RealEstate.Controllers
@@ -58,12 +59,18 @@ namespace RealEstate.Controllers
 
 
             // minimum and maximum abaliable sale and rent prices
-            mainHomeVM.MinAvaliableRentPrice = await _realEstateContext.TbProperties.Where(a=>a.CurrentState == true && a.StatusId == 2).MinAsync(a=>a.Price);
-            mainHomeVM.MaxAvaliableRentPrice = await _realEstateContext.TbProperties.Where(a => a.CurrentState == true && a.StatusId == 2).MaxAsync(a => a.Price);
+            if (_realEstateContext.TbProperties.Any())
+            {
+                mainHomeVM.MinAvaliableRentPrice = await _realEstateContext.TbProperties.Where(a => a.CurrentState == true && a.StatusId == 2).MinAsync(a => a.Price);
+
+                mainHomeVM.MaxAvaliableRentPrice = await _realEstateContext.TbProperties.Where(a => a.CurrentState == true && a.StatusId == 2).MaxAsync(a => a.Price);
 
 
-            mainHomeVM.MinAvaliableSalePrice = await _realEstateContext.TbProperties.Where(a => a.CurrentState == true && a.StatusId == 1).MinAsync(a => a.Price);
-            mainHomeVM.MaxAvaliableSalePrice = await _realEstateContext.TbProperties.Where(a => a.CurrentState == true && a.StatusId == 1).MaxAsync(a => a.Price);
+                mainHomeVM.MinAvaliableSalePrice = await _realEstateContext.TbProperties.Where(a => a.CurrentState == true && a.StatusId == 1).MinAsync(a => a.Price);
+                mainHomeVM.MaxAvaliableSalePrice = await _realEstateContext.TbProperties.Where(a => a.CurrentState == true && a.StatusId == 1).MaxAsync(a => a.Price);
+
+            }
+           
 
 
 
@@ -85,7 +92,12 @@ namespace RealEstate.Controllers
             return View(model);
         }
 
-        public IActionResult PropertiesGrid()
+        public IActionResult PropertiesGridForSale()
+        {
+            return View();
+        }
+
+        public IActionResult PropertiesGridForRent()
         {
             return View();
         }
@@ -100,6 +112,13 @@ namespace RealEstate.Controllers
                 return BadRequest();
 
             PropertyDetailsVM vm = new();
+
+            var property = await _unitOfWork.Properties.GetAsync(id.Value);
+            property.NumOfViews += 1;
+
+            _unitOfWork.Properties.Update(property);
+            await _unitOfWork.SaveChangesAsync();
+
 
             vm.propertyVM = _mapper.Map<TbProperty, PropertyVM>(await _unitOfWork.Properties.GetWithNamesAsync(id.Value));
             vm.PropertiesInTheSameGovernorate = _mapper.Map<IEnumerable<TbProperty>, IEnumerable<PropertyVM>>(await _unitOfWork.Properties.PropertiesInTheSameGovernorate(vm.propertyVM.GovernorateId));

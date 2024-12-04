@@ -1,9 +1,11 @@
-﻿namespace RealEstate.Areas.Admin.Controllers
-{
-    [Area("Admin")]
-	//[Authorize(Roles = "Admin")]
+﻿using Microsoft.AspNetCore.Authorization;
 
-	public class UsersController : Controller
+namespace RealEstate.Areas.Admin.Controllers
+{
+    [Authorize(Roles = "Admin")]
+
+    [Area("Admin")]
+    public class UsersController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
 

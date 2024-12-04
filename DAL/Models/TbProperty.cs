@@ -48,7 +48,7 @@ public partial class TbProperty : IHasCurrentState
 
     public int? GovernorateId { get; set; }
 
-    public int? NumOfViews { get; set; }
+    public int NumOfViews { get; set; }
 
     public int NumOfAdvertisement { get; set; }
 

@@ -1,9 +1,35 @@
 [
   {
     "ContainingType": "RealEstate.ApiControllers.PropertiesController",
-    "Method": "Get",
-    "RelativePath": "api/Properties",
-    "HttpMethod": "",
+    "Method": "GetCities",
+    "RelativePath": "api/Properties/GetCities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "governorateId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RealEstate.DTOS.CitiesDTO, RealEstate, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RealEstate.ApiControllers.PropertiesController",
+    "Method": "GetPropertiesForRent",
+    "RelativePath": "api/Properties/GetPropertiesForRent",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -27,21 +53,21 @@
   },
   {
     "ContainingType": "RealEstate.ApiControllers.PropertiesController",
-    "Method": "GetCities",
-    "RelativePath": "api/Properties/GetCities",
+    "Method": "GetPropertiesForSale",
+    "RelativePath": "api/Properties/GetPropertiesForSale",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "governorateId",
-        "Type": "System.Int32",
+        "Name": "sortOrder",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[RealEstate.DTOS.CitiesDTO, RealEstate, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RealEstate.DTOS.PropertyDTO, RealEstate, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

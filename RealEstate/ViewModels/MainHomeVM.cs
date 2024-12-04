@@ -16,10 +16,10 @@
         public int NumOfForRental { get; set; }
 
 
-        public decimal MinAvaliableRentPrice { get; set; }
-        public decimal MinAvaliableSalePrice { get; set; }
+        public decimal MinAvaliableRentPrice { get; set; } = 0;
+        public decimal MinAvaliableSalePrice { get; set; } = 0;
 
-        public decimal MaxAvaliableRentPrice { get; set; }
-        public decimal MaxAvaliableSalePrice { get; set; }
+        public decimal MaxAvaliableRentPrice { get; set; } = 0;
+        public decimal MaxAvaliableSalePrice { get; set; } = 0;
     }
 }

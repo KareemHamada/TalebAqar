@@ -62,8 +62,8 @@
                                     <div class="ltn__main-menu">
                                         <ul>
                                             <li><a href="/">الرئيسية</a></li>
-                                            <li><a href="/Home/PropertiesGrid">جميع العقار</a></li>
-                                            <li><a href="/Home/ContactUs">تواصل معنا</a></li>
+                                            <li><a href="/Home/PropertiesGridForSale">جميع العقار المتاحة للبيع</a></li>
+                                            <li><a href="/Home/PropertiesGridForRent">جميع العقار المتاحة للإيجار</a></li>
                                             <li><a href="/Admin">الادمن</a></li>
                                         </ul>
                                     </div>
@@ -358,10 +358,11 @@
                                     </div>
                                     <div class="col-lg-6 col-12">
                                         <div class="modal-product-info">
-                                                <div class="d-flex align-items-center justify-content-space-around">
+                                            <div class="d-flex align-items-center justify-content-space-around">
                                                 <h3 id="modal-product-type" class="mb-0"></h3>
-                                                <span class="sale-badge bg-green p-1">للبيع</span>
+                                                <span id="modal-product-status" class="sale-badge bg-green p-1"></span>
                                             </div>
+                                                <span id="modal-product-id" class="d-none"></span>
 
                                             <div class="product-price">
                                                     <span id="modal-product-price"></span>
@@ -376,7 +377,9 @@
                                             <div class="ltn__product-details-menu-3">
                                                 <ul>
                                                     <li>
-                                                        <a href="#" class="" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
+                                                            <a href="#" class="" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal"
+                                                               onclick="addItemToWishlist()">
+                                                                
                                                             <i class="far fa-heart"></i>
                                                             <span>Add to Wishlist</span>
                                                         </a>
@@ -384,8 +387,7 @@
                                                 </ul>
                                             </div>
                                             <hr>
-                                           
-                                            <label class="float-end mb-0"><a class="text-decoration" href="product-details.html"><small>View Details</small></a></label>
+                                                <label class="float-end mb-0"><a id="modal-product-link" class="text-decoration" href=""><small>مشاهدة التفاصيل</small></a></label>
                                         </div>
                                     </div>
                                 </div>
@@ -420,7 +422,7 @@
                                         </div>
                                          <div class="modal-product-info">
 @*                                             <h5><a href="product-details.html">3 Rooms Manhattan</a></h5>
- *@                                         <p class="added-cart"><i class="fa fa-check-circle"></i>تمت الإضافة إلى المفضلة</p>
+ *@                                         <p class="added-cart" id="messageAdding"></p>
                                             <div class="btn-wrapper">
                                                 <a href="/home/wishlist" class="theme-btn-1 btn btn-effect-1">قائمة مفضلاتى</a>
                                             </div>
@@ -457,27 +459,36 @@
     <script src="~/Frontend/js/main.js"></script>
     <script>
         $('#quick_view_modal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget); // Button that triggered the modal
-        var propertyId = button.data('property-id');
-        var propertyType = button.data('property-type');
-        var propertyPrice = button.data('property-price');
-        var propertyDescription = button.data('property-description');
-        var propertyImage = button.data('property-image');
+            var button = $(event.relatedTarget); // Button that triggered the modal
+            var propertyId = button.data('property-id');
+            var propertyType = button.data('property-type');
+            var propertyPrice = button.data('property-price');
+            var propertyDescription = button.data('property-description');
+            var propertyImage = button.data('property-image');
+            var propertyStatus = button.data('property-status');
 
-        // Update modal content
-        $('#modal-product-type').text(propertyType);
-        $('#modal-product-price').text(propertyPrice + "جنية ");
-        // $('#modal-product-description').text(propertyDescription);
-        $('#modal-product-image').attr('src', propertyImage);
-
-         // Render the HTML inside the modal
-        $('#modal-product-description').html(propertyDescription);
+            // Update modal content
+            $('#modal-product-type').text(propertyType);
+            $('#modal-product-status').text(propertyStatus);
+            $('#modal-product-price').text(propertyPrice + "جنية ");
+            $('#modal-product-image').attr('src', propertyImage);
+            $('#modal-product-link').attr('href', "/home/PropertyDetails/" + propertyId);
+            $('#modal-product-id').text(propertyId);
+             // Render the HTML inside the modal
+            $('#modal-product-description').html(propertyDescription);
         });
     </script>
 
 
-    // Add to Wishlist
     <script>
+        function addItemToWishlist(){
+            const propertyId = document.getElementById("modal-product-id").innerHTML;
+            const imageUrl = document.getElementById("modal-product-image").src;
+            const price = document.getElementById("modal-product-price").innerHTML;
+            const status = document.getElementById("modal-product-status").innerHTML;
+            const type = document.getElementById("modal-product-type").innerHTML;
+            addToWishlist(propertyId,imageUrl, price, status,type);
+        }
         function addToWishlist(propertyId,imageUrl, price, status,type) {
 
 
@@ -498,7 +509,10 @@
                 localStorage.setItem("wishlist", JSON.stringify(wishlist));
                  updateWishlistCount();
                 // Show modal after adding
-                showWishlistModal(imageUrl);
+                showWishlistModal(imageUrl,"تمت الإضافة إلى المفضلة");
+            }else{
+             // Show modal if exist
+                showWishlistModal(imageUrl,"تمت الإضافة إلى المفضلة سابقا");
             }
         }
 
@@ -535,9 +549,14 @@
             loadWishlist(); // Refresh table
         }
 
-         function showWishlistModal(imageUrl) {
+         function showWishlistModal(imageUrl,message) {
+             console.log(imageUrl);
+                          console.log(message);
+
+             document.getElementById("messageAdding").innerHTML = `<i class="fa fa-check-circle"></i> ${message}`;
             // Populate modal content
             document.getElementById("wishlistModalImage").src = imageUrl || "~/Uploads/DefaultImages/default-image.png";
+
         }
 
 

@@ -1,6 +1,9 @@
-﻿namespace RealEstate.Areas.Admin.Controllers
+﻿using Microsoft.AspNetCore.Authorization;
+
+namespace RealEstate.Areas.Admin.Controllers
 {
-	[Area("Admin")]
+    [Authorize(Roles = "Admin")]
+    [Area("Admin")]
 	public class StatusesController : Controller
 	{
 		private readonly IUnitOfWork _unitOfWork;

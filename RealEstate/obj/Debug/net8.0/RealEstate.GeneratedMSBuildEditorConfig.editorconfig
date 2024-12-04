@@ -320,6 +320,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Account/CheckYourInBox.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDaGVja1lvdXJJbkJveC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -356,8 +360,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Home/PropertiesGrid.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9wZXJ0aWVzR3JpZC5jc2h0bWw=
+[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Home/PropertiesGridForRent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9wZXJ0aWVzR3JpZEZvclJlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Home/PropertiesGridForSale.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9wZXJ0aWVzR3JpZEZvclNhbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Home/PropertyDetails.cshtml]

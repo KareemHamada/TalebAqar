@@ -1,11 +1,13 @@
+using DAL;
 using DAL.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace RealEstate
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -15,16 +17,30 @@ namespace RealEstate
 
 
 
+            #region Configure service
             builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation()
-	        .AddViewOptions(options =>
-	        {
-		        options.HtmlHelperOptions.ClientValidationEnabled = true;
-	        });
+              .AddViewOptions(options =>
+              {
+                  options.HtmlHelperOptions.ClientValidationEnabled = true;
+              });
 
-			builder.Services.AddDbContext<RealEstateContext>(options =>
+            builder.Services.AddDbContext<RealEstateContext>(options =>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
+
+            builder.Services.ConfigureApplicationCookie(options =>
+            {
+                options.AccessDeniedPath = "/Account/AccessDenied";
+                options.Cookie.Name = "Cookie";
+                options.Cookie.HttpOnly = true;
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(720);
+                options.LoginPath = "/Account/Login";
+                options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
+                options.SlidingExpiration = true;
+            });
+
+
 
 
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
@@ -32,39 +48,52 @@ namespace RealEstate
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<RealEstateContext>().AddDefaultTokenProviders();
 
 
-			builder.Services.AddAutoMapper(typeof(Program).Assembly);
+            builder.Services.AddAutoMapper(typeof(Program).Assembly); 
+            #endregion
 
 
-            // Retrieve logo path from the database
-            using (var scope = builder.Services.BuildServiceProvider().CreateScope())
+
+            #region Update Database
+            // Group of services lifetime scopped
+            using var Scope = builder.Services.BuildServiceProvider().CreateScope();
+            // Services its self
+            var Services = Scope.ServiceProvider;
+
+            var LoggerFactory = Services.GetRequiredService<ILoggerFactory>();
+            try
             {
-                var context = scope.ServiceProvider.GetRequiredService<RealEstateContext>();
-                var settingsData = context.TbSettings.FirstOrDefault();
 
-                builder.Configuration["SiteSettings:Logo"] = settingsData?.Logo ?? "/Uploads/DefaultImages/logo.jpg";
-                builder.Configuration["SiteSettings:WebsiteName"] = settingsData?.WebsiteName;
-                builder.Configuration["SiteSettings:WebsiteDescription"] = settingsData?.WebsiteDescription;
-                builder.Configuration["SiteSettings:FacebookLink"] = settingsData?.FacebookLink;
-                builder.Configuration["SiteSettings:TwitterLink"] = settingsData?.TwitterLink;
-                builder.Configuration["SiteSettings:InstgramLink"] = settingsData?.InstgramLink;
-                builder.Configuration["SiteSettings:LinkedinLink"] = settingsData?.LinkedinLink;
-                builder.Configuration["SiteSettings:YoutubeLink"] = settingsData?.YoutubeLink;
-                builder.Configuration["SiteSettings:Address"] = settingsData?.Address;
-                builder.Configuration["SiteSettings:ContactNumber"] = settingsData?.ContactNumber;
-                builder.Configuration["SiteSettings:Email"] = settingsData?.Email;
-                builder.Configuration["SiteSettings:MainPanner"] = settingsData?.MainPanner;
-                builder.Configuration["SiteSettings:PropertyDetailsPanner"] = settingsData?.PropertyDetailsPanner;
+                // Ask CLR for creating object from DbContext Explicitly
+                var dbContext = Services.GetRequiredService<RealEstateContext>();
+                // Update-database
+                await dbContext.Database.MigrateAsync();
+
+                // Data Seeding
+                await ContextDataSeed.SeedAsync(dbContext, Services);
+
+
+                // Refresh site settings from the database
+                Services.LoadSettingsFromDatabase(builder.Configuration);
+
+
 
             }
+            catch (Exception ex)
+            {
+                var Logger = LoggerFactory.CreateLogger<Program>();
+                Logger.LogError(ex, "An error occured during appling the migration");
+            }
+
+            // Bind the updated configuration to the SiteSettings class
             builder.Services.Configure<SiteSettings>(builder.Configuration.GetSection("SiteSettings"));
-
-
+            //Scope.Dispose();
+            #endregion
 
 
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline. 
+            #region  Configure the HTTP request pipeline. 
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
@@ -80,6 +109,7 @@ namespace RealEstate
             app.UseAuthentication();
             app.UseAuthorization();
 
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapAreaControllerRoute(
@@ -94,6 +124,7 @@ namespace RealEstate
             });
 
 
+            #endregion
             app.Run();
         }
     }

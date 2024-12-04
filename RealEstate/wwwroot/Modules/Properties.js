@@ -1,8 +1,9 @@
 ﻿
 var ClsProperties = {
-    GetAll: function () {
+    GetPropertiesForSale: function () {
         const sortOrder = document.getElementById("sortOrder").value;
-        const url = `https://localhost:7102/api/Properties?sortOrder=${sortOrder}`;
+        const url = `https://localhost:7102/api/Properties/GetPropertiesForSale?sortOrder=${sortOrder}`;
+        console.log(url);
         Helper.AjaxCallGet(url, {}, "json",
             function (data) {
 
@@ -27,7 +28,33 @@ var ClsProperties = {
                 });
             }, function () { });
     },
+    GetPropertiesForRent: function () {
+        const sortOrder = document.getElementById("sortOrder").value;
+        const url = `https://localhost:7102/api/Properties/GetPropertiesForRent?sortOrder=${sortOrder}`;
+        Helper.AjaxCallGet(url, {}, "json",
+            function (data) {
 
+                $('#ItemPagination').pagination({
+                    dataSource: data,
+                    pageSize: 10,
+                    callback: function (data, pagination) {
+                        var htmlData = "";
+                        var htmlData2 = "";
+
+                        for (var i = 0; i < data.length; i++) {
+                            htmlData += ClsProperties.DrawItem(data[i]);
+                            htmlData2 += ClsProperties.DrawItem2(data[i]);
+
+                        }
+                        var d1 = document.getElementById('ItemArea1');
+                        var d2 = document.getElementById('ItemArea2');
+
+                        d1.innerHTML = htmlData;
+                        d2.innerHTML = htmlData2;
+                    }
+                });
+            }, function () { });
+    },
 
     Searching: function (statusId, typeId, governorateId, cityId, bedrooms, price) {
 
