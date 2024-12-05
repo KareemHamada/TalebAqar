@@ -28,6 +28,7 @@ namespace RealEstate.Controllers
         {
             MainHomeVM mainHomeVM = new ();
             mainHomeVM.FeaturedProperties = _mapper.Map<IEnumerable<TbProperty>, IEnumerable<PropertyVM>>(await _unitOfWork.Properties.FeaturedPropertiesAsync(10));
+
             mainHomeVM.LatestProperties = _mapper.Map<IEnumerable<TbProperty>, IEnumerable<PropertyVM>>(await _unitOfWork.Properties.LatestPropertiesAsync(6));
 
             //mainHomeVM.Setting = await _realEstateContext.TbSettings.FirstOrDefaultAsync();

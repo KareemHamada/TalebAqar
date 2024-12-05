@@ -171,7 +171,7 @@
                                 <p>يمكننا مساعدتك فى تحقيق حلمك بإمتلاكك منزل جديد </p>
                             </div>
                             <div class="btn-wrapper">
-                                <a class="btn btn-effect-3 btn-white" href="/Home/PropertiesGrid">اكتشف العقارات<i class="icon-left-arrow"></i></a>
+                                <a class="btn btn-effect-3 btn-white" href="/Home/PropertiesGridForSale">اكتشف العقارات<i class="icon-left-arrow"></i></a>
                             </div>
                         </div>
                     </div>
@@ -184,7 +184,7 @@
 
     <!-- FOOTER AREA START -->
     <footer class="ltn__footer-area">
-        <div class="footer-top-area  section-bg-2 plr--5">
+        @* <div class="footer-top-area  section-bg-2 plr--5">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xl-3 col-md-6 col-sm-6 col-12">
@@ -312,7 +312,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> *@
+        
+        
+        
+        
+        
+        
         <div class="ltn__copyright-area ltn__copyright-2 section-bg-7  plr--5">
             <div class="container-fluid ltn__border-top-2">
                 <div class="row">
@@ -457,6 +463,10 @@
     <script src="~/Frontend/js/plugins.js"></script>
     <!-- Main JS -->
     <script src="~/Frontend/js/main.js"></script>
+@*     <script src="https://cdn.jsdelivr.net/npm/dompurify@2.4.1/dist/purify.min.js"></script>
+ *@
+
+
     <script>
         $('#quick_view_modal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget); // Button that triggered the modal
@@ -475,7 +485,13 @@
             $('#modal-product-link').attr('href', "/home/PropertyDetails/" + propertyId);
             $('#modal-product-id').text(propertyId);
              // Render the HTML inside the modal
-            $('#modal-product-description').html(propertyDescription);
+            // var sanitizedHtml = DOMPurify.sanitize(propertyDescription);
+
+            // $('#modal-product-description').innerHTML = sanitizedHtml;
+
+
+
+            $('#modal-product-description').innerHTML(propertyDescription);
         });
     </script>
 

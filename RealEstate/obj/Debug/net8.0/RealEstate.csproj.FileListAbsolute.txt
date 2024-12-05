@@ -1154,3 +1154,6 @@ F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\Real
 F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\RealEstate.genruntimeconfig.cache
 F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\ref\RealEstate.dll
 F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\RealEstate.sourcelink.json
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\RealEstate\bin\Debug\net8.0\AngleSharp.dll
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\RealEstate\bin\Debug\net8.0\AngleSharp.Css.dll
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\RealEstate\bin\Debug\net8.0\HtmlSanitizer.dll

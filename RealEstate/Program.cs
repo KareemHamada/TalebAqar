@@ -104,6 +104,21 @@ namespace RealEstate
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+
+
+            // Add middleware for error handling
+            app.UseStatusCodePages(async context =>
+            {
+                var response = context.HttpContext.Response;
+
+                if (response.StatusCode == 404)
+                {
+                    response.Redirect("/Error/NotFound");
+                }
+            });
+
+
+
             app.UseRouting();
 
             app.UseAuthentication();

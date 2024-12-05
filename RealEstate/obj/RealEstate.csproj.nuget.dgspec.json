@@ -205,6 +205,10 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
+            "HtmlSanitizer": {
+              "target": "Package",
+              "version": "[8.1.870, )"
+            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[8.0.10, )"

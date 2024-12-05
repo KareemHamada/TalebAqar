@@ -3,7 +3,6 @@ var ClsProperties = {
     GetPropertiesForSale: function () {
         const sortOrder = document.getElementById("sortOrder").value;
         const url = `https://localhost:7102/api/Properties/GetPropertiesForSale?sortOrder=${sortOrder}`;
-        console.log(url);
         Helper.AjaxCallGet(url, {}, "json",
             function (data) {
 
@@ -78,10 +77,8 @@ var ClsProperties = {
             }
         });
 
-        console.log(url);
         Helper.AjaxCallGet(url, {}, "json",
             function (data) {
-                console.log(data);
                 var d1 = document.getElementById('ItemArea1');
                 var d2 = document.getElementById('ItemArea2');
                 $('#ItemPagination').pagination({
@@ -279,14 +276,6 @@ var ClsProperties = {
         const url = `https://localhost:7102/api/Properties/GetCities?governorateId=${governorateId}`;
         Helper.AjaxCallGet(url, {}, "json",
             function (data) {
-
-                //if ($('.nice-select').length) {
-                //    $('.nice-select').niceSelect('destroy');
-                //    $('.nice-select').niceSelect();
-                //}
-
-
-                //console.log(data);
                 const citySelect = document.getElementById("city");
 
                 // Clear all existing options
@@ -318,14 +307,6 @@ var ClsProperties = {
         const url = `https://localhost:7102/api/Properties/GetCities?governorateId=${governorateId}`;
         Helper.AjaxCallGet(url, {}, "json",
             function (data) {
-
-                //if ($('.nice-select').length) {
-                //    $('.nice-select').niceSelect('destroy');
-                //    $('.nice-select').niceSelect();
-                //}
-
-
-                //console.log(data);
                 const citySelect = document.getElementById("city2");
 
                 // Clear all existing options
