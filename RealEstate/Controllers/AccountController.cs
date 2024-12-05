@@ -2,7 +2,6 @@
 
 namespace RealEstate.Controllers
 {
-    [Authorize(Roles = "Admin,Data Entry")]
     public class AccountController : Controller
 	{
 		private readonly UserManager<ApplicationUser> _userManager;
@@ -46,13 +45,11 @@ namespace RealEstate.Controllers
 			return View();
 		}
 
-        [Authorize(Roles = "Admin,Data Entry")]
         public IActionResult Login()
 		{
 			return View();
 		}
 
-        [Authorize(Roles = "Admin,Data Entry")]
         [HttpPost]
 		public IActionResult Login(LoginVM model)
 		{
@@ -182,8 +179,6 @@ namespace RealEstate.Controllers
 
 			return View(model);
 		}
-
-        [Authorize(Roles = "Admin,Data Entry")]
 
         public IActionResult AccessDenied()
         {

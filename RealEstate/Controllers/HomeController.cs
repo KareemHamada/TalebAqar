@@ -115,6 +115,9 @@ namespace RealEstate.Controllers
             PropertyDetailsVM vm = new();
 
             var property = await _unitOfWork.Properties.GetAsync(id.Value);
+            if(property == null)
+                return NotFound();
+
             property.NumOfViews += 1;
 
             _unitOfWork.Properties.Update(property);
