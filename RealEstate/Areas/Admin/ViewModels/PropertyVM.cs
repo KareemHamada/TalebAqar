@@ -33,7 +33,7 @@ namespace RealEstate.Areas.Admin.ViewModels
 		public bool IsSoldOrRenteled { get; set; }
 		public DateTime? SoldOrRenteledDate { get; set; }
 
-		public string? Description { get; set; }
+        public string? Description { get; set; }
 
         public bool CurrentState { get; set; }
 
@@ -86,5 +86,14 @@ namespace RealEstate.Areas.Admin.ViewModels
 		// Navigation properties to ApplicationUser
 		public virtual ApplicationUser? CreatedByUser { get; set; }
 		public virtual ApplicationUser? UpdatedByUser { get; set; }
-	}
+
+
+
+
+        // Computed property for truncated description
+        public string TruncatedDescription =>
+            Description?.Length > 50
+                ? Description.Substring(0, 50) + "..."
+                : Description ?? string.Empty;
+    }
 }
