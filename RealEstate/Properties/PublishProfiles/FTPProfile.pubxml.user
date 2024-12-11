@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>ftp://win9080.site4now.net/site1</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="AngleSharp.Css.dll">
+      <publishTime>01/16/2023 00:45:24</publishTime>
+    </File>
+    <File Include="appsettings.Development.json">
+      <publishTime>10/12/2024 22:35:44</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>12/06/2024 16:00:17</publishTime>
+    </File>
+    <File Include="AutoMapper.dll">
+      <publishTime>02/07/2024 23:45:30</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

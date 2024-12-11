@@ -248,7 +248,7 @@
 									</ul>
 								</div>
 								<div class="product-description">
-									@Html.Raw(item.TruncatedDescription)
+									<a href="/home/PropertyDetails/@item.PropertyId">@Html.Raw(item.TruncatedDescription)</a>
 								</div>
 								<div class="product-img-location">
 									<ul>
@@ -363,7 +363,7 @@
 						<i class="flaticon-office"></i>
 					</div>
 					<h1><span class="counter animated fadeInDownBig">@Model.NumOfRealySold</span><span class="counterUp-icon">+</span> </h1>
-					<h6>عدد االعقارات التى تم تأجيرها</h6>
+					<h6>عدد العقارات التى تم تأجيرها</h6>
 				</div>
 			</div>
 
@@ -392,11 +392,11 @@
 				@foreach (var item in Model.PropertyTypes)
 				{
 					<div class="col-lg-4 col-md-6">
-						<div class="ltn__banner-item ltn__banner-style-4 text-color-white bg-image" data-bs-bg="@item.TypeImage" style="background-image: url(&quot;img/gallery/3.jpg&quot;);">
+						<div class="ltn__banner-item ltn__banner-style-4 text-color-white bg-image" data-bs-bg="@item.TypeImage">
 							<div class="ltn__banner-info">
-								<h3 class="animated fadeIn"><a href="shop.html">@item.Type</a></h3>
-								<p> العروض المتاحة</p>
-								<mark>@item.Count عقارات</mark>
+								<h3 class="animated fadeIn">@item.Type</h3>
+								<p> عدد العقارات المتاحة</p>
+								<mark>@item.Count عقار</mark>
 							</div>
 						</div>
 					</div>
@@ -433,27 +433,5 @@
 			output2.innerHTML = this.value;
 		}
 	</script>
-	<script>
 
-	document.addEventListener("DOMContentLoaded", function () {
-		// Get the amount input field
-		const priceAmount = document.querySelector('.price_slider_amount .amount');
-    
-		// Get the slider handles (assuming the slider library updates their positions)
-		const sliderHandles = document.querySelectorAll('.slider-range .ui-slider-handle');
-
-		// Extract values on a specific event (e.g., button click or slider update)
-		document.querySelector('input[type="submit"]').addEventListener('click', function () {
-			const enteredPrice = priceAmount.value; // The value in the "amount" input field
-			const sliderMin = sliderHandles[0].style.left; // Position of the first handle
-			const sliderMax = sliderHandles[1].style.left; // Position of the second handle
-
-			// Log or use these values
-			console.log("Entered Price:", enteredPrice);
-			console.log("Slider Min:", sliderMin);
-					console.log("Slider Max:", sliderMax);
-		});
-	});
-
-	</script>
 }

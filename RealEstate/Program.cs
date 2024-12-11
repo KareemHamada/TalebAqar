@@ -1,7 +1,3 @@
-using DAL;
-using DAL.Models;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace RealEstate
 {
@@ -75,8 +71,6 @@ namespace RealEstate
                 // Refresh site settings from the database
                 Services.LoadSettingsFromDatabase(builder.Configuration);
 
-
-
             }
             catch (Exception ex)
             {
@@ -93,10 +87,12 @@ namespace RealEstate
 
             var app = builder.Build();
 
+
+
             #region  Configure the HTTP request pipeline. 
             if (!app.Environment.IsDevelopment())
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Error/NotFound");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }

@@ -18,5 +18,9 @@
         public string Governorate { get; set; }
         public string Image { get; set; }
 
+
+        // Read-only property for the shortened description
+        public string ShortDescription { get; set; } // Now writable
+
     }
 }

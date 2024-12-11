@@ -17,401 +17,393 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RealEstate
 build_property.RootNamespace = RealEstate
-build_property.ProjectDir = F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\RealEstate\
+build_property.ProjectDir = D:\TalebAqar\RealEstate\RealEstate\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\RealEstate
+build_property.MSBuildProjectDirectory = D:\TalebAqar\RealEstate\RealEstate
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Addresses/Create.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Addresses/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRkcmVzc2VzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Addresses/Delete.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Addresses/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRkcmVzc2VzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Addresses/Details.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Addresses/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRkcmVzc2VzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Addresses/Edit.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Addresses/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRkcmVzc2VzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Addresses/Index.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Addresses/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRkcmVzc2VzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Addresses/PartialViews/CreateEditPartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Addresses/PartialViews/CreateEditPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRkcmVzc2VzXFBhcnRpYWxWaWV3c1xDcmVhdGVFZGl0UGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Addresses/PartialViews/DetailsDeletePartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Addresses/PartialViews/DetailsDeletePartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRkcmVzc2VzXFBhcnRpYWxWaWV3c1xEZXRhaWxzRGVsZXRlUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Cities/Create.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Cities/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2l0aWVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Cities/Delete.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Cities/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2l0aWVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Cities/Details.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Cities/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2l0aWVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Cities/Edit.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Cities/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2l0aWVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Cities/Index.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Cities/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2l0aWVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Cities/PartialViews/CreateEditPartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Cities/PartialViews/CreateEditPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2l0aWVzXFBhcnRpYWxWaWV3c1xDcmVhdGVFZGl0UGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Cities/PartialViews/DetailsDeletePartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Cities/PartialViews/DetailsDeletePartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2l0aWVzXFBhcnRpYWxWaWV3c1xEZXRhaWxzRGVsZXRlUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Governorates/Create.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Governorates/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR292ZXJub3JhdGVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Governorates/Delete.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Governorates/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR292ZXJub3JhdGVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Governorates/Details.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Governorates/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR292ZXJub3JhdGVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Governorates/Edit.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Governorates/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR292ZXJub3JhdGVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Governorates/Index.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Governorates/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR292ZXJub3JhdGVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Governorates/PartialViews/CreateEditPartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Governorates/PartialViews/CreateEditPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR292ZXJub3JhdGVzXFBhcnRpYWxWaWV3c1xDcmVhdGVFZGl0UGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Governorates/PartialViews/DetailsDeletePartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Governorates/PartialViews/DetailsDeletePartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR292ZXJub3JhdGVzXFBhcnRpYWxWaWV3c1xEZXRhaWxzRGVsZXRlUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Home/Index.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Owners/Create.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Owners/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3duZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Owners/Delete.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Owners/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3duZXJzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Owners/Details.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Owners/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3duZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Owners/Edit.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Owners/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3duZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Owners/Index.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Owners/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3duZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Owners/PartialViews/CreateEditPartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Owners/PartialViews/CreateEditPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3duZXJzXFBhcnRpYWxWaWV3c1xDcmVhdGVFZGl0UGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Owners/PartialViews/DetailsDeletePartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Owners/PartialViews/DetailsDeletePartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3duZXJzXFBhcnRpYWxWaWV3c1xEZXRhaWxzRGVsZXRlUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Properties/Create.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Properties/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvcGVydGllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Properties/Delete.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Properties/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvcGVydGllc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Properties/Details.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Properties/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvcGVydGllc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Properties/Edit.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Properties/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvcGVydGllc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Properties/Index.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Properties/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvcGVydGllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Properties/PartialViews/DetailsDeletePartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Properties/PartialViews/DetailsDeletePartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvcGVydGllc1xQYXJ0aWFsVmlld3NcRGV0YWlsc0RlbGV0ZVBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Roles/AddOrRemoveUsers.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Roles/AddOrRemoveUsers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZXNcQWRkT3JSZW1vdmVVc2Vycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Roles/Create.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Roles/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Roles/Delete.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Roles/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Roles/Details.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Roles/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Roles/Edit.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Roles/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Roles/Index.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Roles/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Roles/PartialViews/CreateEditPartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Roles/PartialViews/CreateEditPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZXNcUGFydGlhbFZpZXdzXENyZWF0ZUVkaXRQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Roles/PartialViews/DetailsDeletePartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Roles/PartialViews/DetailsDeletePartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZXNcUGFydGlhbFZpZXdzXERldGFpbHNEZWxldGVQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Settings/Details.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Settings/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2V0dGluZ3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Settings/Edit.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Settings/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2V0dGluZ3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Shared/_ButtonsPartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Shared/_ButtonsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9CdXR0b25zUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Shared/_NavBarPartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Shared/_NavBarPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9OYXZCYXJQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Shared/_SideBarPartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Shared/_SideBarPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9TaWRlQmFyUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Statuses/Create.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Statuses/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3RhdHVzZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Statuses/Delete.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Statuses/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3RhdHVzZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Statuses/Details.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Statuses/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3RhdHVzZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Statuses/Edit.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Statuses/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3RhdHVzZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Statuses/Index.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Statuses/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3RhdHVzZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Statuses/PartialViews/CreateEditPartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Statuses/PartialViews/CreateEditPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3RhdHVzZXNcUGFydGlhbFZpZXdzXENyZWF0ZUVkaXRQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Statuses/PartialViews/DetailsDeletePartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Statuses/PartialViews/DetailsDeletePartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3RhdHVzZXNcUGFydGlhbFZpZXdzXERldGFpbHNEZWxldGVQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Types/Create.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Types/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVHlwZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Types/Delete.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Types/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVHlwZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Types/Details.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Types/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVHlwZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Types/Edit.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Types/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVHlwZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Types/Index.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Types/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVHlwZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Types/PartialViews/CreateEditPartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Types/PartialViews/CreateEditPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVHlwZXNcUGFydGlhbFZpZXdzXENyZWF0ZUVkaXRQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Types/PartialViews/DetailsDeletePartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Types/PartialViews/DetailsDeletePartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVHlwZXNcUGFydGlhbFZpZXdzXERldGFpbHNEZWxldGVQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Users/Delete.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Users/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Users/Details.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Users/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Users/Edit.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Users/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Users/Error.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Users/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Users/Index.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Users/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Users/PartialViews/CreateEditPartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Users/PartialViews/CreateEditPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcUGFydGlhbFZpZXdzXENyZWF0ZUVkaXRQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Users/PartialViews/DetailsDeletePartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Users/PartialViews/DetailsDeletePartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcUGFydGlhbFZpZXdzXERldGFpbHNEZWxldGVQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/_ViewImports.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/_ViewStart.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Account/CheckYourInBox.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TalebAqar/RealEstate/RealEstate/Views/Account/CheckYourInBox.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDaGVja1lvdXJJbkJveC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Account/ForgetPassword.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Views/Account/ForgetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3JnZXRQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Account/Login.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Account/Register.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Account/ResetPassord.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Views/Account/ResetPassord.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3NvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Home/de.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxkZS5jc2h0bWw=
+[D:/TalebAqar/RealEstate/RealEstate/Views/Error/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcTm90Rm91bmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Home/Dummy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEdW1teS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Home/dummy2.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxkdW1teTIuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Home/Index.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Home/Map.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNYXAuY3NodG1s
+[D:/TalebAqar/RealEstate/RealEstate/Views/Home/PartialViews/PropertyModalPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYXJ0aWFsVmlld3NcUHJvcGVydHlNb2RhbFBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[D:/TalebAqar/RealEstate/RealEstate/Views/Home/PartialViews/PropertyPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYXJ0aWFsVmlld3NcUHJvcGVydHlQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Home/PropertiesGrid.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9wZXJ0aWVzR3JpZC5jc2h0bWw=
+[D:/TalebAqar/RealEstate/RealEstate/Views/Home/PropertiesGridForRent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9wZXJ0aWVzR3JpZEZvclJlbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Home/PropertyDetails.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Views/Home/PropertiesGridForSale.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9wZXJ0aWVzR3JpZEZvclNhbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TalebAqar/RealEstate/RealEstate/Views/Home/PropertyDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9wZXJ0eURldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Home/Search.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Views/Home/Search.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWFyY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Shared/AuthLayout.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Views/Home/Wishlist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxXaXNobGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TalebAqar/RealEstate/RealEstate/Views/Home/WishlistPropertyNotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxXaXNobGlzdFByb3BlcnR5Tm90Rm91bmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TalebAqar/RealEstate/RealEstate/Views/Shared/AuthLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEF1dGhMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Shared/Error.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Shared/HomeLayout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEhvbWVMYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Shared/PartialViews/_PropertyList.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxWaWV3c1xfUHJvcGVydHlMaXN0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Shared/PartialViews/_PropertyList2.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxWaWV3c1xfUHJvcGVydHlMaXN0Mi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/_ViewImports.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/_ViewStart.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Shared/_Layout.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-q8y2blj1gx
 
-[F:/Tech-X/RealEstate Files/TalebAqar/RealEstate/RealEstate/Views/Shared/_Layout.cshtml]
+[D:/TalebAqar/RealEstate/RealEstate/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-38w4zr4b1g

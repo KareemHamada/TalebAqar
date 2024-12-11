@@ -30,3 +30,19 @@ F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\obj\Debug\net8.0\refint\BLL.
 F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\obj\Debug\net8.0\BLL.pdb
 F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\obj\Debug\net8.0\ref\BLL.dll
 F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\obj\Debug\net8.0\BLL.sourcelink.json
+D:\TalebAqar\RealEstate\BLL\bin\Debug\net8.0\BLL.deps.json
+D:\TalebAqar\RealEstate\BLL\bin\Debug\net8.0\BLL.dll
+D:\TalebAqar\RealEstate\BLL\bin\Debug\net8.0\BLL.pdb
+D:\TalebAqar\RealEstate\BLL\bin\Debug\net8.0\DAL.dll
+D:\TalebAqar\RealEstate\BLL\bin\Debug\net8.0\DAL.pdb
+D:\TalebAqar\RealEstate\BLL\obj\Debug\net8.0\BLL.csproj.AssemblyReference.cache
+D:\TalebAqar\RealEstate\BLL\obj\Debug\net8.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\TalebAqar\RealEstate\BLL\obj\Debug\net8.0\BLL.AssemblyInfoInputs.cache
+D:\TalebAqar\RealEstate\BLL\obj\Debug\net8.0\BLL.AssemblyInfo.cs
+D:\TalebAqar\RealEstate\BLL\obj\Debug\net8.0\BLL.csproj.CoreCompileInputs.cache
+D:\TalebAqar\RealEstate\BLL\obj\Debug\net8.0\BLL.sourcelink.json
+D:\TalebAqar\RealEstate\BLL\obj\Debug\net8.0\BLL.csproj.Up2Date
+D:\TalebAqar\RealEstate\BLL\obj\Debug\net8.0\BLL.dll
+D:\TalebAqar\RealEstate\BLL\obj\Debug\net8.0\refint\BLL.dll
+D:\TalebAqar\RealEstate\BLL\obj\Debug\net8.0\BLL.pdb
+D:\TalebAqar\RealEstate\BLL\obj\Debug\net8.0\ref\BLL.dll

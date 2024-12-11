@@ -1,6 +1,3 @@
-using Microsoft.AspNetCore.Mvc.ViewEngines;
-using Microsoft.EntityFrameworkCore;
-using RealEstate.ViewModels;
 
 namespace RealEstate.Controllers
 {
@@ -12,13 +9,12 @@ namespace RealEstate.Controllers
         private readonly RealEstateContext _realEstateContext;
         private readonly ICompositeViewEngine _viewEngine;
 
-        public HomeController(IUnitOfWork unitOfWork, IMapper mapper, RealEstateContext realEstateContext, ICompositeViewEngine viewEngine)
+        public HomeController(IUnitOfWork unitOfWork, IMapper mapper, RealEstateContext realEstateContext, ICompositeViewEngine viewEngine, IConfiguration configuration)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _realEstateContext = realEstateContext;
             _viewEngine = viewEngine;
-
         }
 
       
@@ -58,22 +54,22 @@ namespace RealEstate.Controllers
             ViewBag.Types = new SelectList(await _unitOfWork.Types.GetAllAsync(), "TypeId", "TypeName");
 
 
-
             // minimum and maximum abaliable sale and rent prices
-            if (_realEstateContext.TbProperties.Any())
+            var rentalProperties = _realEstateContext.TbProperties.Where(a => a.CurrentState == true && a.StatusId == 2);
+            if (rentalProperties.Any())
             {
                 mainHomeVM.MinAvaliableRentPrice = await _realEstateContext.TbProperties.Where(a => a.CurrentState == true && a.StatusId == 2).MinAsync(a => a.Price);
 
                 mainHomeVM.MaxAvaliableRentPrice = await _realEstateContext.TbProperties.Where(a => a.CurrentState == true && a.StatusId == 2).MaxAsync(a => a.Price);
 
+            }
 
+            var SaleProperties = _realEstateContext.TbProperties.Where(a => a.CurrentState == true && a.StatusId == 1);
+            if (SaleProperties.Any())
+            {
                 mainHomeVM.MinAvaliableSalePrice = await _realEstateContext.TbProperties.Where(a => a.CurrentState == true && a.StatusId == 1).MinAsync(a => a.Price);
                 mainHomeVM.MaxAvaliableSalePrice = await _realEstateContext.TbProperties.Where(a => a.CurrentState == true && a.StatusId == 1).MaxAsync(a => a.Price);
-
             }
-           
-
-
 
             return View(mainHomeVM);
         }
@@ -90,6 +86,8 @@ namespace RealEstate.Controllers
                 bedrooms = bedrooms,
                 price = price
             };
+
+
             return View(model);
         }
 
@@ -107,6 +105,13 @@ namespace RealEstate.Controllers
             return View();
         }
 
+
+        public IActionResult WishlistPropertyNotFound(int id)
+        {
+            ViewBag.Id = id;
+            return View();
+        }
+
         public async Task<IActionResult> PropertyDetails(int? id)
         {
             if (!id.HasValue)
@@ -116,7 +121,8 @@ namespace RealEstate.Controllers
 
             var property = await _unitOfWork.Properties.GetAsync(id.Value);
             if(property == null)
-                return NotFound();
+                return RedirectToAction("WishlistPropertyNotFound", new { id = id });
+
 
             property.NumOfViews += 1;
 
@@ -130,11 +136,5 @@ namespace RealEstate.Controllers
 
         }
 
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }

@@ -1,0 +1,32 @@
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\bin\Release\net8.0\BLL.deps.json
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\bin\Release\net8.0\BLL.dll
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\bin\Release\net8.0\BLL.pdb
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\bin\Release\net8.0\DAL.dll
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\bin\Release\net8.0\DAL.pdb
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\obj\Release\net8.0\BLL.csproj.AssemblyReference.cache
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\obj\Release\net8.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\obj\Release\net8.0\BLL.AssemblyInfoInputs.cache
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\obj\Release\net8.0\BLL.AssemblyInfo.cs
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\obj\Release\net8.0\BLL.csproj.CoreCompileInputs.cache
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\obj\Release\net8.0\BLL.sourcelink.json
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\obj\Release\net8.0\BLL.csproj.Up2Date
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\obj\Release\net8.0\BLL.dll
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\obj\Release\net8.0\refint\BLL.dll
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\obj\Release\net8.0\BLL.pdb
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\BLL\obj\Release\net8.0\ref\BLL.dll
+D:\TalebAqar\RealEstate\BLL\bin\Release\net8.0\BLL.deps.json
+D:\TalebAqar\RealEstate\BLL\bin\Release\net8.0\BLL.dll
+D:\TalebAqar\RealEstate\BLL\bin\Release\net8.0\BLL.pdb
+D:\TalebAqar\RealEstate\BLL\bin\Release\net8.0\DAL.dll
+D:\TalebAqar\RealEstate\BLL\bin\Release\net8.0\DAL.pdb
+D:\TalebAqar\RealEstate\BLL\obj\Release\net8.0\BLL.csproj.AssemblyReference.cache
+D:\TalebAqar\RealEstate\BLL\obj\Release\net8.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\TalebAqar\RealEstate\BLL\obj\Release\net8.0\BLL.AssemblyInfoInputs.cache
+D:\TalebAqar\RealEstate\BLL\obj\Release\net8.0\BLL.AssemblyInfo.cs
+D:\TalebAqar\RealEstate\BLL\obj\Release\net8.0\BLL.csproj.CoreCompileInputs.cache
+D:\TalebAqar\RealEstate\BLL\obj\Release\net8.0\BLL.sourcelink.json
+D:\TalebAqar\RealEstate\BLL\obj\Release\net8.0\BLL.csproj.Up2Date
+D:\TalebAqar\RealEstate\BLL\obj\Release\net8.0\BLL.dll
+D:\TalebAqar\RealEstate\BLL\obj\Release\net8.0\refint\BLL.dll
+D:\TalebAqar\RealEstate\BLL\obj\Release\net8.0\BLL.pdb
+D:\TalebAqar\RealEstate\BLL\obj\Release\net8.0\ref\BLL.dll

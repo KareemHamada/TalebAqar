@@ -243,7 +243,7 @@ namespace DAL.Migrations
                     b.Property<int?>("FloorNum")
                         .HasColumnType("int");
 
-                    b.Property<bool?>("Furnished")
+                    b.Property<bool>("Furnished")
                         .HasColumnType("bit");
 
                     b.Property<int?>("GovernorateId")
@@ -263,7 +263,7 @@ namespace DAL.Migrations
                     b.Property<decimal?>("Longitude")
                         .HasColumnType("decimal(18, 15)");
 
-                    b.Property<bool?>("Negotiable")
+                    b.Property<bool>("Negotiable")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
                         .HasDefaultValue(true);
@@ -277,8 +277,10 @@ namespace DAL.Migrations
                         .HasColumnType("int")
                         .HasDefaultValue(1000);
 
-                    b.Property<int?>("NumOfViews")
-                        .HasColumnType("int");
+                    b.Property<int>("NumOfViews")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
 
                     b.Property<int?>("OwnerId")
                         .HasColumnType("int");

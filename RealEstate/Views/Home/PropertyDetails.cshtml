@@ -59,16 +59,16 @@
             <div class="row ltn__image-slider-5-active slick-arrow-1 slick-arrow-1-inner ltn__no-gutter-all">
 
 
-            @foreach (var image in Model.propertyVM.PropertyImages)
-                        {
-                            <div class="col-lg-12">
-                                <div class="ltn__img-slide-item-4">
-                                    <a href="@image.ImageUrl" data-rel="lightcase:myCollection">
-                                        <img src="@image.ImageUrl" alt="Property Image">
-                                    </a>
-                                </div>
-                            </div>
-                        }               
+                @foreach (var image in Model.propertyVM.PropertyImages)
+                {
+                    <div class="col-lg-12">
+                        <div class="ltn__img-slide-item-4">
+                            <a href="@image.ImageUrl" data-rel="lightcase:myCollection">
+                                <img src="@image.ImageUrl" alt="Property Image">
+                            </a>
+                        </div>
+                    </div>
+                }               
             </div>
         </div>
     </div>
@@ -116,7 +116,7 @@
                             }
                             <li><label>السعر:</label> <span>@Model.propertyVM.Price</span></li>
                             <li><label>قابل للتفاوض:</label>
-                                @if (Model.propertyVM.Negotiable ?? false)
+                                @if (Model.propertyVM.Negotiable)
                                 {
                                     <span>نعم</span>
                                 }
@@ -129,20 +129,46 @@
 
                             </ul>
                             <ul>
-                            <li><label>عدد مرات مشاهدة الإعلان:</label> <span>@Model.propertyVM.NumOfViews </span></li>
+                                <li><label>عدد مرات مشاهدة الإعلان:</label> <span>@Model.propertyVM.NumOfViews </span></li>
 
-                            @if (Model.propertyVM.FloorNum.HasValue)
+                                @if (Model.propertyVM.FloorNum.HasValue)
                                 {
                                 <li><label>الدور:</label> <span>@Model.propertyVM.FloorNum</span></li>
                                 }
-                            @if (Model.propertyVM.Insurance.HasValue)
+                                @if (Model.propertyVM.Insurance.HasValue)
                                 {
                                 <li><label>التأمين:</label> <span>@Model.propertyVM.Insurance</span></li>
                                 }
  
-                                <li><label>Beds:</label> <span>7</span></li>
-                                <li><label>Price:</label> <span>2</span></li>
-                                <li><label>Property Status:</label> <span>For Sale</span></li>
+                                <li><label>رقم مالك العقار:</label> <span>@Model.propertyVM.Owner?.PhoneNumber</span></li>
+                            <li>
+
+                                @{
+                                    // Retrieve and clean the phone number
+                                    var phoneNumber = Model.propertyVM.Owner?.PhoneNumber?.Replace(" ", "").Replace("-", "");
+                                    var egyptPhoneNumber = !string.IsNullOrEmpty(phoneNumber) ? $"20{phoneNumber}" : "";
+                                }
+                                <!-- WhatsApp Button -->
+                                @if (!string.IsNullOrEmpty(egyptPhoneNumber))
+                                {
+                                    <a href="https://wa.me/@egyptPhoneNumber"
+                                       target="_blank"
+                                       class="btn btn-success flex items-center gap-2 rounded-full bg-green-500 hover:bg-green-600 text-white px-4 py-2 shadow-md transition">
+                                        <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i>
+                                        <span class="text-white">واتساب</span>
+                                    </a>
+                                }
+
+                                <!-- Phone Call Button -->
+                                @if (!string.IsNullOrEmpty(egyptPhoneNumber))
+                                {
+                                    <a href="tel:+@egyptPhoneNumber"
+                                       class="btn btn-primary flex items-center gap-2 rounded-full bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 shadow-md transition">
+                                        <i class="fa-solid fa-phone" style="font-size: 20px;"></i>
+                                        <span class="text-white">اتصال</span>
+                                    </a>
+                                }
+                            </li>
                             </ul>
                         </div>
                                         

@@ -1,7 +1,4 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Authorization;
-using RealEstate.Areas.Admin.ViewModels;
-
+﻿
 namespace RealEstate.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin,Data Entry")]

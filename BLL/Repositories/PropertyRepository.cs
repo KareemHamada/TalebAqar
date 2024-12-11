@@ -12,7 +12,11 @@
 
 		}
 
-		public async Task<IEnumerable<TbProperty>> GetAllWithNamesAsync() => await _dbSet.Where(x => x.CurrentState == true).Include(p => p.Address)
+
+        public async Task<TbProperty?> GetAsync(int id) => await _dbSet.Where(x=>x.PropertyId == id && x.CurrentState == true).FirstOrDefaultAsync();
+
+
+        public async Task<IEnumerable<TbProperty>> GetAllWithNamesAsync() => await _dbSet.Where(x => x.CurrentState == true).Include(p => p.Address)
                .Include(p => p.City)
                .Include(p => p.Governorate)
                .Include(p => p.Owner)
@@ -40,7 +44,6 @@
 		{
 
 			property.CurrentState = true;
-
 			// Set CustomAutoIncrementColumn to the next value
 
 			var maxNumOfAdvertisement = await _dbSet.MaxAsync(p => (int?)p.NumOfAdvertisement) ?? 1000;

@@ -43,9 +43,10 @@
 
 
         public int NumOfOwners { get; set; }
+        public int NumOfPostsViews { get; set; }
 
 
-		public decimal TotalSalesProfit { get; set; }
+        public decimal TotalSalesProfit { get; set; }
 		public decimal MaximumSalesProfit { get; set; }
 		public decimal MinimumSalesProfit { get; set; }
 

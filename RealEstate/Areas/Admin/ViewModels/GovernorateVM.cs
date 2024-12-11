@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
+﻿
 namespace RealEstate.Areas.Admin.ViewModels
 {
     public class GovernorateVM

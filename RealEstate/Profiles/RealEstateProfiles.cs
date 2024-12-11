@@ -1,4 +1,5 @@
-﻿namespace RealEstate.Profiles
+﻿
+namespace RealEstate.Profiles
 {
 	public class RealEstateProfiles : Profile
 	{
@@ -12,6 +13,7 @@
 			CreateMap<TbProperty, PropertyVM>().ReverseMap();
             CreateMap<TbGovernorate, GovernorateVM>().ReverseMap();
             CreateMap<TbSetting, SettingVM>().ReverseMap();
+			//CreateMap<TbProperty, PropertyDTO>().ReverseMap();
 
         }
     }

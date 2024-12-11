@@ -1,9 +1,4 @@
-﻿using DAL.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.EntityFrameworkCore;
-using System.Security.Claims;
-using System.Threading.Channels;
-
+﻿
 namespace RealEstate.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin,Data Entry")]
@@ -63,8 +58,8 @@ namespace RealEstate.Areas.Admin.Controllers
 			var propertyRow = await _unitOfWork.Properties.AddAsync(property);
 
 
-			// Save images associated with the property
-			foreach (var image in images)
+            // Save images associated with the property
+            foreach (var image in images)
 			{
 				if (image != null && image.Length > 0)
 				{
@@ -87,26 +82,7 @@ namespace RealEstate.Areas.Admin.Controllers
 
         }
 
-		// Method to save image to the file system and return the image URL
-		//private async Task<string> SaveImageToFileSystem(IFormFile imageFile, string folderName)
-		//{
-		//	// Implement your logic to save the image file to a specific location
-		//	// and return the URL or path of the saved image
 
-		//	string imageUrl = Guid.NewGuid().ToString() + DateTime.Now.Year + DateTime.Now.Month + DateTime.Now.Day + imageFile.FileName;
-		//	var filePaths = Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\Uploads/" + folderName, imageUrl);
-
-
-
-		//	//string imageUrl = "your/image/path/" + imageFile.FileName;
-
-		//	using (var stream = new FileStream(filePaths, FileMode.Create))
-		//	{
-		//		await imageFile.CopyToAsync(stream);
-		//	}
-
-		//	return filePaths; // Return the URL or relative path
-		//}
 
 		private async Task<string> SaveImageAsync(IFormFile file, string folderName)
 		{

@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
+﻿
 namespace RealEstate.Areas.Admin.ViewModels
 {
 	public class PropertyVM
@@ -19,7 +18,7 @@ namespace RealEstate.Areas.Admin.ViewModels
         [Required(ErrorMessage = "أدخل تكلفة الاعلان")]
         public int CostPrice { get; set; }
 
-        public bool? Negotiable { get; set; }
+        public bool Negotiable { get; set; }
 
 
 		public string CreatedBy { get; set; } // Changed to string
@@ -61,7 +60,7 @@ namespace RealEstate.Areas.Admin.ViewModels
 
         public int? FloorNum { get; set; }
 
-        public bool? Furnished { get; set; }
+        public bool Furnished { get; set; }
 
         public int? Insurance { get; set; }
 
@@ -92,8 +91,8 @@ namespace RealEstate.Areas.Admin.ViewModels
 
         // Computed property for truncated description
         public string TruncatedDescription =>
-            Description?.Length > 50
-                ? Description.Substring(0, 50) + "..."
+            Description?.Length > 40
+                ? Description.Substring(0, 40) + "..."
                 : Description ?? string.Empty;
     }
 }

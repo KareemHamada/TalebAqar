@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JUFB9R5OoSM=",
+  "dgSpecHash": "/cGAVKnEkG8=",
   "success": true,
-  "projectFilePath": "F:\\Tech-X\\RealEstate Files\\TalebAqar\\RealEstate\\DAL\\DAL.csproj",
+  "projectFilePath": "D:\\TalebAqar\\RealEstate\\DAL\\DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kareem\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Kareem\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

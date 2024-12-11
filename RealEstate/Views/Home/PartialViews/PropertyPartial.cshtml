@@ -41,8 +41,10 @@
 						<h2 class="product-title"><a href="/home/PropertyDetails/@item.PropertyId" tabindex="0">@item.Type?.TypeName</a></h2>
 
 						<div class="product-description">
-							@Html.Raw(item.TruncatedDescription)
+							<a href="/home/PropertyDetails/@item.PropertyId">@Html.Raw(item.TruncatedDescription)</a>
+							
 						</div>
+
 						<ul class="ltn__list-item-2 ltn__list-item-2-before">
 							<li>
 								<span>@item.Bedrooms <i class="flaticon-bed"></i></span>

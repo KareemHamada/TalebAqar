@@ -16,7 +16,7 @@ public partial class TbProperty : IHasCurrentState
     public int CostPrice { get; set; }
 
 
-    public bool? Negotiable { get; set; }
+    public bool Negotiable { get; set; }
 
 	// Change these to string
 	[ForeignKey(nameof(CreatedByUser))]
@@ -60,7 +60,7 @@ public partial class TbProperty : IHasCurrentState
 
     public int? FloorNum { get; set; }
 
-    public bool? Furnished { get; set; }
+    public bool Furnished { get; set; }
 
     public int? Insurance { get; set; }
 

@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
-using DAL.Data;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace DAL
+﻿namespace DAL
 {
     public static class ContextDataSeed
     {
@@ -67,6 +58,25 @@ namespace DAL
                     if (Statuses is not null && Statuses.Any())
                     {
                         await dbContext.TbStatuses.AddRangeAsync(Statuses);
+                        await dbContext.SaveChangesAsync();
+                    }
+
+                }
+
+
+                // for statuses
+                if (!dbContext.TbSettings.Any())
+                {
+                    //read statueses from file as string
+                    var SettingData = await File.ReadAllTextAsync("../DAL/Data/DataSeed/setting.json");
+
+                    // transform into C# objects
+                    var setting = JsonSerializer.Deserialize<List<TbSetting>>(SettingData);
+
+                    // add to db & save
+                    if (setting is not null && setting.Any())
+                    {
+                        await dbContext.TbSettings.AddRangeAsync(setting);
                         await dbContext.SaveChangesAsync();
                     }
 

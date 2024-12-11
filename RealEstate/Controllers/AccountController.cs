@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-
+﻿
 namespace RealEstate.Controllers
 {
     public class AccountController : Controller
@@ -82,7 +81,6 @@ namespace RealEstate.Controllers
             return View(model);
 		}
 
-        [Authorize(Roles = "Admin,Data Entry")]
 
         public new IActionResult SignOut()
 		{

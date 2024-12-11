@@ -1,6 +1,4 @@
-﻿using DAL.Data;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
+﻿
 
 namespace RealEstate.Areas.Admin.Controllers
 {

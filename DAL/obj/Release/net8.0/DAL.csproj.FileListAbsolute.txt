@@ -1,0 +1,26 @@
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\DAL\bin\Release\net8.0\DAL.deps.json
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\DAL\bin\Release\net8.0\DAL.dll
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\DAL\bin\Release\net8.0\DAL.pdb
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\DAL\obj\Release\net8.0\DAL.csproj.AssemblyReference.cache
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\DAL\obj\Release\net8.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\DAL\obj\Release\net8.0\DAL.AssemblyInfoInputs.cache
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\DAL\obj\Release\net8.0\DAL.AssemblyInfo.cs
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\DAL\obj\Release\net8.0\DAL.csproj.CoreCompileInputs.cache
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\DAL\obj\Release\net8.0\DAL.sourcelink.json
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\DAL\obj\Release\net8.0\DAL.dll
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\DAL\obj\Release\net8.0\refint\DAL.dll
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\DAL\obj\Release\net8.0\DAL.pdb
+F:\Tech-X\RealEstate Files\TalebAqar\RealEstate\DAL\obj\Release\net8.0\ref\DAL.dll
+D:\TalebAqar\RealEstate\DAL\bin\Release\net8.0\DAL.deps.json
+D:\TalebAqar\RealEstate\DAL\bin\Release\net8.0\DAL.dll
+D:\TalebAqar\RealEstate\DAL\bin\Release\net8.0\DAL.pdb
+D:\TalebAqar\RealEstate\DAL\obj\Release\net8.0\DAL.csproj.AssemblyReference.cache
+D:\TalebAqar\RealEstate\DAL\obj\Release\net8.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\TalebAqar\RealEstate\DAL\obj\Release\net8.0\DAL.AssemblyInfoInputs.cache
+D:\TalebAqar\RealEstate\DAL\obj\Release\net8.0\DAL.AssemblyInfo.cs
+D:\TalebAqar\RealEstate\DAL\obj\Release\net8.0\DAL.csproj.CoreCompileInputs.cache
+D:\TalebAqar\RealEstate\DAL\obj\Release\net8.0\DAL.sourcelink.json
+D:\TalebAqar\RealEstate\DAL\obj\Release\net8.0\DAL.dll
+D:\TalebAqar\RealEstate\DAL\obj\Release\net8.0\refint\DAL.dll
+D:\TalebAqar\RealEstate\DAL\obj\Release\net8.0\DAL.pdb
+D:\TalebAqar\RealEstate\DAL\obj\Release\net8.0\ref\DAL.dll

@@ -1,7 +1,4 @@
-﻿using DAL.Data;
-using DAL.Interfaces;
-
-namespace BLL.Repositories
+﻿namespace BLL.Repositories
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class, IHasCurrentState
 	{

@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using Microsoft.AspNetCore.Authorization;
-
+﻿
 namespace RealEstate.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin,Data Entry")]
@@ -146,10 +144,10 @@ namespace RealEstate.Areas.Admin.Controllers
 			homeVM.NumOfOwners = await _context.TbOwners.CountAsync();
 
 
-			// profit
+			homeVM.NumOfPostsViews = await _context.TbProperties.SumAsync(x=>x.NumOfViews);
 
             // sales
-			homeVM.TotalSalesProfit = await _context.TbProperties.Where(a => a.StatusId == 1).SumAsync(a => a.CostPrice);
+            homeVM.TotalSalesProfit = await _context.TbProperties.Where(a => a.StatusId == 1).SumAsync(a => a.CostPrice);
 
 			var MaximumSalesProfit = await _context.TbProperties.Where(a => a.StatusId == 1).MaxAsync(a => (decimal?)a.CostPrice);
 			homeVM.MaximumSalesProfit = MaximumSalesProfit ?? 0;

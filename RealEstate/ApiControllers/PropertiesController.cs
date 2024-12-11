@@ -1,16 +1,17 @@
-﻿using RealEstate.DTOS;
-
-namespace RealEstate.ApiControllers
+﻿namespace RealEstate.ApiControllers
 {
 	[Route("api/[controller]")]
 	[ApiController]
 	public class PropertiesController : ControllerBase
 	{
         private readonly RealEstateContext _realEstateContext;
+        private readonly IMapper _mapper;
 
-        public PropertiesController(RealEstateContext realEstateContext)
+        public PropertiesController(RealEstateContext realEstateContext, IMapper mapper)
         {
             _realEstateContext = realEstateContext;
+            _mapper = mapper;
+
         }
 
         [HttpGet("PropertiesSearchAsync")]
@@ -59,6 +60,8 @@ namespace RealEstate.ApiControllers
                 City = p.City.CityName,
                 Governorate = p.Governorate.GovernorateName,
                 Image = p.PropertyImages.FirstOrDefault().ImageUrl,
+                ShortDescription = p.Description.Length > 40 ? p.Description.Substring(0, 40) + "..." : p.Description
+
             }).ToListAsync();
         }
 
@@ -84,6 +87,8 @@ namespace RealEstate.ApiControllers
                     City = p.City.CityName,
                     Governorate = p.Governorate.GovernorateName,
                     Image = p.PropertyImages.FirstOrDefault().ImageUrl,
+                    ShortDescription = p.Description.Length > 40 ? p.Description.Substring(0, 40) + "..." : p.Description
+
                 });
 
             query = sortOrder switch
@@ -120,6 +125,8 @@ namespace RealEstate.ApiControllers
                     City = p.City.CityName,
                     Governorate = p.Governorate.GovernorateName,
                     Image = p.PropertyImages.FirstOrDefault().ImageUrl,
+                    ShortDescription = p.Description.Length > 40 ? p.Description.Substring(0, 40) + "..." : p.Description
+
                 });
 
             query = sortOrder switch

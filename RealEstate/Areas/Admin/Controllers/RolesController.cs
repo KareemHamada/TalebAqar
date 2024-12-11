@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-
+﻿
 namespace RealEstate.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin")]
