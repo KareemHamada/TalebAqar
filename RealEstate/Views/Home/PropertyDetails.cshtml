@@ -174,10 +174,15 @@
                                         
      
 
+                        
+
+                    @if (Model.propertyVM.Longitude.HasValue && Model.propertyVM.Latitude.HasValue)
+                    {
                         <h4 class="title-2">الموقع</h4>
-                           
                         <!-- Map Container -->
                         <div id="map"></div>
+                    }
+                        
 
                         
                     </div>
@@ -210,24 +215,32 @@
 
 @section Scripts {
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script>
-        // Initialize the map
-        const map = L.map('map').setView([0, 0], 2);
-        let marker = L.marker([0, 0]).addTo(map);
 
-        // Add OpenStreetMap tiles
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '© OpenStreetMap'
-        }).addTo(map);
+        @if (Model.propertyVM.Longitude.HasValue && Model.propertyVM.Latitude.HasValue)
+        {
+        <script>
 
-        const lat = parseFloat(@Model.propertyVM.Latitude);
-        const lng = parseFloat(@Model.propertyVM.Longitude);
+                // Initialize the map
+                const map = L.map('map').setView([0, 0], 2);
+                let marker = L.marker([0, 0]).addTo(map);
 
-        if (!isNaN(lat) && !isNaN(lng)) {
-            // Set marker position and center the map
-            marker.setLatLng([lat, lng]);
-            map.setView([lat, lng], 10);
+                // Add OpenStreetMap tiles
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '© OpenStreetMap'
+                }).addTo(map);
+
+            const lat = parseFloat(@Model.propertyVM.Latitude);
+            const lng = parseFloat(@Model.propertyVM.Longitude);
+
+            if (!isNaN(lat) && !isNaN(lng))
+            {
+                // Set marker position and center the map
+                marker.setLatLng([lat, lng]);
+                map.setView([lat, lng], 10);
+            }
+        </script>
+
         }
-    </script>
+        
 }

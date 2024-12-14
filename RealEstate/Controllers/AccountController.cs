@@ -68,10 +68,11 @@ namespace RealEstate.Controllers
 					var result = _signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, false).Result;
 
 					if (result.Succeeded)
-						return RedirectToAction(nameof(HomeController.Index), nameof(HomeController).Replace("Controller", string.Empty));
+                        //return RedirectToAction(nameof(HomeController.Index), nameof(HomeController).Replace("Controller", string.Empty));
+                        return RedirectToAction("Index", "Home", new { area = "AdminArea289" });
 
 
-					ModelState.AddModelError(string.Empty, "الاميل او الباسورد غير صحيح");
+                    ModelState.AddModelError(string.Empty, "الاميل او الباسورد غير صحيح");
 
 					return View();
 				}

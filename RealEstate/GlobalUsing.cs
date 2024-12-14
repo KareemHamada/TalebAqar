@@ -5,7 +5,7 @@ global using Microsoft.EntityFrameworkCore;
 global using DAL.Models;
 global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.AspNetCore.Mvc.Rendering;
-global using RealEstate.Areas.Admin.ViewModels;
+global using RealEstate.Areas.AdminArea289.ViewModels;
 global using AutoMapper;
 global using System.ComponentModel.DataAnnotations;
 global using RealEstate.Models;

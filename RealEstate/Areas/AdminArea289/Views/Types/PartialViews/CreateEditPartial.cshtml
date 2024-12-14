@@ -1,0 +1,27 @@
+﻿@model TypeVM
+
+<div class="card-body">
+	<input type="hidden" asp-for="TypeId" />
+	<span class="text-danger" class="text-danger" asp-validation-for="TypeId"></span>
+
+	<input type="hidden" asp-for="CurrentState" />
+
+
+	<div class="form-group">
+		<label asp-for="TypeName" for="exampleInputText">الحالة</label>
+		<input asp-for="TypeName" type="text" class="form-control" id="exampleInputText" placeholder="أدخل نوع العقار">
+		<span class="text-danger" class="text-danger" asp-validation-for="TypeName"></span>
+	</div>
+
+	<div class="form-check">
+		<input asp-for="ShowHomeRoomNumber" type="checkbox" class="form-check-input" id="exampleCheck1">
+		<label asp-for="ShowHomeRoomNumber" class="form-check-label" for="exampleCheck1" checked="@Model.ShowHomeRoomNumber ?? false">عرض عدد الغرف معها فى الشاشة الرئيسية</label>
+	</div>
+
+	@* image *@
+	<div class="form-group">
+		<label for="TypeImage">الصورة</label>
+		<input type="file" name="TypeImage" id="TypeImage" accept="image/*" class="form-control-file" />
+	</div>
+
+</div>

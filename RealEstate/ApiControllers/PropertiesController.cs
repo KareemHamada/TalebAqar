@@ -15,7 +15,6 @@
         }
 
         [HttpGet("PropertiesSearchAsync")]
-
         public async Task<IEnumerable<PropertyDTO>> PropertiesSearchAsync([FromQuery] int? statusId,int? typeId,int? governorateId, int? cityId, int? bedrooms, int? price, string sortOrder)
         {
             var query = _realEstateContext.TbProperties.Where(x => x.CurrentState == true);
@@ -23,13 +22,13 @@
             if (statusId.HasValue)
                 query = query.Where(p => p.StatusId == statusId.Value);
 
-            if (typeId.HasValue)
+            if (typeId.HasValue && typeId != 0)
                 query = query.Where(p => p.TypeId == typeId.Value);
-            if (governorateId.HasValue)
+            if (governorateId.HasValue && governorateId != 0)
                 query = query.Where(p => p.GovernorateId == governorateId.Value);
-            if (cityId.HasValue)
+            if (cityId.HasValue && cityId != 0)
                 query = query.Where(p => p.CityId == cityId.Value);
-            if (bedrooms.HasValue)
+            if (bedrooms.HasValue && bedrooms != 0)
                 query = query.Where(p => p.Bedrooms == bedrooms.Value);
             if (price.HasValue)
                 query = query.Where(p => p.Price <= price.Value);

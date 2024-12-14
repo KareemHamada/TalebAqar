@@ -1,0 +1,18 @@
+﻿@model TypeVM
+
+<div class="card-body">
+	<span class="text-danger" class="text-danger" asp-validation-for="TypeId"></span>
+
+	<div class="form-group">
+		<label asp-for="TypeName" for="exampleInputText">نوع العقار</label>
+		<input asp-for="TypeName" type="text" class="form-control" id="exampleInputText" disabled>
+	</div>
+
+
+
+	<div class="form-check">
+		<input disabled asp-for="ShowHomeRoomNumber" type="checkbox" class="form-check-input" id="exampleCheck1">
+		<label asp-for="ShowHomeRoomNumber" class="form-check-label" for="exampleCheck1" checked="@Model.ShowHomeRoomNumber ?? false">عرض عدد الغرف معها فى الشاشة الرئيسية</label>
+	</div>
+
+</div>

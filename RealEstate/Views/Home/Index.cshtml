@@ -100,22 +100,22 @@
 
 													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-4 col-md-6">
 														<select name="typeId" class="nice-select" asp-items="ViewBag.Types">
-															<option value="@null">نوع العقار</option>
+															<option value="0">نوع العقار</option>
 														</select>
 													</div>
 													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-car col-lg-4 col-md-6">
 														<select id="governorate" name="governorateId" class="nice-select" asp-items="ViewBag.Governorates" onchange="ClsProperties.GetAllCitiesForRent()">
-															<option value="@null">المحافظة</option>
+															<option value="0">المحافظة</option>
 														</select>
 													</div>
 													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-meter col-lg-4 col-md-6">
 														<select id="city" name="cityId" class="nice-select">
-															<option value="">المدينة</option>
+															<option value="0">المدينة</option>
 														</select>
 													</div>
 													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-ring col-lg-4 col-md-6">
 														<select name="bedrooms" class="nice-select">
-															<option value=" ">عدد الغرف</option>
+															<option value="0">عدد الغرف</option>
 															<option value="1">1</option>
 															<option value="2">2</option>
 															<option value="3">3</option>
@@ -156,22 +156,22 @@
 
 													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-4 col-md-6">
 														<select name="typeId" class="nice-select" asp-items="ViewBag.Types">
-															<option value="@null">نوع العقار</option>
+															<option value="0">نوع العقار</option>
 														</select>
 													</div>
 													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-car col-lg-4 col-md-6">
 														<select id="governorate2" name="governorateId" class="nice-select" asp-items="ViewBag.Governorates" onchange="ClsProperties.GetAllCitiesForSale()">
-															<option value="@null">المحافظة</option>
+															<option value="0">المحافظة</option>
 														</select>
 													</div>
 													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-meter col-lg-4 col-md-6">
 														<select id="city2" name="cityId" class="nice-select">
-															<option value="">المدينة</option>
+															<option value="0">المدينة</option>
 														</select>
 													</div>
 													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-ring col-lg-4 col-md-6">
 														<select name="bedrooms" class="nice-select">
-															<option value=" ">عدد الغرف</option>
+															<option value="0">عدد الغرف</option>
 															<option>1</option>
 															<option>2</option>
 															<option>3</option>
@@ -242,11 +242,18 @@
 								<a href="/home/PropertyDetails/@item.PropertyId"><img src="@item.PropertyImages.FirstOrDefault().ImageUrl" alt="#"></a>
 							</div>
 							<div class="product-info">
-								<div class="product-badge">
+								<div class="d-flex align-items-center justify-content-space-around">
+									<h4 class="product-title"><a href="/home/PropertyDetails/@item.PropertyId" tabindex="0">@item.Type?.TypeName</a></h4>
+
+									<span style="display: inline-block; width: 4ch;"></span>
+
+									<h4 class="product-title"><a href="/home/PropertyDetails/@item.PropertyId" tabindex="0">@item.Status?.StatusName</a></h4>
+								</div>
+								@* <div class="product-badge">
 									<ul>
 										<li class="sale-badg">@item.Status?.StatusName</li>
 									</ul>
-								</div>
+								</div> *@
 								<div class="product-description">
 									<a href="/home/PropertyDetails/@item.PropertyId">@Html.Raw(item.TruncatedDescription)</a>
 								</div>

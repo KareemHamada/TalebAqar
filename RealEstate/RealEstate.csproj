@@ -19,6 +19,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.6" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.6" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,23 +33,23 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="Areas\Admin\Views\Home\Index.cshtml">
+    <Content Update="Areas\AdminArea289\Views\Home\Index.cshtml">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="Areas\Admin\Views\Shared\_Layout.cshtml">
+    <Content Update="Areas\AdminArea289\Views\Shared\_Layout.cshtml">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="Areas\Admin\Views\Shared\_ValidationScriptsPartial.cshtml">
+    <Content Update="Areas\AdminArea289\Views\Shared\_ValidationScriptsPartial.cshtml">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="Areas\Admin\Views\_ViewImports.cshtml">
+    <Content Update="Areas\AdminArea289\Views\_ViewImports.cshtml">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="Areas\Admin\Views\_ViewStart.cshtml">
+    <Content Update="Areas\AdminArea289\Views\_ViewStart.cshtml">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
@@ -59,6 +60,8 @@
 		</None>
 	</ItemGroup>
 	<ItemGroup>
+	  <Content Remove="wwwroot\Data\DataSeed\setting.json" />
+	  <Content Remove="wwwroot\Data\DataSeed\statuses.json" />
 	  <Content Remove="wwwroot\Uploads\DefaultImages\favicon.png" />
 	</ItemGroup>
   <ItemGroup>
@@ -66,6 +69,8 @@
     <Folder Include="wwwroot\Uploads\Types\" />
     <Folder Include="wwwroot\Uploads\Settings\" />
     <Folder Include="wwwroot\Uploads\Properties\" />
+	  <Folder Include="wwwroot\Uploads\Data\DataSeed\" />
+
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">

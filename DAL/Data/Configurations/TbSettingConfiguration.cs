@@ -6,6 +6,10 @@
         {
             entity.HasKey(e => e.SettingId);
 
+            entity.Property(e => e.CurrentState).HasDefaultValue(true);
+
+
+
             OnConfigurePartial(entity);
         }
 

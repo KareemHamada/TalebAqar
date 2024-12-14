@@ -1,4 +1,6 @@
-﻿namespace DAL
+﻿using static System.Net.Mime.MediaTypeNames;
+
+namespace DAL
 {
     public static class ContextDataSeed
     {
@@ -48,8 +50,16 @@
                 // for statuses
                 if (!dbContext.TbStatuses.Any())
                 {
+                    //string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", image.ImageUrl.TrimStart('/'));
+
+
+                    var StatusesData = await File.ReadAllTextAsync(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Data", "DataSeed", "statuses.json"));
+
                     //read statueses from file as string
-                    var StatusesData = await File.ReadAllTextAsync("../DAL/Data/DataSeed/statuses.json");
+                    //var StatusesData = await File.ReadAllTextAsync(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "/Data/DataSeed/statuses.json"));
+
+
+                    //var StatusesData = await File.ReadAllTextAsync("../wwwroot/Data/DataSeed/statuses.json");
 
                     // transform into C# objects
                     var Statuses = JsonSerializer.Deserialize<List<TbStatus>>(StatusesData);
@@ -68,7 +78,11 @@
                 if (!dbContext.TbSettings.Any())
                 {
                     //read statueses from file as string
-                    var SettingData = await File.ReadAllTextAsync("../DAL/Data/DataSeed/setting.json");
+                    //var SettingData = await File.ReadAllTextAsync("../DAL/Data/DataSeed/setting.json");
+
+                    var SettingData = await File.ReadAllTextAsync(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Data", "DataSeed", "setting.json"));
+
+
 
                     // transform into C# objects
                     var setting = JsonSerializer.Deserialize<List<TbSetting>>(SettingData);

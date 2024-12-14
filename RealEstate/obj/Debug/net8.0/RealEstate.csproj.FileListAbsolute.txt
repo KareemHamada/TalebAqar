@@ -2374,7 +2374,6 @@ D:\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\RealEstate.MvcApplicationPar
 D:\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\RealEstate.RazorAssemblyInfo.cache
 D:\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\RealEstate.RazorAssemblyInfo.cs
 D:\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\RealEstate.sourcelink.json
-D:\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\scopedcss\bundle\RealEstate.styles.css
 D:\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\scopedcss\projectbundle\RealEstate.bundle.scp.css
@@ -2396,3 +2395,7 @@ D:\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\RealEstate.genruntimeconfig.
 D:\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\ref\RealEstate.dll
 D:\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\RealEstate.Properties.Resources.resources
 D:\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\RealEstate.csproj.GenerateResource.cache
+D:\TalebAqar\RealEstate\RealEstate\bin\Debug\net8.0\SixLabors.ImageSharp.dll
+D:\TalebAqar\RealEstate\RealEstate\obj\Debug\net8.0\scopedcss\Areas\AdminArea289\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\TalebAqar\RealEstate\RealEstate\bin\Debug\net8.0\wwwroot\Data\DataSeed\setting.json
+D:\TalebAqar\RealEstate\RealEstate\bin\Debug\net8.0\wwwroot\Data\DataSeed\statuses.json

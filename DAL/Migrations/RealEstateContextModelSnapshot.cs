@@ -368,7 +368,9 @@ namespace DAL.Migrations
                         .HasColumnType("nvarchar(11)");
 
                     b.Property<bool>("CurrentState")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
@@ -426,6 +428,9 @@ namespace DAL.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TypeId"));
 
                     b.Property<bool>("CurrentState")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("ShowHomeRoomNumber")
                         .HasColumnType("bit");
 
                     b.Property<string>("TypeImage")

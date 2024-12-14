@@ -3,7 +3,12 @@ var ClsProperties = {
     GetPropertiesForSale: function () {
         const sortOrder = document.getElementById("sortOrder").value;
 
-        const url = `https://kareemabdelwahab-001-site1.ktempurl.com/api/Properties/GetPropertiesForSale?sortOrder=${sortOrder}`;
+        const apiBaseUrl = window.location.hostname === "localhost"
+            ? "https://localhost:7102"
+            : "https://talebaqar.com.com";
+
+
+        const url = `${apiBaseUrl}/api/Properties/GetPropertiesForSale?sortOrder=${sortOrder}`;
 
 
         Helper.AjaxCallGet(url, {}, "json",
@@ -13,26 +18,36 @@ var ClsProperties = {
                     dataSource: data,
                     pageSize: 10,
                     callback: function (data, pagination) {
-                        var htmlData = "";
-                        var htmlData2 = "";
+                        
+                        if (data.length > 0) {
+                            var htmlData = "";
+                            var htmlData2 = "";
+                            for (var i = 0; i < data.length; i++) {
+                                htmlData += ClsProperties.DrawItem(data[i]);
+                                htmlData2 += ClsProperties.DrawItem2(data[i]);
 
-                        for (var i = 0; i < data.length; i++) {
-                            htmlData += ClsProperties.DrawItem(data[i]);
-                            htmlData2 += ClsProperties.DrawItem2(data[i]);
+                            }
+                            var d1 = document.getElementById('ItemArea1');
+                            var d2 = document.getElementById('ItemArea2');
 
+                            d1.innerHTML = htmlData;
+                            d2.innerHTML = htmlData2;
+                        } else {
+                            d1.innerHTML = '<h2>لا توجد عقارات مطابقة للبحث</h2>';
+                            d2.innerHTML = '<h2>لا توجد عقارات مطابقة للبحث</h2>';
                         }
-                        var d1 = document.getElementById('ItemArea1');
-                        var d2 = document.getElementById('ItemArea2');
-
-                        d1.innerHTML = htmlData;
-                        d2.innerHTML = htmlData2;
+                        
                     }
                 });
             }, function () { });
     },
     GetPropertiesForRent: function () {
         const sortOrder = document.getElementById("sortOrder").value;
-        const url = `https://kareemabdelwahab-001-site1.ktempurl.com/api/Properties/GetPropertiesForRent?sortOrder=${sortOrder}`;
+
+        const apiBaseUrl = window.location.hostname === "localhost"
+            ? "https://localhost:7102"
+            : "https://talebaqar.com.com";
+        const url = `${apiBaseUrl}/api/Properties/GetPropertiesForRent?sortOrder=${sortOrder}`;
 
         Helper.AjaxCallGet(url, {}, "json",
             function (data) {
@@ -41,29 +56,38 @@ var ClsProperties = {
                     dataSource: data,
                     pageSize: 10,
                     callback: function (data, pagination) {
-                        var htmlData = "";
-                        var htmlData2 = "";
+                        
+                        if (data.length > 0) {
+                            var htmlData = "";
+                            var htmlData2 = "";
 
-                        for (var i = 0; i < data.length; i++) {
-                            htmlData += ClsProperties.DrawItem(data[i]);
-                            htmlData2 += ClsProperties.DrawItem2(data[i]);
+                            for (var i = 0; i < data.length; i++) {
+                                htmlData += ClsProperties.DrawItem(data[i]);
+                                htmlData2 += ClsProperties.DrawItem2(data[i]);
 
+                            }
+                            var d1 = document.getElementById('ItemArea1');
+                            var d2 = document.getElementById('ItemArea2');
+
+                            d1.innerHTML = htmlData;
+                            d2.innerHTML = htmlData2;
+                        } else {
+                            d1.innerHTML = '<h2>لا توجد عقارات مطابقة للبحث</h2>';
+                            d2.innerHTML = '<h2>لا توجد عقارات مطابقة للبحث</h2>';
                         }
-                        var d1 = document.getElementById('ItemArea1');
-                        var d2 = document.getElementById('ItemArea2');
-
-                        d1.innerHTML = htmlData;
-                        d2.innerHTML = htmlData2;
                     }
                 });
             }, function () { });
     },
 
     Searching: function (statusId, typeId, governorateId, cityId, bedrooms, price) {
-
+        console.log(statusId, typeId, governorateId, cityId, bedrooms, price);
         const sortOrder = document.getElementById("sortOrder").value;
-
-        const url = new URL(`https://kareemabdelwahab-001-site1.ktempurl.com/api/Properties/PropertiesSearchAsync`);
+        const apiBaseUrl = window.location.hostname === "localhost"
+            ? "https://localhost:7102"
+            : "https://talebaqar.com.com";
+        const url = new URL(`${apiBaseUrl}/api/Properties/PropertiesSearchAsync`);
+        console.log(url);
         const params = {
             sortOrder,
             statusId,
@@ -91,6 +115,8 @@ var ClsProperties = {
                         var htmlData = "";
                         var htmlData2 = "";
                         if (data.length > 0) {
+                    
+
                             for (var i = 0; i < data.length; i++) {
                                 htmlData += ClsProperties.DrawItem(data[i]);
                                 htmlData2 += ClsProperties.DrawItem2(data[i]);
@@ -301,8 +327,10 @@ var ClsProperties = {
 
     GetAllCitiesForRent: function () {
         const governorateId = document.getElementById("governorate").value;
-
-        const url = `https://kareemabdelwahab-001-site1.ktempurl.com/api/Properties/GetCities?governorateId=${governorateId}`;
+        const apiBaseUrl = window.location.hostname === "localhost"
+            ? "https://localhost:7102"
+            : "https://talebaqar.com.com";
+        const url = `${apiBaseUrl}/api/Properties/GetCities?governorateId=${governorateId}`;
 
         Helper.AjaxCallGet(url, {}, "json",
             function (data) {
@@ -314,7 +342,7 @@ var ClsProperties = {
                 // Add a default option
                 const defaultOption = document.createElement('option');
                 defaultOption.textContent = '-- المدينة--';
-                defaultOption.value = null;
+                defaultOption.value = 0;
                 citySelect.appendChild(defaultOption);
 
                 // Add new options
@@ -333,7 +361,10 @@ var ClsProperties = {
 
     GetAllCitiesForSale: function () {
         const governorateId = document.getElementById("governorate2").value;
-        const url = `https://kareemabdelwahab-001-site1.ktempurl.com/api/Properties/GetCities?governorateId=${governorateId}`;
+        const apiBaseUrl = window.location.hostname === "localhost"
+            ? "https://localhost:7102"
+            : "https://talebaqar.com.com";
+        const url = `${apiBaseUrl}/api/Properties/GetCities?governorateId=${governorateId}`;
         Helper.AjaxCallGet(url, {}, "json",
             function (data) {
                 const citySelect = document.getElementById("city2");
@@ -344,7 +375,7 @@ var ClsProperties = {
                 // Add a default option
                 const defaultOption = document.createElement('option');
                 defaultOption.textContent = '-- المدينة--';
-                defaultOption.value = null;
+                defaultOption.value = 0;
                 citySelect.appendChild(defaultOption);
 
                 // Add new options

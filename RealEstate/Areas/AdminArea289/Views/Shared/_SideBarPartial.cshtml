@@ -1,0 +1,339 @@
+﻿@inject SignInManager<ApplicationUser> singInManager
+@inject UserManager<ApplicationUser> userManager
+@using Microsoft.AspNetCore.Identity
+
+
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="/AdminArea289/Home" class="brand-link">
+        <img src="~/Admin/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+             style="opacity: .8">
+        <span class="brand-text font-weight-light">طالب عقار</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img src="~/Admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+                
+                    @if (singInManager.IsSignedIn(User))
+                    {
+                        var user = await userManager.GetUserAsync(User);
+                        var firstName = user?.FirstName;
+                        var lastName = user?.LastName;
+                        <a href="#" class="d-block">
+                            <p>@firstName @lastName</p>
+                        </a>
+                    }
+                    else
+                    {
+                        <a href="/User/Login" class="btn head-btn2">Login</a>
+                    }
+                
+            </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class
+                     with font-awesome or any other icon font library -->
+                <li class="nav-item has-treeview menu-open">
+                    <a href="#" class="nav-link active">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            خصائص العقار
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                    العقارات
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a asp-area="AdminArea289" asp-controller="Properties" asp-action="Index" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>عرض العقارات</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-area="AdminArea289" asp-controller="Properties" asp-action="Create" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>إضافة عقار جديد </p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a asp-area="AdminArea289" asp-controller="Properties" asp-action="DeletedProperties" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>العقارات المحذوفة</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                    الحالات
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a asp-area="AdminArea289" asp-controller="Statuses" asp-action="Index" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>عرض الحالات</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-area="AdminArea289" asp-controller="Statuses" asp-action="Create" class="nav-link">
+                                        <i class="nav-icon fas fa-edit"></i>
+                                        <p>إضافة حالة جديدة</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                    الانواع
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a asp-area="AdminArea289" asp-controller="Types" asp-action="Index" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>عرض الانواع</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-area="AdminArea289" asp-controller="Types" asp-action="Create" class="nav-link">
+                                        <i class="nav-icon fas fa-edit"></i>
+                                        <p>إضافة نوع جديد</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                       
+                    </ul>
+                </li>
+                
+                <li class="nav-item has-treeview menu-open">
+                    <a href="#" class="nav-link active">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            المواقع
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                    المحافظات
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a asp-area="AdminArea289" asp-controller="Governorates" asp-action="Index" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>عرض المحافظات</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-area="AdminArea289" asp-controller="Governorates" asp-action="Create" class="nav-link">
+                                        <i class="nav-icon fas fa-edit"></i>
+                                        <p>إضافة محافظة جديدة</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                    المدن
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a asp-area="AdminArea289" asp-controller="Cities" asp-action="Index" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>عرض المدن</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-area="AdminArea289" asp-controller="Cities" asp-action="Create" class="nav-link">
+                                        <i class="nav-icon fas fa-edit"></i>
+                                        <p>إضافة مدينة جديدة</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                    العناوين
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a asp-area="AdminArea289" asp-controller="Addresses" asp-action="Index" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>عرض العناوين</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-area="AdminArea289" asp-controller="Addresses" asp-action="Create" class="nav-link">
+                                        <i class="nav-icon fas fa-edit"></i>
+                                        <p>إضافة عنوان جديد</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            مالكى العقارات
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a asp-area="AdminArea289" asp-controller="Owners" asp-action="Index" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>عرض الملاك</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-area="AdminArea289" asp-controller="Owners" asp-action="Create" class="nav-link">
+                                <i class="nav-icon fas fa-edit"></i>
+                                <p>إضافة مالك جديد</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                
+                
+                
+                
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            المستخدمين
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a asp-area="AdminArea289" asp-controller="Users" asp-action="Index" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>عرض المستخدين</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-area="" asp-controller="Account" asp-action="Register" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>إضافة مستخدم جديد</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            الصلاحيات
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a asp-area="AdminArea289" asp-controller="Roles" asp-action="Index" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>عرض الصلاحيات</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-area="AdminArea289" asp-controller="Roles" asp-action="Create" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>إضافة صلاحية جديدة</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                    
+               
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            الاعدادات
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a asp-area="AdminArea289" asp-controller="Settings" asp-action="Details" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>عرض الاعدادات</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-area="AdminArea289" asp-controller="Settings" asp-action="Edit" class="nav-link">
+                                <i class="nav-icon fas fa-edit"></i>
+                                <p>تعديل الاعدادات</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+           @*      @if (User.IsInRole("Admin"))
+                {
+
+
+                } *@
+
+
+
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>

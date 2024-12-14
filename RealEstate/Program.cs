@@ -124,9 +124,9 @@ namespace RealEstate
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapAreaControllerRoute(
-                    name: "Admin",
-                    areaName: "Admin",
-                    pattern: "Admin/{controller=Home}/{action=Index}/{id?}");
+                    name: "AdminArea289",
+                    areaName: "AdminArea289",
+                    pattern: "AdminArea289/{controller=Home}/{action=Index}/{id?}");
 
                 endpoints.MapControllerRoute(
                    name: "Default",

@@ -2373,7 +2373,6 @@ D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\RealEstate.MvcApplicationP
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\RealEstate.RazorAssemblyInfo.cache
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\RealEstate.RazorAssemblyInfo.cs
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\RealEstate.sourcelink.json
-D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\scopedcss\bundle\RealEstate.styles.css
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\scopedcss\projectbundle\RealEstate.bundle.scp.css
@@ -2396,3 +2395,7 @@ D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\ref\RealEstate.dll
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Types\pexels-pixabay-302769_40fd2f14-289d-4f65-a388-e19de2b62df8_b224656f-1300-4f6c-8aaa-521c23bd3f99.jpg
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\RealEstate.Properties.Resources.resources
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\RealEstate.csproj.GenerateResource.cache
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\SixLabors.ImageSharp.dll
+D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\scopedcss\Areas\AdminArea289\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Data\DataSeed\setting.json
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Data\DataSeed\statuses.json

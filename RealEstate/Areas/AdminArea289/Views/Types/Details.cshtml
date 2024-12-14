@@ -1,0 +1,84 @@
+﻿@model TypeVM
+
+@{
+    ViewData["Title"] = "Details";
+	Layout = "~/Areas/AdminArea289/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="content-wrapper" style="min-height: 1017.2px;">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<div class="container-fluid">
+			<div class="row mb-2">
+				<div class="col-sm-6">
+					<h1>تفاصيل نوع العقار</h1>
+				</div>
+			</div>
+		</div><!-- /.container-fluid -->
+	</section>
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="container-fluid">
+			<div class="row">
+				<!-- left column -->
+				<div class="col-md-6">
+					<!-- general form elements -->
+					<div class="card card-primary">
+						<div class="card-header"> </div>
+
+						<partial name="PartialViews/DetailsDeletePartial"></partial>
+
+						<div class="card-footer">
+							<a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.TypeId">تعديل</a>
+							<a class="btn btn-danger" asp-action="Index">إلغاء</a>
+						</div>
+
+
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="card card-primary">
+						<div class="mt-4">
+							<h4>الصورة</h4>
+							<img id="LogoImage" src="@Model.TypeImage" alt="الصورة" style="width: 200px;height: 200px;" />
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- /.row -->
+		</div><!-- /.container-fluid -->
+	</section>
+	<!-- /.content -->
+</div>
+
+
+@section Scripts {
+
+
+	<script>
+		$(document).ready(function () {
+			// Preview the uploaded Logo before submission
+			$('#TypeImage').change(function (e) {
+				const file = e.target.files[0];
+				const reader = new FileReader();
+
+				reader.onload = function (event) {
+					$('#LogoImage')
+						.attr('src', event.target.result)
+						.show();
+				}
+
+				if (file) {
+					reader.readAsDataURL(file);
+				}
+			});
+		});
+	</script>
+
+	<partial name="_ValidationScriptsPartial"></partial>
+}

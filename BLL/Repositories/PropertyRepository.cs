@@ -15,6 +15,7 @@
 
         public async Task<TbProperty?> GetAsync(int id) => await _dbSet.Where(x=>x.PropertyId == id && x.CurrentState == true).FirstOrDefaultAsync();
 
+        public async Task<TbProperty?> GetWithImagesAsync(int id) => await _dbSet.Where(x => x.PropertyId == id && x.CurrentState == true).Include(x=>x.PropertyImages).FirstOrDefaultAsync();
 
         public async Task<IEnumerable<TbProperty>> GetAllWithNamesAsync() => await _dbSet.Where(x => x.CurrentState == true).Include(p => p.Address)
                .Include(p => p.City)
@@ -25,10 +26,16 @@
                .Include(p => p.Type)
 		       .ToListAsync();
 
+        public async Task<IEnumerable<TbProperty>> GetAllDeletedWithNamesAsync() => await _dbSet.Where(x => x.CurrentState == false).Include(p => p.Address)
+               .Include(p => p.City)
+               .Include(p => p.Governorate)
+               .Include(p => p.Owner)
+               .Include(p => p.Status)
+               .Include(p => p.Type)
+               .ToListAsync();
+        
 
-
-
-		public async Task<TbProperty?> GetWithNamesAsync(int id) => await _dbSet.Where(x => x.PropertyId == id && x.CurrentState == true)
+        public async Task<TbProperty?> GetWithNamesAsync(int id) => await _dbSet.Where(x => x.PropertyId == id && x.CurrentState == true)
 				.Include(p => p.Address)
 				.Include(p => p.City)
 				.Include(p => p.Governorate)

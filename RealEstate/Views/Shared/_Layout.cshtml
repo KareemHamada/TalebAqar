@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Place favicon.png in the root directory -->
-    <link rel="shortcut icon" href="~/Uploads/DefaultImages/favicon.png type="image/x-icon" />
+    <link rel="shortcut icon" href="~/Uploads/DefaultImages/favicon.png" type="image/x-icon" />
 
     <!-- Font Icons css -->
     <link rel="stylesheet" href="~/Frontend/css/font-icons.css">
@@ -374,11 +374,11 @@
                                     <div class="col-lg-6 col-12">
                                         <div class="modal-product-info">
                                             <div class="d-flex align-items-center justify-content-space-around">
-                                                    <h3 id="modal-product-type" class="bg-red mb-0 p-1"></h3>
+                                                <h3 id="modal-product-type" class="bg-red mb-0 p-1"></h3>
                                                 
                                                 <span style="display: inline-block; width: 4ch;"></span>
 
-                                                    <span id="modal-product-status" class="bg-orange p-1"></span>
+                                                <span id="modal-product-status" class="bg-orange p-1"></span>
                                             </div>
                                                 <span id="modal-product-id" class="d-none"></span>
 
@@ -493,7 +493,7 @@
             // Determine the class to add based on the value of propertyStatus
             var statusClass = propertyStatus === "للبيع" ? "sale-badge bg-green--- p-1" : "sale-badge bg-green p-1";
             $('#modal-product-status').text(propertyStatus);
-            $('#modal-product-price').text(propertyPrice + "جنية ");
+            $('#modal-product-price').text(propertyPrice + "جنية /");
             $('#modal-product-image').attr('src', propertyImage);
             $('#modal-product-link').attr('href', "/home/PropertyDetails/" + propertyId);
             $('#modal-product-id').text(propertyId);

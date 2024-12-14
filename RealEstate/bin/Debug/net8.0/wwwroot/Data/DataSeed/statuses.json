@@ -1,0 +1,11 @@
+[
+    {
+        "StatusName": "للبيع",
+        "CurrentState": true
+    },
+    {
+        "StatusName": "للإيجار",
+        "CurrentState": true
+    }
+
+]

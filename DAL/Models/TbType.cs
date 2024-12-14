@@ -11,6 +11,8 @@ public partial class TbType : IHasCurrentState
 
     public bool CurrentState { get; set; }
 
+    public bool ShowHomeRoomNumber { get; set; }
+
     [InverseProperty("Type")]
     public virtual ICollection<TbProperty> TbProperties { get; set; } = new List<TbProperty>();
 }
