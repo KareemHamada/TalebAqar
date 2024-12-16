@@ -9,11 +9,14 @@
 <div class="content-wrapper">
 	<!-- Main content -->
 	<section class="content">
-
-
-		<a class="btn btn-primary" asp-action="Create">إضافة</a>
+		
 
 		<div class="card">
+			<div class="d-flex justify-content-between mb-3">
+				<a asp-action="Create" class="btn btn-primary">
+					<i class="fa fa-plus"></i> إضافة
+				</a>
+			</div>
 			@if (Model.Any())
 			{
 				<div class="card-header">
@@ -27,11 +30,9 @@
 								<th>نوع العقار</th>
 								<th></th>
 								<th>عرض عدد الغرف معها فى الشاشة الرئيسية</th>
-
 								<th></th>
 								<th></th>
 								<th></th>
-
 							</tr>
 						</thead>
 						<tbody>
@@ -45,7 +46,7 @@
 											<input asp-for="@item.ShowHomeRoomNumber"
 												   type="checkbox"
 												   class="form-check-input"
-												   checked="@item.ShowHomeRoomNumber ?? false">
+												   checked="@item.ShowHomeRoomNumber" disabled>
 										</div>
 									</td>
 									<partial name="_ButtonsPartial" model="@item.TypeId.ToString()"></partial>

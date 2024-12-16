@@ -98,11 +98,16 @@
 
 													<input type="hidden" name="statusId" value="2" />
 
+
+
 													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-4 col-md-6">
-														<select name="typeId" class="nice-select" asp-items="ViewBag.Types">
-															<option value="0">نوع العقار</option>
+														<select id="typeSelect" name="typeId" class="nice-select" asp-items="ViewBag.Types" onchange="toggleHomeRoomSection()">
+															<option value="0" data-showrooms="false">نوع العقار</option>
 														</select>
 													</div>
+
+
+
 													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-car col-lg-4 col-md-6">
 														<select id="governorate" name="governorateId" class="nice-select" asp-items="ViewBag.Governorates" onchange="ClsProperties.GetAllCitiesForRent()">
 															<option value="0">المحافظة</option>
@@ -113,7 +118,7 @@
 															<option value="0">المدينة</option>
 														</select>
 													</div>
-													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-ring col-lg-4 col-md-6">
+													<div id="homeRoomSection" class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-ring col-lg-4 col-md-6" style="display: none;">
 														<select name="bedrooms" class="nice-select">
 															<option value="0">عدد الغرف</option>
 															<option value="1">1</option>
@@ -155,8 +160,9 @@
 													<input type="hidden" name="statusId" value="1" />
 
 													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-4 col-md-6">
-														<select name="typeId" class="nice-select" asp-items="ViewBag.Types">
-															<option value="0">نوع العقار</option>
+												
+														<select id="typeSelect2" name="typeId" class="nice-select" asp-items="ViewBag.Types" onchange="toggleHomeRoomSection2()">
+															<option value="0" data-showrooms="false">نوع العقار</option>
 														</select>
 													</div>
 													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-car col-lg-4 col-md-6">
@@ -169,7 +175,7 @@
 															<option value="0">المدينة</option>
 														</select>
 													</div>
-													<div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-ring col-lg-4 col-md-6">
+													<div id="homeRoomSection2" class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-ring col-lg-4 col-md-6" style="display: none;">
 														<select name="bedrooms" class="nice-select">
 															<option value="0">عدد الغرف</option>
 															<option>1</option>
@@ -441,4 +447,42 @@
 		}
 	</script>
 
+
+
+	<script>
+		function toggleHomeRoomSection() {
+				const select = document.getElementById('typeSelect');
+				const selectedOption = select.options[select.selectedIndex];
+
+				const showRooms = selectedOption.parentNode.label === 'True';
+				const homeRoomSection = document.getElementById('homeRoomSection');
+				const bedroomsSelect = homeRoomSection.querySelector('select[name="bedrooms"]');
+
+
+
+				if (showRooms) {
+					homeRoomSection.style.display = 'block'; // Show the section
+				} else {
+					homeRoomSection.style.display = 'none'; // Hide the section
+					// Set the value of the select to 0 when the section is hidden
+					bedroomsSelect.value = "0";
+				}
+		}
+		function toggleHomeRoomSection2() {
+				const select = document.getElementById('typeSelect2');
+				const selectedOption = select.options[select.selectedIndex];
+
+				const showRooms = selectedOption.parentNode.label === 'True';
+				const homeRoomSection = document.getElementById('homeRoomSection2');
+				const bedroomsSelect = homeRoomSection.querySelector('select[name="bedrooms"]');
+
+				if (showRooms) {
+					homeRoomSection.style.display = 'block'; // Show the section
+				} else {
+					homeRoomSection.style.display = 'none'; // Hide the section
+					// Set the value of the select to 0 when the section is hidden
+					bedroomsSelect.value = "0";
+				}
+		}
+	</script>
 }

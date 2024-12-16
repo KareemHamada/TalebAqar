@@ -31,6 +31,8 @@
 								<th>الحمامات</th>
 								<th>تكلفة الاعلان</th>
 								<th>تاريخ إنشاءالاعلان</th>
+								<th>تاريخ البيع او الإيجار</th>
+								<th>هل تم البيع او الإيجار</th>
 								<th>حالة العقار</th>
 								<th>نوع العقار</th>
 								<th>المحافظة</th>
@@ -52,7 +54,39 @@
 									<td>@item.Bedrooms</td>
 									<td>@item.Bathrooms</td>
 									<td>@item.CostPrice</td>
-									<td>@item.CreatedDate</td>
+									<td>
+										@{
+											var egyptTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Egypt Standard Time");
+											var egyptTime = TimeZoneInfo.ConvertTimeFromUtc(item.CreatedDate, egyptTimeZone);
+											string shortDateTimeEgypt = egyptTime.ToString("dd/MM/yyyy HH:mm");
+
+										}
+										@shortDateTimeEgypt
+									</td>
+									<td>
+										@{
+											string shortDate = "";
+											var soldorRentalDate = TimeZoneInfo.FindSystemTimeZoneById("Egypt Standard Time");
+											if (item.SoldOrRenteledDate.HasValue) // Check if the nullable DateTime has a value
+											{
+												var egyptTimeForSoldOrRentalDate = TimeZoneInfo.ConvertTimeFromUtc(item.SoldOrRenteledDate.Value, soldorRentalDate); // Use .Value to get the underlying DateTime
+												shortDate = egyptTimeForSoldOrRentalDate.ToString("dd/MM/yyyy HH:mm");
+											}
+											else
+											{
+												shortDate = "";
+											}
+										}
+										@shortDate
+									</td>
+									<td>
+										<div class="form-check">
+											<input asp-for="@item.IsSoldOrRenteled"
+												   type="checkbox"
+												   class="form-check-input"
+												   checked="@item.IsSoldOrRenteled" disabled>
+										</div>
+									</td>
 									<td>@item.Status?.StatusName</td>
 									<td>@item.Type?.TypeName</td>
 									<td>@item.Governorate?.GovernorateName</td>
@@ -99,6 +133,8 @@
 								<th>الحمامات</th>
 								<th>تكلفة الاعلان</th>
 								<th>تاريخ إنشاءالاعلان</th>
+								<th>تاريخ البيع او الإيجار</th>
+								<th>هل تم البيع او الإيجار</th>
 								<th>حالة العقار</th>
 								<th>نوع العقار</th>
 								<th>المحافظة</th>

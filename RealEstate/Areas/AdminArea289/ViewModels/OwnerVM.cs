@@ -20,7 +20,10 @@ namespace RealEstate.Areas.AdminArea289.ViewModels
 		public string PhoneNumber { get; set; } = null!;
 
 
-		[StringLength(255)]
+        public bool HasWhatsApp { get; set; }
+
+
+        [StringLength(255)]
 		[Required(ErrorMessage = "أدخل العنوان")]
 		public string? Address { get; set; }
 

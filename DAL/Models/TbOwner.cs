@@ -10,7 +10,11 @@ public partial class TbOwner : IHasCurrentState
     public string? Email { get; set; }
 	[StringLength(maximumLength: 11, MinimumLength = 11, ErrorMessage = "رقم التليفون يجب الا يقل او يزيد عن 11 رقم")]
 	public string PhoneNumber { get; set; } = null!;
-	[StringLength(255)]
+
+    public bool HasWhatsApp { get; set; }
+
+
+    [StringLength(255)]
 
 	public string? Address { get; set; }
 

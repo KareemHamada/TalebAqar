@@ -493,7 +493,7 @@
             // Determine the class to add based on the value of propertyStatus
             var statusClass = propertyStatus === "للبيع" ? "sale-badge bg-green--- p-1" : "sale-badge bg-green p-1";
             $('#modal-product-status').text(propertyStatus);
-            $('#modal-product-price').text(propertyPrice + "جنية /");
+            $('#modal-product-price').text(propertyPrice + " جنية");
             $('#modal-product-image').attr('src', propertyImage);
             $('#modal-product-link').attr('href', "/home/PropertyDetails/" + propertyId);
             $('#modal-product-id').text(propertyId);
@@ -553,7 +553,7 @@
                         <td class="cart-product-image"><a href="/home/propertyDetails/${item.id}"><img src="${item.image}" alt="image"></a></td>
                         <td class="cart-product-type">${item.type} </td>
                         <td class="cart-product-status">${item.status} </td>
-                        <td class="cart-product-price">${item.price} / جنية</td>
+                        <td class="cart-product-price">${item.price} جنية</td>
                     </tr>
                 `;
                 tableBody.innerHTML += row;

@@ -57,13 +57,9 @@ namespace RealEstate.Areas.AdminArea289.Controllers
                 return View(propertyVM);
 
 			propertyVM.CreatedBy = _userManager.GetUserId(User);
-            propertyVM.CreatedDate = DateTime.Now;
-             
-			var property = _mapper.Map<PropertyVM, TbProperty>(propertyVM);
+            propertyVM.CreatedDate = DateTime.UtcNow;
 
-			//var propertyRow =  await _unitOfWork.Properties.AddAsync(property);
-			//await _unitOfWork.SaveChangesAsync();
-
+            var property = _mapper.Map<PropertyVM, TbProperty>(propertyVM);
 
 			var propertyRow = await _unitOfWork.Properties.AddAsync(property);
 
@@ -114,10 +110,20 @@ namespace RealEstate.Areas.AdminArea289.Controllers
             {
                 try
                 {
-					propertyVM.UpdatedBy = _userManager.GetUserId(User);
-					propertyVM.UpdatedDate = DateTime.Now;
+                    propertyVM.UpdatedBy = _userManager.GetUserId(User);
+					propertyVM.UpdatedDate = DateTime.UtcNow;
 
-					var property = _mapper.Map<PropertyVM, TbProperty>(propertyVM);
+                    // Convert SoldOrRenteledDate to UTC
+                    if (propertyVM.SoldOrRenteledDate.HasValue)
+                    {
+                        propertyVM.SoldOrRenteledDate = TimeZoneInfo.ConvertTimeToUtc(propertyVM.SoldOrRenteledDate.Value);
+                    }
+
+                    // Convert SoldOrRenteledDate to UTC
+                    
+                    propertyVM.CreatedDate = TimeZoneInfo.ConvertTimeToUtc(propertyVM.CreatedDate);
+
+                    var property = _mapper.Map<PropertyVM, TbProperty>(propertyVM);
 					_unitOfWork.Properties.Update(property);
                     await _unitOfWork.SaveChangesAsync();
 
@@ -251,6 +257,24 @@ namespace RealEstate.Areas.AdminArea289.Controllers
             await IcludeSelectItem();
 
             var propertyVM = _mapper.Map<TbProperty, PropertyVM>(property);
+
+            var egyptTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Egypt Standard Time");
+
+            propertyVM.SoldOrRenteledDate = propertyVM.SoldOrRenteledDate.HasValue
+                    ? TimeZoneInfo.ConvertTimeFromUtc(propertyVM.SoldOrRenteledDate.Value, egyptTimeZone)
+                    : (DateTime?)null;
+
+
+            propertyVM.CreatedDate = TimeZoneInfo.ConvertTimeFromUtc(propertyVM.CreatedDate, egyptTimeZone);
+
+
+
+            propertyVM.UpdatedDate = propertyVM.UpdatedDate.HasValue
+                                ? TimeZoneInfo.ConvertTimeFromUtc(propertyVM.UpdatedDate.Value, egyptTimeZone)
+                                : (DateTime?)null;
+
+
+
 
             return View(viewName, propertyVM);
         }

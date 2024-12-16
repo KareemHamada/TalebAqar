@@ -33,6 +33,7 @@ public partial class TbProperty : IHasCurrentState
 	public DateTime? SoldOrRenteledDate { get; set; }
 
     public string? Description { get; set; }
+    public string? StyledDescription { get; set; }
 
     public bool CurrentState { get; set; }
 

@@ -78,11 +78,21 @@
 								<div class="form-group">
 									<label asp-for="Description" for="exampleInputEmail1">وصف العقار</label>
 
-									<textarea asp-for="Description" id="exampleInputText" class="form-control" placeholder="وصف العقار">
+									<textarea asp-for="Description" id="exampleInputText" class="form-control" placeholder="وصف العقار"></textarea>
 									<span class="text-danger" asp-validation-for="Description"></span>
 
-									</textarea>
 								</div>
+
+
+								<div class="form-group">
+									<label asp-for="StyledDescription">وصف العقار بالتنسيق</label>
+
+									<textarea asp-for="StyledDescription" id="description" name="description"></textarea>
+
+									<span class="text-danger" asp-validation-for="StyledDescription"></span>
+
+								</div>
+
 
 								<div class="form-group">
 									<label asp-for="Price" for="exampleInputText">سعر بيع او تاجير العقار</label>
@@ -271,7 +281,6 @@
 
 
 @section Scripts {
-	<partial name="_ValidationScriptsPartial"></partial>
 
 
 	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -374,8 +383,24 @@
 		}
 	</script>
 
+	<!-- Place the first <script> tag in your HTML's <head> -->
+	<script src="https://cdn.tiny.cloud/1/m5bepjwot3xac9lwd8iu0lsharlngntxqnzmzlkstb6er24f/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
+	<!-- Place the following <script> and <textarea> tags your HTML's <body> -->
+	<script>
+
+		 tinymce.init({
+			selector: '#description',
+			directionality: 'rtl',
+			menubar: false,
+			toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+			plugins: 'lists',
+			content_style: "body { font-family:Arial,sans-serif; font-size:14px }"
+		});
+	</script>
 
 
 
+	<partial name="_ValidationScriptsPartial"></partial>
 
 }

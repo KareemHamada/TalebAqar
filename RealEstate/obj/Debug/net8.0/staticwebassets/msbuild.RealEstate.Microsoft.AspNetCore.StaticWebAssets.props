@@ -31824,6 +31824,60 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\130223189-800x600_5415284d-a78c-4e74-82ae-f4a9344fced3_0ddf8003-7993-4500-b3dd-1d5467788fb7.webp'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\breno-assis-r3WAWU5Fi5Q-unsplash_71ec6870-5683-4032-9765-5037fb3165c6_de0c2e16-34b8-4be0-ad0f-313efb427b9d.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>RealEstate</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/RealEstate</BasePath>
+      <RelativePath>Uploads/Properties/breno-assis-r3WAWU5Fi5Q-unsplash_71ec6870-5683-4032-9765-5037fb3165c6_de0c2e16-34b8-4be0-ad0f-313efb427b9d.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>4496nhpcut</Fingerprint>
+      <Integrity>XKHz5wfqgpusru7o9z8lFw7C1LHPd30WJ6ARmoSgfKk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\breno-assis-r3WAWU5Fi5Q-unsplash_71ec6870-5683-4032-9765-5037fb3165c6_de0c2e16-34b8-4be0-ad0f-313efb427b9d.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\brian-babb-XbwHrt87mQ0-unsplash_e2d024d2-045d-4ee8-96e1-3edf5c1885d0_826ec167-2446-43d5-8ec4-5db740ca6194.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>RealEstate</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/RealEstate</BasePath>
+      <RelativePath>Uploads/Properties/brian-babb-XbwHrt87mQ0-unsplash_e2d024d2-045d-4ee8-96e1-3edf5c1885d0_826ec167-2446-43d5-8ec4-5db740ca6194.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>6j6m8wwzzn</Fingerprint>
+      <Integrity>khIloTS+AyAw1BH5ZJFozpVMQv2tvFgZdRwpD9Tz4mM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\brian-babb-XbwHrt87mQ0-unsplash_e2d024d2-045d-4ee8-96e1-3edf5c1885d0_826ec167-2446-43d5-8ec4-5db740ca6194.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\brian-babb-XbwHrt87mQ0-unsplash_e2d024d2-045d-4ee8-96e1-3edf5c1885d0_87e54ba5-f4be-448d-94bd-656b4ef43d3b.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>RealEstate</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/RealEstate</BasePath>
+      <RelativePath>Uploads/Properties/brian-babb-XbwHrt87mQ0-unsplash_e2d024d2-045d-4ee8-96e1-3edf5c1885d0_87e54ba5-f4be-448d-94bd-656b4ef43d3b.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>6j6m8wwzzn</Fingerprint>
+      <Integrity>khIloTS+AyAw1BH5ZJFozpVMQv2tvFgZdRwpD9Tz4mM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\brian-babb-XbwHrt87mQ0-unsplash_e2d024d2-045d-4ee8-96e1-3edf5c1885d0_87e54ba5-f4be-448d-94bd-656b4ef43d3b.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\brian-babb-XbwHrt87mQ0-unsplash_e2d024d2-045d-4ee8-96e1-3edf5c1885d0_aca4ae6f-24c0-4e06-9560-50e07a9d69f3.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>RealEstate</SourceId>
@@ -31842,6 +31896,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\brian-babb-XbwHrt87mQ0-unsplash_e2d024d2-045d-4ee8-96e1-3edf5c1885d0_aca4ae6f-24c0-4e06-9560-50e07a9d69f3.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\cole-ankney-ZdJ6eIKN3G0-unsplash_b3c62c59-6dce-401e-bb96-d570768b020b_479e87c4-5c39-49fb-ae21-e1409dbf3221.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>RealEstate</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/RealEstate</BasePath>
+      <RelativePath>Uploads/Properties/cole-ankney-ZdJ6eIKN3G0-unsplash_b3c62c59-6dce-401e-bb96-d570768b020b_479e87c4-5c39-49fb-ae21-e1409dbf3221.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>u2uvbgbq8h</Fingerprint>
+      <Integrity>+vrgC8Emlr+JbTUqcoeMAFqpaOvMTyaQ+Z2Yj0USnKY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\cole-ankney-ZdJ6eIKN3G0-unsplash_b3c62c59-6dce-401e-bb96-d570768b020b_479e87c4-5c39-49fb-ae21-e1409dbf3221.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\cole-ankney-ZdJ6eIKN3G0-unsplash_b3c62c59-6dce-401e-bb96-d570768b020b_5ea6af5b-1dd8-40f0-8bc7-0f3549b22b5f.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>RealEstate</SourceId>
@@ -31859,6 +31931,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\cole-ankney-ZdJ6eIKN3G0-unsplash_b3c62c59-6dce-401e-bb96-d570768b020b_5ea6af5b-1dd8-40f0-8bc7-0f3549b22b5f.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\cole-ankney-ZdJ6eIKN3G0-unsplash_b3c62c59-6dce-401e-bb96-d570768b020b_911df4e7-bc17-4a4c-860d-ee986a3d0254.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>RealEstate</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/RealEstate</BasePath>
+      <RelativePath>Uploads/Properties/cole-ankney-ZdJ6eIKN3G0-unsplash_b3c62c59-6dce-401e-bb96-d570768b020b_911df4e7-bc17-4a4c-860d-ee986a3d0254.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>u2uvbgbq8h</Fingerprint>
+      <Integrity>+vrgC8Emlr+JbTUqcoeMAFqpaOvMTyaQ+Z2Yj0USnKY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\cole-ankney-ZdJ6eIKN3G0-unsplash_b3c62c59-6dce-401e-bb96-d570768b020b_911df4e7-bc17-4a4c-860d-ee986a3d0254.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\frames-for-your-heart-2d4lAQAlbDA-unsplash_58edb1c5-6f5f-4045-a4b7-54b4bfbf2957_54628292-47ad-4983-886a-92255ed9d678.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>RealEstate</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/RealEstate</BasePath>
+      <RelativePath>Uploads/Properties/frames-for-your-heart-2d4lAQAlbDA-unsplash_58edb1c5-6f5f-4045-a4b7-54b4bfbf2957_54628292-47ad-4983-886a-92255ed9d678.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>2gt4nr505z</Fingerprint>
+      <Integrity>7n4jGg80urSk3q1R19y+hLCOsb/WxcaBjuoaj5mk0t8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\frames-for-your-heart-2d4lAQAlbDA-unsplash_58edb1c5-6f5f-4045-a4b7-54b4bfbf2957_54628292-47ad-4983-886a-92255ed9d678.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\frames-for-your-heart-2d4lAQAlbDA-unsplash_58edb1c5-6f5f-4045-a4b7-54b4bfbf2957_76acb1dc-d0c4-4524-9aaa-a89306a2e12b.jpg'))">
       <SourceType>Package</SourceType>
@@ -31986,6 +32094,60 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-curtis-adams-1694007-3288103_e43ed9e6-9f66-451d-a18d-68ee3ad4ad51_cc51a126-0cb1-4359-98ee-4fcc70528342.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-curtis-adams-1694007-3288104_85604e15-f366-4643-9504-7aaa136b7ad7_3f414397-45dd-4a9e-9a51-32a1e8d7c31b.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>RealEstate</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/RealEstate</BasePath>
+      <RelativePath>Uploads/Properties/pexels-curtis-adams-1694007-3288104_85604e15-f366-4643-9504-7aaa136b7ad7_3f414397-45dd-4a9e-9a51-32a1e8d7c31b.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>h4vkuoyso4</Fingerprint>
+      <Integrity>b8fplsFsraH8QqYXXSqQxiG16Bc8yjMtcB4CGNfr6b8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-curtis-adams-1694007-3288104_85604e15-f366-4643-9504-7aaa136b7ad7_3f414397-45dd-4a9e-9a51-32a1e8d7c31b.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-expect-best-79873-323780_0f1e594a-195b-4e28-adc1-5f1c805c10bd_acf024c0-bb97-483d-a142-371d2cdf1adc.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>RealEstate</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/RealEstate</BasePath>
+      <RelativePath>Uploads/Properties/pexels-expect-best-79873-323780_0f1e594a-195b-4e28-adc1-5f1c805c10bd_acf024c0-bb97-483d-a142-371d2cdf1adc.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>wl9thp0ypl</Fingerprint>
+      <Integrity>5AoUKasgHNlZDs97smCuSuf5Zhcn2nvh2GMvtha675Q=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-expect-best-79873-323780_0f1e594a-195b-4e28-adc1-5f1c805c10bd_acf024c0-bb97-483d-a142-371d2cdf1adc.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-expect-best-79873-323780_0f1e594a-195b-4e28-adc1-5f1c805c10bd_d69564e6-0704-4149-8bea-16bcd9f800db.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>RealEstate</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/RealEstate</BasePath>
+      <RelativePath>Uploads/Properties/pexels-expect-best-79873-323780_0f1e594a-195b-4e28-adc1-5f1c805c10bd_d69564e6-0704-4149-8bea-16bcd9f800db.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>wl9thp0ypl</Fingerprint>
+      <Integrity>5AoUKasgHNlZDs97smCuSuf5Zhcn2nvh2GMvtha675Q=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-expect-best-79873-323780_0f1e594a-195b-4e28-adc1-5f1c805c10bd_d69564e6-0704-4149-8bea-16bcd9f800db.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-photo-5071140_c9c8e4a4-9428-42b9-90c6-a28e43c4dc4e_3fc026a6-193a-4ffa-9db0-05e9c03daec5.jpeg'))">
       <SourceType>Package</SourceType>
       <SourceId>RealEstate</SourceId>
@@ -32003,6 +32165,78 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-photo-5071140_c9c8e4a4-9428-42b9-90c6-a28e43c4dc4e_3fc026a6-193a-4ffa-9db0-05e9c03daec5.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-photo-5071140_c9c8e4a4-9428-42b9-90c6-a28e43c4dc4e_54afa672-525d-4a1b-9165-86c0ec33ffa5.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>RealEstate</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/RealEstate</BasePath>
+      <RelativePath>Uploads/Properties/pexels-photo-5071140_c9c8e4a4-9428-42b9-90c6-a28e43c4dc4e_54afa672-525d-4a1b-9165-86c0ec33ffa5.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>qch33o9oof</Fingerprint>
+      <Integrity>mk3QGu3QN/BsMA0K1gtljft55W3p3IT96rSlq0ca1AA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-photo-5071140_c9c8e4a4-9428-42b9-90c6-a28e43c4dc4e_54afa672-525d-4a1b-9165-86c0ec33ffa5.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-photo-5071140_c9c8e4a4-9428-42b9-90c6-a28e43c4dc4e_88df47c0-c787-429e-b241-6213c5be2788.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>RealEstate</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/RealEstate</BasePath>
+      <RelativePath>Uploads/Properties/pexels-photo-5071140_c9c8e4a4-9428-42b9-90c6-a28e43c4dc4e_88df47c0-c787-429e-b241-6213c5be2788.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>qch33o9oof</Fingerprint>
+      <Integrity>mk3QGu3QN/BsMA0K1gtljft55W3p3IT96rSlq0ca1AA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-photo-5071140_c9c8e4a4-9428-42b9-90c6-a28e43c4dc4e_88df47c0-c787-429e-b241-6213c5be2788.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-photo-5071140_c9c8e4a4-9428-42b9-90c6-a28e43c4dc4e_931dbd9e-48a5-4f4a-ba25-1a6145dbd237.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>RealEstate</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/RealEstate</BasePath>
+      <RelativePath>Uploads/Properties/pexels-photo-5071140_c9c8e4a4-9428-42b9-90c6-a28e43c4dc4e_931dbd9e-48a5-4f4a-ba25-1a6145dbd237.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>qch33o9oof</Fingerprint>
+      <Integrity>mk3QGu3QN/BsMA0K1gtljft55W3p3IT96rSlq0ca1AA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-photo-5071140_c9c8e4a4-9428-42b9-90c6-a28e43c4dc4e_931dbd9e-48a5-4f4a-ba25-1a6145dbd237.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_008c4670-00ca-47b1-b200-d6073536e188.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>RealEstate</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/RealEstate</BasePath>
+      <RelativePath>Uploads/Properties/pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_008c4670-00ca-47b1-b200-d6073536e188.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>34ile5ibyb</Fingerprint>
+      <Integrity>8zCFah4xxzFG0w2YTYa3tOjuJDqvLy+iBjyG8+d7YPo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_008c4670-00ca-47b1-b200-d6073536e188.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_01a973f5-c5da-4ccc-b2ec-62a1f22078bf.jpg'))">
       <SourceType>Package</SourceType>
@@ -32022,6 +32256,42 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_01a973f5-c5da-4ccc-b2ec-62a1f22078bf.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_2b3adacd-e737-49e4-94b0-8569fa983e38.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>RealEstate</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/RealEstate</BasePath>
+      <RelativePath>Uploads/Properties/pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_2b3adacd-e737-49e4-94b0-8569fa983e38.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>34ile5ibyb</Fingerprint>
+      <Integrity>8zCFah4xxzFG0w2YTYa3tOjuJDqvLy+iBjyG8+d7YPo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_2b3adacd-e737-49e4-94b0-8569fa983e38.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_4b76b499-a028-43c0-acb7-6e732531ea10.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>RealEstate</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/RealEstate</BasePath>
+      <RelativePath>Uploads/Properties/pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_4b76b499-a028-43c0-acb7-6e732531ea10.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>34ile5ibyb</Fingerprint>
+      <Integrity>8zCFah4xxzFG0w2YTYa3tOjuJDqvLy+iBjyG8+d7YPo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_4b76b499-a028-43c0-acb7-6e732531ea10.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_8204f654-cdcc-4d3a-874a-1be8e8b30525.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>RealEstate</SourceId>
@@ -32039,6 +32309,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_8204f654-cdcc-4d3a-874a-1be8e8b30525.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\r-architecture-0tKCSyLXqQM-unsplash_572e9ae4-a966-4169-9bd1-83759d78b8ba_53c88bed-f1d9-4d15-9188-bbd213dbb688.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>RealEstate</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/RealEstate</BasePath>
+      <RelativePath>Uploads/Properties/r-architecture-0tKCSyLXqQM-unsplash_572e9ae4-a966-4169-9bd1-83759d78b8ba_53c88bed-f1d9-4d15-9188-bbd213dbb688.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>l7oarqa79t</Fingerprint>
+      <Integrity>EZz3J53ZuvMi2ejAuICTD2OwOeOwxaMLSFF4Y8iSB2k=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\r-architecture-0tKCSyLXqQM-unsplash_572e9ae4-a966-4169-9bd1-83759d78b8ba_53c88bed-f1d9-4d15-9188-bbd213dbb688.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\r-architecture-0tKCSyLXqQM-unsplash_572e9ae4-a966-4169-9bd1-83759d78b8ba_ca376526-6fab-42f6-bbd4-38ba2ad6f3a2.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>RealEstate</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/RealEstate</BasePath>
+      <RelativePath>Uploads/Properties/r-architecture-0tKCSyLXqQM-unsplash_572e9ae4-a966-4169-9bd1-83759d78b8ba_ca376526-6fab-42f6-bbd4-38ba2ad6f3a2.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>l7oarqa79t</Fingerprint>
+      <Integrity>EZz3J53ZuvMi2ejAuICTD2OwOeOwxaMLSFF4Y8iSB2k=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\r-architecture-0tKCSyLXqQM-unsplash_572e9ae4-a966-4169-9bd1-83759d78b8ba_ca376526-6fab-42f6-bbd4-38ba2ad6f3a2.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Properties\r-architecture-0tKCSyLXqQM-unsplash_572e9ae4-a966-4169-9bd1-83759d78b8ba_f74bcdae-cefe-4efe-a299-e3940ec77559.jpg'))">
       <SourceType>Package</SourceType>
@@ -32633,6 +32939,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Types\11_bbe9747e-7b8f-452e-8ed1-20cc19953ed0_f4d391a3-e46b-4835-aee0-b2e2a37f8d78.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Types\pexels-charlotte-may-5825527_864cc3f0-e268-463f-909c-5651d485e8ea_b25e7f64-82c9-4154-9668-3ec3df5c1e06.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>RealEstate</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/RealEstate</BasePath>
+      <RelativePath>Uploads/Types/pexels-charlotte-may-5825527_864cc3f0-e268-463f-909c-5651d485e8ea_b25e7f64-82c9-4154-9668-3ec3df5c1e06.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>cbxyjzopaa</Fingerprint>
+      <Integrity>KPyzdS/smFg+XRtqJlIK1nG3CX1PPY3SHn1vipVfMfs=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Types\pexels-charlotte-may-5825527_864cc3f0-e268-463f-909c-5651d485e8ea_b25e7f64-82c9-4154-9668-3ec3df5c1e06.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Types\pexels-pixabay-302769_40fd2f14-289d-4f65-a388-e19de2b62df8_1578c150-a079-4ede-af1f-b74a7044827c.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>RealEstate</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/RealEstate</BasePath>
+      <RelativePath>Uploads/Types/pexels-pixabay-302769_40fd2f14-289d-4f65-a388-e19de2b62df8_1578c150-a079-4ede-af1f-b74a7044827c.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>7tamqxgpxz</Fingerprint>
+      <Integrity>xWGUyD0C2VvrWZTuJ/9HtLQzN8UQabVg1WrOw/h/xRs=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Types\pexels-pixabay-302769_40fd2f14-289d-4f65-a388-e19de2b62df8_1578c150-a079-4ede-af1f-b74a7044827c.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Uploads\Types\pexels-pixabay-302769_40fd2f14-289d-4f65-a388-e19de2b62df8_b224656f-1300-4f6c-8aaa-521c23bd3f99.jpg'))">
       <SourceType>Package</SourceType>

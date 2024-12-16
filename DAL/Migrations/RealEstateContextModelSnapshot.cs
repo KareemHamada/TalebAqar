@@ -191,6 +191,9 @@ namespace DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("HasWhatsApp")
+                        .HasColumnType("bit");
+
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
                         .HasMaxLength(11)
@@ -293,6 +296,9 @@ namespace DAL.Migrations
 
                     b.Property<int?>("StatusId")
                         .HasColumnType("int");
+
+                    b.Property<string>("StyledDescription")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("TypeId")
                         .HasColumnType("int");

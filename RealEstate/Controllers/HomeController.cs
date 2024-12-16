@@ -49,8 +49,16 @@ namespace RealEstate.Controllers
 
 
             ViewBag.Governorates = new SelectList(await _unitOfWork.Governorates.GetAllAsync(), "GovernorateId", "GovernorateName");
-            ViewBag.Types = new SelectList(await _unitOfWork.Types.GetAllAsync(), "TypeId", "TypeName");
+            //ViewBag.Types = new SelectList(await _unitOfWork.Types.GetAllAsync(), "TypeId", "TypeName");
 
+            ViewBag.Types = (await _unitOfWork.Types.GetAllAsync())
+             .Select(t => new SelectListItem
+             {
+                 Value = t.TypeId.ToString(),
+                 Text = t.TypeName,
+                 // Use a custom attribute to pass ShowHomeRoomNumber as additional data
+                 Group = new SelectListGroup { Name = t.ShowHomeRoomNumber.ToString() }
+             }).ToList();
 
             // minimum and maximum abaliable sale and rent prices
             var rentalProperties = _realEstateContext.TbProperties.Where(a => a.CurrentState == true && a.StatusId == 2);

@@ -33,6 +33,7 @@ namespace RealEstate.Areas.AdminArea289.ViewModels
 		public DateTime? SoldOrRenteledDate { get; set; }
 
         public string? Description { get; set; }
+        public string? StyledDescription { get; set; }
 
         public bool CurrentState { get; set; }
 
