@@ -137,7 +137,7 @@ namespace RealEstate.Controllers
 
 
             vm.propertyVM = _mapper.Map<TbProperty, PropertyVM>(await _unitOfWork.Properties.GetWithNamesAsync(id.Value));
-            vm.PropertiesInTheSameGovernorate = _mapper.Map<IEnumerable<TbProperty>, IEnumerable<PropertyVM>>(await _unitOfWork.Properties.PropertiesInTheSameGovernorate(vm.propertyVM.GovernorateId));
+            vm.PropertiesInTheSameGovernorate = _mapper.Map<IEnumerable<TbProperty>, IEnumerable<PropertyVM>>(await _unitOfWork.Properties.PropertiesInTheSameGovernorate(vm.propertyVM.GovernorateId,vm.propertyVM.PropertyId));
             return View(vm);
 
         }

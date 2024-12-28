@@ -1,0 +1,7 @@
+﻿.showPagination {
+    display: block; /* Make it visible */
+}
+
+.hidePagination {
+    display: none; /* Hide the element */
+}

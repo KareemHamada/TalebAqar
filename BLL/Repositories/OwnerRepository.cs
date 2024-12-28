@@ -6,5 +6,10 @@
         {
 
         }
+
+
+
+        public async Task<ICollection<TbOwner>> GetAllOwnersAsync() => await _dbSet.AsNoTracking().Where(x => x.CurrentState == true).OrderByDescending(x=>x.OwnerId).ToListAsync();
+
     }
 }

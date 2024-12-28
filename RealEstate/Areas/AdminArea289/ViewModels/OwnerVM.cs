@@ -27,7 +27,10 @@ namespace RealEstate.Areas.AdminArea289.ViewModels
 		[Required(ErrorMessage = "أدخل العنوان")]
 		public string? Address { get; set; }
 
-		public bool CurrentState { get; set; }
+
+        public string? CardIdImage { get; set; }
+
+        public bool CurrentState { get; set; }
 
 		public virtual ICollection<TbProperty> TbProperties { get; set; } = new List<TbProperty>();
 	}

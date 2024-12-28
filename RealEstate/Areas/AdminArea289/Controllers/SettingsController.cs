@@ -71,11 +71,98 @@ namespace RealEstate.Areas.AdminArea289.Controllers
 
 
 
-                    settingVM.Logo = Logo != null ? await Helper.SaveingImageAsync(Logo, "Settings"): existingSetting.Logo;
+                    //// Get the full path to the image file
+                    //string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", type.TypeImage.TrimStart('/'));
 
-                    settingVM.MainPanner = MainPanner != null ? await Helper.SaveingImageAsync(MainPanner, "Settings") : existingSetting.MainPanner;
+                    //// Delete the image file if it exists
+                    //if (System.IO.File.Exists(imagePath))
+                    //{
+                    //    System.IO.File.Delete(imagePath);
+                    //}
 
-                    settingVM.PropertyDetailsPanner = PropertyDetailsPanner != null ? await Helper.SaveingImageAsync(PropertyDetailsPanner, "Settings") : existingSetting.PropertyDetailsPanner;
+
+
+                    if (Logo != null) {
+                        if (existingSetting.Logo != null) {
+                            // Delete Existing logo
+
+                            // Get the full path to the image file
+                            string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", existingSetting.Logo.TrimStart('/'));
+
+                            // Delete the image file if it exists
+                            if (System.IO.File.Exists(imagePath))
+                            {
+                                System.IO.File.Delete(imagePath);
+                            }
+                        }
+
+                        settingVM.Logo = await Helper.SaveingImageAsync(Logo, "Settings");
+                    }
+                    else
+                    {
+                        settingVM.Logo = existingSetting.Logo;
+                    }
+
+
+                    // settingVM.Logo = Logo != null ? await Helper.SaveingImageAsync(Logo, "Settings"): existingSetting.Logo;
+                    //settingVM.MainPanner = MainPanner != null ? await Helper.SaveingImageAsync(MainPanner, "Settings") : existingSetting.MainPanner;
+
+                    //settingVM.PropertyDetailsPanner = PropertyDetailsPanner != null ? await Helper.SaveingImageAsync(PropertyDetailsPanner, "Settings") : existingSetting.PropertyDetailsPanner;
+
+
+
+                    if (MainPanner != null)
+                    {
+                        if (existingSetting.MainPanner != null)
+                        {
+                            // Delete Existing logo
+
+                            // Get the full path to the image file
+                            string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", existingSetting.MainPanner.TrimStart('/'));
+
+                            // Delete the image file if it exists
+                            if (System.IO.File.Exists(imagePath))
+                            {
+                                System.IO.File.Delete(imagePath);
+                            }
+                        }
+
+                        settingVM.MainPanner = await Helper.SaveingImageAsync(MainPanner, "Settings");
+                    }
+                    else
+                    {
+                        settingVM.MainPanner = existingSetting.MainPanner;
+                    }
+
+                   
+                    if (PropertyDetailsPanner != null)
+                    {
+                        if (existingSetting.PropertyDetailsPanner != null)
+                        {
+                            // Delete Existing logo
+
+                            // Get the full path to the image file
+                            string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", existingSetting.PropertyDetailsPanner.TrimStart('/'));
+
+                            // Delete the image file if it exists
+                            if (System.IO.File.Exists(imagePath))
+                            {
+                                System.IO.File.Delete(imagePath);
+                            }
+                        }
+
+                        settingVM.PropertyDetailsPanner = await Helper.SaveingImageAsync(PropertyDetailsPanner, "Settings");
+                    }
+                    else
+                    {
+                        settingVM.PropertyDetailsPanner = existingSetting.PropertyDetailsPanner;
+                    }
+
+
+
+
+
+                    
 
                     // Detach the existing entity
                     _realEstateContext.Entry(existingSetting).State = EntityState.Detached;

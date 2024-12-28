@@ -60,18 +60,18 @@
 		</None>
 	</ItemGroup>
 	<ItemGroup>
-	  <Content Remove="wwwroot\Data\DataSeed\setting.json" />
-	  <Content Remove="wwwroot\Data\DataSeed\statuses.json" />
-	  <Content Remove="wwwroot\Uploads\DefaultImages\favicon.png" />
+	  <Content Remove="wwwroot\Custom\css\custom.css" />
+	  <Content Remove="wwwroot\Custom\js\custom.js" />
 	</ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\PublishProfiles\" />
-    <Folder Include="wwwroot\Uploads\Types\" />
-    <Folder Include="wwwroot\Uploads\Settings\" />
-    <Folder Include="wwwroot\Uploads\Properties\" />
-	  <Folder Include="wwwroot\Uploads\Data\DataSeed\" />
-
-  </ItemGroup>
+	
+    <ItemGroup>
+        <Folder Include="Properties\PublishProfiles\" />
+        <Folder Include="wwwroot\Uploads\Owners\" />
+        <Folder Include="wwwroot\Uploads\Types\" />
+        <Folder Include="wwwroot\Uploads\Settings\" />
+        <Folder Include="wwwroot\Uploads\Properties\" />
+        <Folder Include="wwwroot\Uploads\Data\DataSeed\" />
+    </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>

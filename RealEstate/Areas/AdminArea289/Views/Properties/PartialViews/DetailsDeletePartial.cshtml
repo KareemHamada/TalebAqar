@@ -31,23 +31,20 @@
 		<span class="text-danger" class="text-danger" asp-validation-for="PropertyId"></span>
 
 
-		@* <div class="form-group">
-			<label asp-for="Description" for="exampleInputEmail1">وصف العقار</label>
 
-			<textarea asp-for="Description" id="textAreaId" class="textarea" placeholder="وصف العقار" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid rgb(221, 221, 221); padding: 10px; display: none;">
-			<span class="text-danger" asp-validation-for="Description" disabled></span>
-
-			</textarea>
-		</div>
- *@
 
 		<div class="form-group">
 			<label asp-for="Description" for="exampleInputEmail1">وصف العقار</label>
 
-			<textarea asp-for="Description" id="exampleInputText" class="form-control" placeholder="وصف العقار"></textarea>
+			<textarea asp-for="Description" id="exampleInputText" class="form-control" placeholder="وصف العقار" disabled></textarea>
 		</div>
 
+		<div class="form-group">
+			<label asp-for="StyledDescription">وصف العقار بالتنسيق</label>
 
+			<textarea asp-for="StyledDescription" id="description" disabled></textarea>
+
+		</div>
 
 		<div class="form-group">
 			<label asp-for="Price" for="exampleInputText">سعر بيع او تاجير العقار</label>
@@ -196,50 +193,79 @@
 
 	</div>
 	<div class="tab-pane fade" id="custom-content-above-details" role="tabpanel" aria-labelledby="custom-content-above-details-tab">
+		<div class="row">
+			<div class="col-lg-6 col-sm-12">
+				<div class="form-group">
+					<label asp-for="NumOfAdvertisement" for="exampleInputText">رقم الاعلان</label>
+					<input readonly asp-for="NumOfAdvertisement" type="number" class="form-control" id="exampleInputText" />
+				</div>
 
-		<div class="form-group">
-			<label asp-for="NumOfAdvertisement" for="exampleInputText">رقم الاعلان</label>
-			<input readonly asp-for="NumOfAdvertisement" type="number" class="form-control" id="exampleInputText" />
+				<div class="form-group">
+					<label asp-for="NumOfViews" for="exampleInputText">عدد مرات المشاهده</label>
+					<input readonly asp-for="NumOfViews" type="number" class="form-control" id="exampleInputText" />
+				</div>
+
+
+				<div class="form-group">
+					<label asp-for="Area" for="exampleInputText">المساحة بالمتر</label>
+					<input readonly asp-for="Area" type="number" class="form-control" id="exampleInputText" />
+				</div>
+
+				<div class="form-group">
+					<label asp-for="Bedrooms" for="exampleInputText">عدد الغرف</label>
+					<input readonly asp-for="Bedrooms" type="number" class="form-control" id="exampleInputText" />
+				</div>
+
+				<div class="form-group">
+					<label asp-for="Bathrooms" for="exampleInputText">عدد الحمامات</label>
+					<input readonly asp-for="Bathrooms" type="number" class="form-control" id="exampleInputText" />
+				</div>
+
+				<div class="form-group">
+					<label asp-for="Furnished">مفروش</label>
+					<select asp-for="Furnished" class="form-control" id="Furnished" disabled>
+						<option value="false">لا</option>
+						<option value="true">نعم</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label asp-for="FloorNum" for="exampleInputText">رقم الدور</label>
+					<input readonly asp-for="FloorNum" type="number" class="form-control" id="exampleInputText" />
+				</div>
+
+				<div class="form-group">
+					<label asp-for="Insurance" for="exampleInputText">التامين</label>
+					<input readonly asp-for="Insurance" type="number" class="form-control" id="exampleInputText" />
+				</div>
+			</div>
+
+			<div class="col-lg-6 col-sm-12">
+				<div class="form-group">
+					<label asp-for="PostDays" for="exampleInputText">مدة ايام الإعلان</label>
+					<input readonly asp-for="PostDays" type="number" class="form-control" id="exampleInputText" min="0" placeholder="مدة ايام الإعلان">
+					<span class="text-danger" class="text-danger" asp-validation-for="PostDays"></span>
+				</div>
+
+
+				<div class="form-group">
+					<label for="ContractImage">الصورة</label>
+					<input type="file" name="ContractImage" id="ContractImage" accept="image/*" class="form-control-file" />
+				</div>
+
+				<div class="form-group">
+					<div class="mt-4">
+						<h4>العقد</h4>
+						<img id="ContractImageView" src="@Model.PropertyContractImage" alt="صورة العقد" style="width: 200px;height: 200px;" />
+					</div>
+				</div>
+
+			</div>
 		</div>
 
-		<div class="form-group">
-			<label asp-for="NumOfViews" for="exampleInputText">عدد مرات المشاهده</label>
-			<input readonly asp-for="NumOfViews" type="number" class="form-control" id="exampleInputText" />
-		</div>
+		
 
-
-		<div class="form-group">
-			<label asp-for="Area" for="exampleInputText">المساحة(M^2)</label>
-			<input readonly asp-for="Area" type="number" class="form-control" id="exampleInputText" />
-		</div>
-
-		<div class="form-group">
-			<label asp-for="Bedrooms" for="exampleInputText">عدد الغرف</label>
-			<input readonly asp-for="Bedrooms" type="number" class="form-control" id="exampleInputText" />
-		</div>
-
-		<div class="form-group">
-			<label asp-for="Bathrooms" for="exampleInputText">عدد الحمامات</label>
-			<input readonly asp-for="Bathrooms" type="number" class="form-control" id="exampleInputText" />
-		</div>
-
-		<div class="form-group">
-			<label asp-for="Furnished">مفروش</label>
-			<select asp-for="Furnished" class="form-control" id="Furnished" disabled>
-				<option value="false">لا</option>
-				<option value="true">نعم</option>
-			</select>
-		</div>
-
-		<div class="form-group">
-			<label asp-for="FloorNum" for="exampleInputText">رقم الدور</label>
-			<input readonly asp-for="FloorNum" type="number" class="form-control" id="exampleInputText" />
-		</div>
-
-		<div class="form-group">
-			<label asp-for="Insurance" for="exampleInputText">التامين</label>
-			<input readonly asp-for="Insurance" type="number" class="form-control" id="exampleInputText" />
-		</div>
+		
 	</div>
 
 	<div class="tab-pane fade" id="custom-content-above-logs" role="tabpanel" aria-labelledby="custom-content-above-logs-tab">

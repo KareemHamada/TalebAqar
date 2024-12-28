@@ -17,6 +17,8 @@
         [HttpGet("PropertiesSearchAsync")]
         public async Task<IEnumerable<PropertyDTO>> PropertiesSearchAsync([FromQuery] int? statusId,int? typeId,int? governorateId, int? cityId, int? bedrooms, int? price, string sortOrder)
         {
+            TimeZoneInfo egyptTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Egypt Standard Time");
+
             var query = _realEstateContext.TbProperties.Where(x => x.CurrentState == true);
 
             if (statusId.HasValue)
@@ -51,7 +53,7 @@
                 Bathrooms = p.Bathrooms,
                 Price = p.Price,
                 Negotiable = p.Negotiable,
-                CreatedDate = p.CreatedDate,
+                CreatedDate = TimeZoneInfo.ConvertTimeFromUtc(p.CreatedDate, egyptTimeZone).ToString("g"),
                 Description = p.Description,
                 Status = p.Status.StatusName,
                 Type = p.Type.TypeName,
@@ -66,7 +68,9 @@
 
         [HttpGet("GetPropertiesForSale")]
         public async Task<IEnumerable<PropertyDTO>> GetPropertiesForSale([FromQuery] string? sortOrder)
-        {
+        { 
+            // Define Egypt time zone (UTC+2)
+            TimeZoneInfo egyptTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Egypt Standard Time");
 
             var query = _realEstateContext.TbProperties
                 .Where(x => x.CurrentState == true && x.StatusId == 1)
@@ -78,7 +82,7 @@
                     Bathrooms = p.Bathrooms,
                     Price = p.Price,
                     Negotiable = p.Negotiable,
-                    CreatedDate = p.CreatedDate,
+                    CreatedDate = TimeZoneInfo.ConvertTimeFromUtc(p.CreatedDate, egyptTimeZone).ToString("g"),
                     Description = p.Description,
                     Status = p.Status.StatusName,
                     Type = p.Type.TypeName,
@@ -86,7 +90,8 @@
                     City = p.City.CityName,
                     Governorate = p.Governorate.GovernorateName,
                     Image = p.PropertyImages.FirstOrDefault().ImageUrl,
-                    ShortDescription = p.Description.Length > 40 ? p.Description.Substring(0, 40) + "..." : p.Description
+                    ShortDescription = p.Description.Length > 40 ? p.Description.Substring(0, 40) + "..." : p.Description,
+
 
                 });
 
@@ -105,6 +110,7 @@
         [HttpGet("GetPropertiesForRent")]
         public async Task<IEnumerable<PropertyDTO>> GetPropertiesForRent([FromQuery] string? sortOrder)
         {
+            TimeZoneInfo egyptTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Egypt Standard Time");
 
             var query = _realEstateContext.TbProperties
                 .Where(x => x.CurrentState == true && x.StatusId == 2)
@@ -116,7 +122,7 @@
                     Bathrooms = p.Bathrooms,
                     Price = p.Price,
                     Negotiable = p.Negotiable,
-                    CreatedDate = p.CreatedDate,
+                    CreatedDate = TimeZoneInfo.ConvertTimeFromUtc(p.CreatedDate, egyptTimeZone).ToString("g"),
                     Description = p.Description,
                     Status = p.Status.StatusName,
                     Type = p.Type.TypeName,

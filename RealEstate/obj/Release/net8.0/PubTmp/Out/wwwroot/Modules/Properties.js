@@ -5,21 +5,23 @@ var ClsProperties = {
 
         const apiBaseUrl = window.location.hostname === "localhost"
             ? "https://localhost:7102"
-            : "https://talebaqar.com.com";
+            : "https://www.talebaqar.com";
+
 
 
         const url = `${apiBaseUrl}/api/Properties/GetPropertiesForSale?sortOrder=${sortOrder}`;
 
-
         Helper.AjaxCallGet(url, {}, "json",
             function (data) {
+                var paginationDiv = document.getElementById('ItemPagination');
 
-                $('#ItemPagination').pagination({
-                    dataSource: data,
-                    pageSize: 10,
-                    callback: function (data, pagination) {
-                        
-                        if (data.length > 0) {
+                var d1 = document.getElementById('ItemArea1');
+                var d2 = document.getElementById('ItemArea2');
+                if (data.length > 0) {
+                    $('#ItemPagination').pagination({
+                        dataSource: data,
+                        pageSize: 10,
+                        callback: function (data, pagination) {
                             var htmlData = "";
                             var htmlData2 = "";
                             for (var i = 0; i < data.length; i++) {
@@ -32,13 +34,21 @@ var ClsProperties = {
 
                             d1.innerHTML = htmlData;
                             d2.innerHTML = htmlData2;
-                        } else {
-                            d1.innerHTML = '<h2>لا توجد عقارات مطابقة للبحث</h2>';
-                            d2.innerHTML = '<h2>لا توجد عقارات مطابقة للبحث</h2>';
+
+
                         }
-                        
-                    }
-                });
+                    });
+                } else {
+                    d1.innerHTML = '<h2>لا توجد عقارات متاحة</h2>';
+                    d2.innerHTML = '<h2>لا توجد عقارات متاحة</h2>';
+
+
+                    // Hide the pagination area if no data
+                    paginationDiv.classList.remove('showPagination');
+                    paginationDiv.classList.add('hidePagination');
+                } 
+
+                
             }, function () { });
     },
     GetPropertiesForRent: function () {
@@ -46,18 +56,23 @@ var ClsProperties = {
 
         const apiBaseUrl = window.location.hostname === "localhost"
             ? "https://localhost:7102"
-            : "https://talebaqar.com.com";
+            : "https://www.talebaqar.com";
         const url = `${apiBaseUrl}/api/Properties/GetPropertiesForRent?sortOrder=${sortOrder}`;
 
         Helper.AjaxCallGet(url, {}, "json",
             function (data) {
 
-                $('#ItemPagination').pagination({
-                    dataSource: data,
-                    pageSize: 10,
-                    callback: function (data, pagination) {
-                        
-                        if (data.length > 0) {
+                var paginationDiv = document.getElementById('ItemPagination');
+
+                var d1 = document.getElementById('ItemArea1');
+                var d2 = document.getElementById('ItemArea2');
+
+                if (data.length > 0) {
+
+                    $('#ItemPagination').pagination({
+                        dataSource: data,
+                        pageSize: 10,
+                        callback: function (data, pagination) {
                             var htmlData = "";
                             var htmlData2 = "";
 
@@ -66,28 +81,34 @@ var ClsProperties = {
                                 htmlData2 += ClsProperties.DrawItem2(data[i]);
 
                             }
-                            var d1 = document.getElementById('ItemArea1');
-                            var d2 = document.getElementById('ItemArea2');
-
                             d1.innerHTML = htmlData;
                             d2.innerHTML = htmlData2;
-                        } else {
-                            d1.innerHTML = '<h2>لا توجد عقارات مطابقة للبحث</h2>';
-                            d2.innerHTML = '<h2>لا توجد عقارات مطابقة للبحث</h2>';
+
+                            // Show the pagination area if there is data
+                            paginationDiv.classList.remove('hidePagination');
+                            paginationDiv.classList.add('showPagination');
                         }
-                    }
-                });
+                    });
+                }
+                else {
+                    d1.innerHTML = '<h2>لا توجد عقارات متاحة</h2>';
+                    d2.innerHTML = '<h2>لا توجد عقارات متاحة</h2>';
+
+
+                    // Hide the pagination area if no data
+                    paginationDiv.classList.remove('showPagination');
+                    paginationDiv.classList.add('hidePagination');
+                }
+                
             }, function () { });
     },
 
     Searching: function (statusId, typeId, governorateId, cityId, bedrooms, price) {
-        console.log(statusId, typeId, governorateId, cityId, bedrooms, price);
         const sortOrder = document.getElementById("sortOrder").value;
         const apiBaseUrl = window.location.hostname === "localhost"
             ? "https://localhost:7102"
-            : "https://talebaqar.com.com";
+            : "https://www.talebaqar.com";
         const url = new URL(`${apiBaseUrl}/api/Properties/PropertiesSearchAsync`);
-        console.log(url);
         const params = {
             sortOrder,
             statusId,
@@ -106,16 +127,18 @@ var ClsProperties = {
 
         Helper.AjaxCallGet(url, {}, "json",
             function (data) {
+                var paginationDiv = document.getElementById('ItemPagination');
                 var d1 = document.getElementById('ItemArea1');
                 var d2 = document.getElementById('ItemArea2');
-                $('#ItemPagination').pagination({
-                    dataSource: data,
-                    pageSize: 10,
-                    callback: function (data, pagination) {
-                        var htmlData = "";
-                        var htmlData2 = "";
-                        if (data.length > 0) {
-                    
+
+                if (data.length > 0) {
+
+                    $('#ItemPagination').pagination({
+                        dataSource: data,
+                        pageSize: 10,
+                        callback: function (data, pagination) {
+                            var htmlData = "";
+                            var htmlData2 = "";
 
                             for (var i = 0; i < data.length; i++) {
                                 htmlData += ClsProperties.DrawItem(data[i]);
@@ -124,16 +147,24 @@ var ClsProperties = {
                             }
                             d1.innerHTML = htmlData;
                             d2.innerHTML = htmlData2;
-                        } else {
-                            d1.innerHTML = '<h2>لا توجد عقارات مطابقة للبحث</h2>';
-                            d2.innerHTML = '<h2>لا توجد عقارات مطابقة للبحث</h2>';
                         }
-                    }
-                });
+                    });
+
+                }
+
+                else {
+                    d1.innerHTML = '<h2>لا توجد عقارات مطابقة للبحث</h2>';
+                    d2.innerHTML = '<h2>لا توجد عقارات مطابقة للبحث</h2>';
+
+
+                    // Hide the pagination area if no data
+                    paginationDiv.classList.remove('showPagination');
+                    paginationDiv.classList.add('hidePagination');
+                }
+
+                
             }, function () { });
     },
-
-
 
 
     DrawItem: function (item) {
@@ -148,7 +179,10 @@ var ClsProperties = {
                     <div class="product-info">
                         <div class="product-badge">
                             <ul>
-                                <li class="sale-badg">${item.status}</li>
+                                      <li class="sale-badg">${item.type}</li>
+                               <li><span style="display: inline-block; width: 4ch;"></span></li>
+
+                               <li class="sale-badg">${item.status}</li>
                             </ul>
                         </div>
                         <div class="product-description">
@@ -161,17 +195,19 @@ var ClsProperties = {
                                 </li>
                             </ul>
                         </div>
-                        <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-                            <li>
-                                <span>${item.bedrooms}</span>
+                        <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">`;
 
-                                غرف
-                            </li>
-                            <li>
-                              <span>${item.bathrooms}</span>
-                                حمام
-                            </li>
-                            <li>
+                        
+                        if (item.bedrooms !== null) {
+                            data += `<li>غرف <span>${item.bedrooms}</span></li>`;
+                        }
+
+                        if (item.bathrooms !== null) {
+                            data += `<li>حمام <span>${item.bathrooms}</span></li>`;
+                        }
+
+                        data +=`
+                           <li>
                                    <span>${item.area}</span>
                                 المساحة
                             </li>
@@ -242,7 +278,10 @@ var ClsProperties = {
                     <div class="product-badge-price">
                         <div class="product-badge">
                             <ul>
-                                <li class="sale-badg">${item.status}</li>
+                                <li class="sale-badg">${item.type}</li>
+                               <li><span style="display: inline-block; width: 4ch;"></span></li>
+
+                               <li class="sale-badg">${item.status}</li>
                             </ul>
                         </div>
                         <div class="product-price">
@@ -260,18 +299,18 @@ var ClsProperties = {
                             </li>
                         </ul>
                     </div>
-                    <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
+                    <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">`;
 
-                        <li>
-                            <span>${item.bedrooms}</span>
+                    if (item.bedrooms !== null) {
+                        data += `<li>غرف <span>${item.bedrooms}</span></li>`;
+                    }
 
-                            غرف
-                        </li>
-                        <li>
-                            <span>${item.bathrooms}</span>
-                            حمام
-                        </li>
-                        <li>
+                    if (item.bathrooms !== null) {
+                        data += `<li>حمام <span>${item.bathrooms}</span></li>`;
+                    }
+
+                        
+                    data +=`<li>
                             <span>${item.area}</span>
                             المساحة
                         </li>
@@ -329,7 +368,7 @@ var ClsProperties = {
         const governorateId = document.getElementById("governorate").value;
         const apiBaseUrl = window.location.hostname === "localhost"
             ? "https://localhost:7102"
-            : "https://talebaqar.com.com";
+            : "https://www.talebaqar.com";
         const url = `${apiBaseUrl}/api/Properties/GetCities?governorateId=${governorateId}`;
 
         Helper.AjaxCallGet(url, {}, "json",
@@ -363,7 +402,7 @@ var ClsProperties = {
         const governorateId = document.getElementById("governorate2").value;
         const apiBaseUrl = window.location.hostname === "localhost"
             ? "https://localhost:7102"
-            : "https://talebaqar.com.com";
+            : "https://www.talebaqar.com";
         const url = `${apiBaseUrl}/api/Properties/GetCities?governorateId=${governorateId}`;
         Helper.AjaxCallGet(url, {}, "json",
             function (data) {
@@ -391,9 +430,6 @@ var ClsProperties = {
 
             }, function () { });
     },
-
-
-
 
 }
 

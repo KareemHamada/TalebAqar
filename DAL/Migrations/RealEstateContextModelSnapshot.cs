@@ -181,6 +181,9 @@ namespace DAL.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<string>("CardIdImage")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("CurrentState")
                         .HasColumnType("bit");
 
@@ -288,8 +291,14 @@ namespace DAL.Migrations
                     b.Property<int?>("OwnerId")
                         .HasColumnType("int");
 
+                    b.Property<int>("PostDays")
+                        .HasColumnType("int");
+
                     b.Property<int>("Price")
                         .HasColumnType("int");
+
+                    b.Property<string>("PropertyContractImage")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("SoldOrRenteledDate")
                         .HasColumnType("datetime2");

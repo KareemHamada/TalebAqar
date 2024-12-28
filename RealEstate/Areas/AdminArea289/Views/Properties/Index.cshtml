@@ -36,6 +36,7 @@
 								<th>الحمامات</th>
 								<th>تكلفة الاعلان</th>
 								<th>تاريخ إنشاءالاعلان</th>
+								<th>مدة الإعلان بالايام</th>
 								<th>حالة العقار</th>
 								<th>نوع العقار</th>
 								<th>المحافظة</th>
@@ -62,15 +63,12 @@
 									<td>@item.Bathrooms</td>
 									<td>@item.CostPrice</td>
 									<td>
-										@{
-											var egyptTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Egypt Standard Time");
-											var egyptTime = TimeZoneInfo.ConvertTimeFromUtc(item.CreatedDate, egyptTimeZone);
-											string shortDateTimeEgypt = egyptTime.ToString("dd/MM/yyyy HH:mm");
 
-										}
-										@shortDateTimeEgypt
-										
+										@TimeZoneInfo.ConvertTimeFromUtc(item.CreatedDate, TimeZoneInfo.FindSystemTimeZoneById("Egypt Standard Time")).ToString("dd/MM/yyyy HH:mm")
+
 									</td>
+									<td>@item.PostDays</td>
+
 									<td>@item.Status?.StatusName</td>
 									<td>@item.Type?.TypeName</td>
 									<td>@item.Governorate?.GovernorateName</td>
@@ -120,6 +118,7 @@
 								<th>الحمامات</th>
 								<th>تكلفة الاعلان</th>
 								<th>تاريخ إنشاءالاعلان</th>
+								<th>مدة الإعلان بالايام</th>
 								<th>حالة العقار</th>
 								<th>نوع العقار</th>
 								<th>المحافظة</th>

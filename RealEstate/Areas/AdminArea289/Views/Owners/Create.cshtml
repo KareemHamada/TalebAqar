@@ -28,7 +28,7 @@
 						<div class="card-header"></div>
 						<!-- /.card-header -->
 						<!-- form start -->
-						<form role="form" method="post" asp-action="Create" >
+						<form role="form" method="post" asp-action="Create" enctype="multipart/form-data">
 
 							<partial name="PartialViews/CreateEditPartial"></partial>
 
@@ -41,7 +41,14 @@
 
 				</div>
 
-				<div class="col-md-6"></div>
+				<div class="col-md-6">
+					<div class="card card-primary">
+						<div class="mt-4">
+							<h4>صورة البطاقة</h4>
+							<img id="CardIdImage" src="@Model.CardIdImage" alt="الصورة" style="width: 200px;height: 200px;" />
+						</div>
+					</div>
+				</div>
 
 			</div>
 			<!-- /.row -->
@@ -52,5 +59,26 @@
 
 
 @section Scripts {
+
+	<script>
+		$(document).ready(function () {
+			// Preview the uploaded Logo before submission
+			$('#CardImage').change(function (e) {
+				const file = e.target.files[0];
+				const reader = new FileReader();
+
+				reader.onload = function (event) {
+					$('#CardIdImage')
+						.attr('src', event.target.result)
+						.show();
+				}
+				if (file) {
+					reader.readAsDataURL(file);
+				}
+			});
+		});
+	</script>
+
+
 	<partial name="_ValidationScriptsPartial"></partial>
 }

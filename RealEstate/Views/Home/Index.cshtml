@@ -248,18 +248,17 @@
 								<a href="/home/PropertyDetails/@item.PropertyId"><img src="@item.PropertyImages.FirstOrDefault().ImageUrl" alt="#"></a>
 							</div>
 							<div class="product-info">
-								<div class="d-flex align-items-center justify-content-space-around">
-									<h4 class="product-title"><a href="/home/PropertyDetails/@item.PropertyId" tabindex="0">@item.Type?.TypeName</a></h4>
-
-									<span style="display: inline-block; width: 4ch;"></span>
-
-									<h4 class="product-title"><a href="/home/PropertyDetails/@item.PropertyId" tabindex="0">@item.Status?.StatusName</a></h4>
-								</div>
-								@* <div class="product-badge">
+								<div class="product-badge">
 									<ul>
-										<li class="sale-badg">@item.Status?.StatusName</li>
+										<li class="sale-badg"><a href="/home/PropertyDetails/@item.PropertyId" tabindex="0">@item.Type?.TypeName</a></li>
+										<li><span style="display: inline-block; width: 4ch;"></span></li>
+
+										<li class="sale-badg"><a href="/home/PropertyDetails/@item.PropertyId" tabindex="0">@item.Status?.StatusName</a></li>
+
 									</ul>
-								</div> *@
+								</div>
+
+
 								<div class="product-description">
 									<a href="/home/PropertyDetails/@item.PropertyId">@Html.Raw(item.TruncatedDescription)</a>
 								</div>
@@ -271,18 +270,17 @@
 									</ul>
 								</div>
 								<ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-									<li>
-										<span>@item.Bedrooms</span>
-										غرف
-									</li>
-									<li>
-										<span>@item.Bathrooms</span>
-										حمام
-									</li>
-									<li>
-										<span>@item.Area</span>
-										المساحة
-									</li>
+									@if (item.Bedrooms.HasValue)
+									{
+										<li>غرف <span>@item.Bedrooms</span></li>
+									}
+									@if (item.Bathrooms.HasValue)
+									{
+										<li>حمام <span>@item.Bathrooms</span></li>
+									}
+									<li>المساحة <span>@item.Area</span></li>
+									
+									
 								</ul>
 								<partial name="PartialViews/PropertyModalPartial" model="@item"></partial>
 
@@ -395,7 +393,7 @@
 			<div class="col-lg-12">
 				<div class="section-title-area ltn__section-title-2--- text-center">
 					<h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">العقارات</h6>
-					<h1 class="section-title">أنواع العقارت المتاحة</h1>
+					<h1 class="section-title">أنواع العقارات المتاحة</h1>
 				</div>
 			</div>
 		</div>

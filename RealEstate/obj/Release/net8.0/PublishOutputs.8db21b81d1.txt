@@ -2,9 +2,8 @@ D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\PubTmp\Out\RealEstate.exe
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\PubTmp\Out\appsettings.json
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\PubTmp\Out\appsettings.Production.json
-D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\PubTmp\Out\wwwroot\Data\DataSeed\setting.json
-D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\PubTmp\Out\wwwroot\Data\DataSeed\statuses.json
-D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\PubTmp\Out\wwwroot\Uploads\DefaultImages\favicon.png
+D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\PubTmp\Out\wwwroot\Custom\css\custom.css
+D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\PubTmp\Out\wwwroot\Custom\js\custom.js
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\PubTmp\Out\refs\Microsoft.AspNetCore.Antiforgery.dll
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\PubTmp\Out\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\PubTmp\Out\refs\Microsoft.AspNetCore.Authentication.BearerToken.dll

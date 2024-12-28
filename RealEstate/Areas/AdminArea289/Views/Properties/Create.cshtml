@@ -5,7 +5,8 @@
 	<link rel="stylesheet" href="~/Admin/plugins/sweetalert2/sweetalert2.min.css">
 	<!-- Toastr -->
 	<link rel="stylesheet" href="~/Admin/plugins/toastr/toastr.min.css"> *@
-
+	<!-- Load Google Fonts for Arabic -->
+	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&family=Amiri&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 	<style>
@@ -70,10 +71,7 @@
 						<div class="tab-content" id="custom-content-above-tabContent">
 							<div class="tab-pane fade show active" id="custom-content-above-description" role="tabpanel" aria-labelledby="custom-content-above-description-tab">
 
-								@*start of details*@
-
-								@* <input type="hidden" asp-for="PropertyId" />
-								<span class="text-danger" class="text-danger" asp-validation-for="PropertyId"></span> *@
+							
 
 								<div class="form-group">
 									<label asp-for="Description" for="exampleInputEmail1">وصف العقار</label>
@@ -87,7 +85,7 @@
 								<div class="form-group">
 									<label asp-for="StyledDescription">وصف العقار بالتنسيق</label>
 
-									<textarea asp-for="StyledDescription" id="description" name="description"></textarea>
+									<textarea asp-for="StyledDescription" id="description"></textarea>
 
 									<span class="text-danger" asp-validation-for="StyledDescription"></span>
 
@@ -217,44 +215,72 @@
 
 							</div>
 							<div class="tab-pane fade" id="custom-content-above-details" role="tabpanel" aria-labelledby="custom-content-above-details-tab">
+								<div class="row">
+									<div class="col-lg-6 col-sm-12">
+										<div class="form-group">
+											<label asp-for="Area" for="exampleInputText">المساحة بالمتر</label>
+											<input asp-for="Area" type="number" class="form-control" id="exampleInputText" placeholder="أدخل المساحة">
+											<span class="text-danger" class="text-danger" asp-validation-for="Area"></span>
+										</div>
 
-								<div class="form-group">
-									<label asp-for="Area" for="exampleInputText">المساحة(M^2)</label>
-									<input asp-for="Area" type="number" class="form-control" id="exampleInputText" placeholder="أدخل المساحة">
-									<span class="text-danger" class="text-danger" asp-validation-for="Area"></span>
+										<div class="form-group">
+											<label asp-for="Bedrooms" for="exampleInputText">عدد الغرف</label>
+											<input asp-for="Bedrooms" type="number" class="form-control" id="exampleInputText" placeholder="أدخل عدد الغرف">
+											<span class="text-danger" class="text-danger" asp-validation-for="Bedrooms"></span>
+										</div>
+
+										<div class="form-group">
+											<label asp-for="Bathrooms" for="exampleInputText">عدد الحمامات</label>
+											<input asp-for="Bathrooms" type="number" class="form-control" id="exampleInputText" placeholder="أدخل عدد الحمامات">
+											<span class="text-danger" class="text-danger" asp-validation-for="Bathrooms"></span>
+										</div>
+
+										<div class="form-group">
+											<label asp-for="Furnished">مفروش</label>
+											<select asp-for="Furnished" class="form-control" id="Furnished">
+												<option value="false">لا</option>
+												<option value="true">نعم</option>
+											</select>
+										</div>
+
+										<div class="form-group">
+											<label asp-for="FloorNum" for="exampleInputText">رقم الدور</label>
+											<input asp-for="FloorNum" type="number" class="form-control" id="exampleInputText" placeholder="أدخل رقم الدور">
+											<span class="text-danger" class="text-danger" asp-validation-for="FloorNum"></span>
+										</div>
+
+										<div class="form-group">
+											<label asp-for="Insurance" for="exampleInputText">التامين</label>
+											<input asp-for="Insurance" type="number" class="form-control" id="exampleInputText" placeholder="أدخل التامين">
+											<span class="text-danger" class="text-danger" asp-validation-for="Insurance"></span>
+										</div>
+									</div>
+
+									<div class="col-lg-6 col-sm-12">
+										<div class="form-group">
+											<label asp-for="PostDays" for="exampleInputText">مدة ايام الإعلان</label>
+											<input asp-for="PostDays" type="number" class="form-control" id="exampleInputText" min="0" placeholder="مدة ايام الإعلان">
+											<span class="text-danger" class="text-danger" asp-validation-for="PostDays"></span>
+										</div>
+
+
+										<div class="form-group">
+											<label for="ContractImage">الصورة</label>
+											<input type="file" name="ContractImage" id="ContractImage" accept="image/*" class="form-control-file" />
+										</div>
+
+										<div class="form-group">
+											<div class="mt-4">
+												<h4>العقد</h4>
+												<img id="ContractImageView" src="@Model.PropertyContractImage" alt="صورة العقد" style="width: 200px;height: 200px;" />
+											</div>
+
+										</div>
+
+									</div>
 								</div>
 
-								<div class="form-group">
-									<label asp-for="Bedrooms" for="exampleInputText">عدد الغرف</label>
-									<input asp-for="Bedrooms" type="number" class="form-control" id="exampleInputText" placeholder="أدخل عدد الغرف">
-									<span class="text-danger" class="text-danger" asp-validation-for="Bedrooms"></span>
-								</div>
-
-								<div class="form-group">
-									<label asp-for="Bathrooms" for="exampleInputText">عدد الحمامات</label>
-									<input asp-for="Bathrooms" type="number" class="form-control" id="exampleInputText" placeholder="أدخل عدد الحمامات">
-									<span class="text-danger" class="text-danger" asp-validation-for="Bathrooms"></span>
-								</div>
-
-								<div class="form-group">
-									<label asp-for="Furnished">مفروش</label>
-									<select asp-for="Furnished" class="form-control" id="Furnished">
-										<option value="false">لا</option>
-										<option value="true">نعم</option>
-									</select>
-								</div>
-
-								<div class="form-group">
-									<label asp-for="FloorNum" for="exampleInputText">رقم الدور</label>
-									<input asp-for="FloorNum" type="number" class="form-control" id="exampleInputText" placeholder="أدخل رقم الدور">
-									<span class="text-danger" class="text-danger" asp-validation-for="FloorNum"></span>
-								</div>
-
-								<div class="form-group">
-									<label asp-for="Insurance" for="exampleInputText">التامين</label>
-									<input asp-for="Insurance" type="number" class="form-control" id="exampleInputText" placeholder="أدخل التامين">
-									<span class="text-danger" class="text-danger" asp-validation-for="Insurance"></span>
-								</div>
+								
 							</div>
 						</div>
 
@@ -395,10 +421,29 @@
 			menubar: false,
 			toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
 			plugins: 'lists',
-			content_style: "body { font-family:Arial,sans-serif; font-size:14px }"
+			content_style: "body { font-family: 'Cairo', 'Amiri', 'Tajawal',Arial,sans-serif; font-size:14px }"
 		});
 	</script>
 
+
+	<script>
+		$(document).ready(function () {
+			// Preview the uploaded Logo before submission
+			$('#ContractImage').change(function (e) {
+				const file = e.target.files[0];
+				const reader = new FileReader();
+
+				reader.onload = function (event) {
+					$('#ContractImageView')
+						.attr('src', event.target.result)
+						.show();
+				}
+				if (file) {
+					reader.readAsDataURL(file);
+				}
+			});
+		});
+	</script>
 
 
 	<partial name="_ValidationScriptsPartial"></partial>

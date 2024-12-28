@@ -89,7 +89,16 @@
                                     <a class="bg-orange">@Model.propertyVM.Status.StatusName</a>
                                 </li>
                                 <li class="ltn__blog-date">
-                                    <i class="far fa-calendar-alt"></i>@Model.propertyVM.CreatedDate
+                                    <i class="far fa-calendar-alt"></i>
+                                    @{
+											var egyptTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Egypt Standard Time");
+                                    var egyptTime = TimeZoneInfo.ConvertTimeFromUtc(@Model.propertyVM.CreatedDate, egyptTimeZone);
+											string shortDateTimeEgypt = egyptTime.ToString("dd/MM/yyyy HH:mm");
+
+										}
+										@shortDateTimeEgypt
+
+                                    
                                 </li>
                             </ul>
                         </div>
@@ -103,7 +112,7 @@
                         <div class="property-detail-info-list section-bg-1 clearfix mb-60">                          
                             <ul>
                             <li><label>رقم العقار</label> <span>@Model.propertyVM.NumOfAdvertisement</span></li>
-                            <li><label>المساحة: </label> <span>@Model.propertyVM.Area</span></li>
+                            <li><label>المساحة بالمتر: </label> <span>@Model.propertyVM.Area</span></li>
                             @if (Model.propertyVM.Bedrooms.HasValue)
                             {
                                 <li><label>الغرف:</label> <span>@Model.propertyVM.Bedrooms</span></li>
@@ -138,7 +147,7 @@
                                 <li><label>التأمين:</label> <span>@Model.propertyVM.Insurance</span></li>
                                 }
  
-                                <li><label>رقم مالك العقار:</label> <span>@Model.propertyVM.Owner?.PhoneNumber</span></li>
+                                <li><label>للتواصل:</label> <span>@Model.propertyVM.Owner?.PhoneNumber</span></li>
                             <li>
 
                                 @{

@@ -1,4 +1,3 @@
-
 namespace RealEstate
 {
     public class Program
@@ -9,9 +8,6 @@ namespace RealEstate
 
             // Add services to the container.
             //builder.Services.AddControllersWithViews();
-
-
-
 
             #region Configure service
             builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation()
@@ -44,9 +40,20 @@ namespace RealEstate
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<RealEstateContext>().AddDefaultTokenProviders();
 
 
-            builder.Services.AddAutoMapper(typeof(Program).Assembly); 
+            builder.Services.AddAutoMapper(typeof(Program).Assembly);
             #endregion
 
+
+            // Configure CORS to allow requests from your domain
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin", policy =>
+                {
+                    policy.WithOrigins("https://talebaqar.com") // Allow the specific domain
+                          .AllowAnyHeader()
+                          .AllowAnyMethod(); // Allow all HTTP methods (GET, POST, OPTIONS)
+                });
+            });
 
 
             #region Update Database
@@ -84,9 +91,8 @@ namespace RealEstate
             #endregion
 
 
-
+            // Configure Kestrel (no need to allow synchronous IO, just sanitizing the URL)
             var app = builder.Build();
-
 
 
             #region  Configure the HTTP request pipeline. 
@@ -99,6 +105,11 @@ namespace RealEstate
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+
+            // Add the URL sanitization middleware here
+            app.UseMiddleware<SanitizeUrlMiddleware>();
+
 
 
 
@@ -116,6 +127,9 @@ namespace RealEstate
 
 
             app.UseRouting();
+            // Use the CORS middleware here
+            app.UseCors("AllowSpecificOrigin");
+
 
             app.UseAuthentication();
             app.UseAuthorization();

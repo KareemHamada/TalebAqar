@@ -10,7 +10,7 @@
         public Task<IEnumerable<TbProperty>> FeaturedPropertiesAsync(int count);
 
         public Task<IEnumerable<TbProperty>> LatestPropertiesAsync(int count);
-        public Task<IEnumerable<TbProperty>> PropertiesInTheSameGovernorate(int? govornorate);
+        public Task<IEnumerable<TbProperty>> PropertiesInTheSameGovernorate(int? govornorate, int propertyId);
 
 
         Task<TbProperty> GetWithImagesAsync(int id);

@@ -1,4 +1,7 @@
 ﻿
+using System;
+using RealEstate.Areas.AdminArea289.ViewModels;
+
 namespace RealEstate.Areas.AdminArea289.Controllers
 {
     [Authorize(Roles = "Admin,Data Entry")]
@@ -21,6 +24,7 @@ namespace RealEstate.Areas.AdminArea289.Controllers
         public async Task<IActionResult> Index()
         {
             var properties = await _unitOfWork.Properties.GetAllWithNamesAsync();
+
             var propertyVM = _mapper.Map<IEnumerable<TbProperty>, IEnumerable<PropertyVM>>(properties);
 
             return View(propertyVM);
@@ -38,15 +42,17 @@ namespace RealEstate.Areas.AdminArea289.Controllers
 
         public async Task<IActionResult> Create()
         {
+            var property = new PropertyVM();
+
             // including select items
             await IcludeSelectItem();
 
-            return View();
+            return View(property);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(PropertyVM propertyVM, List<IFormFile> images)
+        public async Task<IActionResult> Create(PropertyVM propertyVM, List<IFormFile> images, IFormFile? ContractImage)
         {
 
             ModelState.Remove("PropertyId");
@@ -58,6 +64,11 @@ namespace RealEstate.Areas.AdminArea289.Controllers
 
 			propertyVM.CreatedBy = _userManager.GetUserId(User);
             propertyVM.CreatedDate = DateTime.UtcNow;
+
+            if (ContractImage != null)
+                propertyVM.PropertyContractImage = await Helper.SaveImageAsync(ContractImage, "Properties", 600, 454);
+
+
 
             var property = _mapper.Map<PropertyVM, TbProperty>(propertyVM);
 
@@ -94,7 +105,7 @@ namespace RealEstate.Areas.AdminArea289.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit([FromRoute] int id, PropertyVM propertyVM, List<int> DeleteImages, List<IFormFile> images)
+        public async Task<IActionResult> Edit([FromRoute] int id, PropertyVM propertyVM, List<int> DeleteImages, List<IFormFile> images, IFormFile? ContractImage)
         {
             if (id != propertyVM.PropertyId)
             {
@@ -110,6 +121,14 @@ namespace RealEstate.Areas.AdminArea289.Controllers
             {
                 try
                 {
+                    var propertyForImage = await _unitOfWork.Properties.GetAsync(id);
+                    if (propertyForImage == null)
+                    {
+                        ModelState.AddModelError("", "The types does not exist.");
+                        return View(propertyVM);
+                    }
+
+                    propertyVM.CreatedDate = propertyForImage.CreatedDate;
                     propertyVM.UpdatedBy = _userManager.GetUserId(User);
 					propertyVM.UpdatedDate = DateTime.UtcNow;
 
@@ -119,9 +138,35 @@ namespace RealEstate.Areas.AdminArea289.Controllers
                         propertyVM.SoldOrRenteledDate = TimeZoneInfo.ConvertTimeToUtc(propertyVM.SoldOrRenteledDate.Value);
                     }
 
-                    // Convert SoldOrRenteledDate to UTC
-                    
-                    propertyVM.CreatedDate = TimeZoneInfo.ConvertTimeToUtc(propertyVM.CreatedDate);
+      
+
+
+                    //contract image
+                    if (ContractImage != null)
+                    {
+                        if (propertyForImage.PropertyContractImage != null)
+                        {
+                            // Delete Existing logo
+
+                            // Get the full path to the image file
+                            string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", propertyForImage.PropertyContractImage.TrimStart('/'));
+
+                            // Delete the image file if it exists
+                            if (System.IO.File.Exists(imagePath))
+                            {
+                                System.IO.File.Delete(imagePath);
+                            }
+                        }
+
+                        propertyVM.PropertyContractImage = await Helper.SaveingImageAsync(ContractImage, "Properties");
+                    }
+                    else
+                    {
+                        propertyVM.PropertyContractImage = propertyForImage.PropertyContractImage;
+                    }
+
+
+                    _unitOfWork.Properties.Detach(propertyForImage);
 
                     var property = _mapper.Map<PropertyVM, TbProperty>(propertyVM);
 					_unitOfWork.Properties.Update(property);
@@ -131,16 +176,37 @@ namespace RealEstate.Areas.AdminArea289.Controllers
 					// Handle Deletion of Images
 					if (DeleteImages != null && DeleteImages.Any())
 					{
-						var ThisProperty = await _realEstateContext.TbProperties
-							 .Include(p => p.PropertyImages)
-							 .FirstOrDefaultAsync(p => p.PropertyId == id);
 
-                        var imagesToDelete = ThisProperty.PropertyImages
-													 .Where(img => DeleteImages.Contains(img.ImageId))
-													 .ToList();
+                        var ThisProperty = await _realEstateContext.TbProperties
+                             .Include(p => p.PropertyImages)
+                             .FirstOrDefaultAsync(p => p.PropertyId == id);
 
-						_realEstateContext.TbPropertyImages.RemoveRange(imagesToDelete);
-					}
+
+                        if(ThisProperty != null)
+                        {
+                            // remove images from path
+                            // Get the full path to the image file
+                            foreach (var image in ThisProperty.PropertyImages)
+                            {
+                                string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", image.ImageUrl.TrimStart('/'));
+
+                                // Delete the image file if it exists
+                                if (System.IO.File.Exists(imagePath))
+                                {
+                                    System.IO.File.Delete(imagePath);
+                                }
+                            }
+
+
+
+
+                            var imagesToDelete = ThisProperty.PropertyImages
+                                                         .Where(img => DeleteImages.Contains(img.ImageId))
+                                                         .ToList();
+
+                            _realEstateContext.TbPropertyImages.RemoveRange(imagesToDelete);
+                        }
+                    }
 
 
 
@@ -215,6 +281,7 @@ namespace RealEstate.Areas.AdminArea289.Controllers
 
             try
             {
+                // remove images from path
                 // Get the full path to the image file
                 foreach (var image in property.PropertyImages)
                 {
@@ -226,6 +293,20 @@ namespace RealEstate.Areas.AdminArea289.Controllers
                         System.IO.File.Delete(imagePath);
                     }
                 }
+                if (!string.IsNullOrEmpty(property.PropertyContractImage))
+                {
+                    // Get the full path to the image file
+                    string imageContractPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", property.PropertyContractImage.TrimStart('/'));
+
+                    // Delete the image file if it exists
+                    if (System.IO.File.Exists(imageContractPath))
+                    {
+                        System.IO.File.Delete(imageContractPath);
+                    }
+                }
+
+                    
+
 
                 _unitOfWork.Properties.Delete(property);
                 await _unitOfWork.SaveChangesAsync();
@@ -283,7 +364,7 @@ namespace RealEstate.Areas.AdminArea289.Controllers
         {
             ViewBag.Governorates = new SelectList(await _unitOfWork.Governorates.GetAllAsync(), "GovernorateId", "GovernorateName");
             ViewBag.Cities = new SelectList(await _unitOfWork.Cities.GetAllAsync(), "CityId", "CityName");
-            ViewBag.Owners = new SelectList(await _unitOfWork.Owners.GetAllAsync(), "OwnerId", "FullName");
+            ViewBag.Owners = new SelectList(await _unitOfWork.Owners.GetAllOwnersAsync(), "OwnerId", "FullName");
             ViewBag.Statuses = new SelectList(await _unitOfWork.Statuses.GetAllAsync(), "StatusId", "StatusName");
             ViewBag.Types = new SelectList(await _unitOfWork.Types.GetAllAsync(), "TypeId", "TypeName");
             ViewBag.Addresses = new SelectList(await _unitOfWork.Addresses.GetAllAsync(), "AddressId", "AddressName");

@@ -20,8 +20,9 @@ namespace RealEstate.Areas.AdminArea289.ViewModels
 
         public bool Negotiable { get; set; }
 
+        public string? PropertyContractImage { get; set; }
 
-		public string CreatedBy { get; set; } // Changed to string
+        public string CreatedBy { get; set; } // Changed to string
 
 		public DateTime CreatedDate { get; set; }
 
@@ -29,7 +30,12 @@ namespace RealEstate.Areas.AdminArea289.ViewModels
 
 		public DateTime? UpdatedDate { get; set; }
 
-		public bool IsSoldOrRenteled { get; set; }
+
+        [Required(ErrorMessage = "أدخل عدد ايام")]
+        public int PostDays { get; set; }
+
+
+        public bool IsSoldOrRenteled { get; set; }
 		public DateTime? SoldOrRenteledDate { get; set; }
 
         public string? Description { get; set; }

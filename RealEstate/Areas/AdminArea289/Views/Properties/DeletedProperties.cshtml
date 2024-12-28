@@ -31,6 +31,7 @@
 								<th>الحمامات</th>
 								<th>تكلفة الاعلان</th>
 								<th>تاريخ إنشاءالاعلان</th>
+								<th>مدة الإعلان بالايام</th>
 								<th>تاريخ البيع او الإيجار</th>
 								<th>هل تم البيع او الإيجار</th>
 								<th>حالة العقار</th>
@@ -63,6 +64,8 @@
 										}
 										@shortDateTimeEgypt
 									</td>
+									<td>@item.PostDays</td>
+
 									<td>
 										@{
 											string shortDate = "";
@@ -79,6 +82,10 @@
 										}
 										@shortDate
 									</td>
+
+
+
+
 									<td>
 										<div class="form-check">
 											<input asp-for="@item.IsSoldOrRenteled"
@@ -133,6 +140,8 @@
 								<th>الحمامات</th>
 								<th>تكلفة الاعلان</th>
 								<th>تاريخ إنشاءالاعلان</th>
+								<th>مدة الإعلان بالايام</th>
+
 								<th>تاريخ البيع او الإيجار</th>
 								<th>هل تم البيع او الإيجار</th>
 								<th>حالة العقار</th>

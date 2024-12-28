@@ -1,5 +1,7 @@
 ﻿
 
+using RealEstate.Areas.AdminArea289.ViewModels;
+
 namespace RealEstate.Areas.AdminArea289.Controllers
 {
     [Authorize(Roles = "Admin")]
@@ -79,10 +81,39 @@ namespace RealEstate.Areas.AdminArea289.Controllers
                     var typeForImage = await _unitOfWork.Types.GetAsync(id);
                     if (typeForImage == null)
                     {
-                        ModelState.AddModelError("", "The setting does not exist.");
+                        ModelState.AddModelError("", "The types does not exist.");
                         return View(typeVM);
                     }
-                    typeVM.TypeImage = TypeImage != null ? await Helper.SaveImageAsync(TypeImage, "Types", 600, 454) : typeForImage.TypeImage;
+
+
+
+                    if (TypeImage != null)
+                    {
+                        if (typeForImage.TypeImage != null)
+                        {
+                            // Delete Existing logo
+
+                            // Get the full path to the image file
+                            string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", typeForImage.TypeImage.TrimStart('/'));
+
+                            // Delete the image file if it exists
+                            if (System.IO.File.Exists(imagePath))
+                            {
+                                System.IO.File.Delete(imagePath);
+                            }
+                        }
+
+                        typeVM.TypeImage = await Helper.SaveImageAsync(TypeImage, "Types", 600, 454);
+                    }
+                    else
+                    {
+                        typeVM.TypeImage = typeForImage.TypeImage;
+                    }
+
+
+
+
+                    //typeVM.TypeImage = TypeImage != null ? await Helper.SaveImageAsync(TypeImage, "Types", 600, 454) : typeForImage.TypeImage;
 
 					_unitOfWork.Types.Detach(typeForImage);
 
@@ -137,7 +168,16 @@ namespace RealEstate.Areas.AdminArea289.Controllers
 
 			try
 			{
-				_unitOfWork.Types.Delete(type);
+                // Get the full path to the image file
+                string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", type.TypeImage.TrimStart('/'));
+
+                // Delete the image file if it exists
+                if (System.IO.File.Exists(imagePath))
+                {
+                    System.IO.File.Delete(imagePath);
+                }
+
+                _unitOfWork.Types.Delete(type);
 				await _unitOfWork.SaveChangesAsync();
 				return RedirectToAction(nameof(Index));
 			}
@@ -163,8 +203,6 @@ namespace RealEstate.Areas.AdminArea289.Controllers
 
 			if (type == null)
 				return NotFound();
-
-
 
 
 			var typeVM = _mapper.Map<TbType, TypeVM>(type);

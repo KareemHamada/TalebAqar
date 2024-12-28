@@ -8,7 +8,7 @@
         public int? Bathrooms { get; set; }
         public decimal Price { get; set; }
         public bool? Negotiable { get; set; }
-        public DateTime CreatedDate { get; set; }
+        public string CreatedDate { get; set; }
         public string? Description { get; set; }
         public string Status { get; set; }
         public string Type { get; set; }
@@ -21,6 +21,7 @@
 
         // Read-only property for the shortened description
         public string ShortDescription { get; set; } // Now writable
+
 
     }
 }

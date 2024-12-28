@@ -109,6 +109,39 @@
 		document.getElementById("textAreaId").disabled = true;
 	</script>
 
+	<!-- Place the first <script> tag in your HTML's <head> -->
+	<script src="https://cdn.tiny.cloud/1/m5bepjwot3xac9lwd8iu0lsharlngntxqnzmzlkstb6er24f/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
+	<!-- Place the following <script> and <textarea> tags your HTML's <body> -->
+	<script>
+
+		 tinymce.init({
+			selector: '#description',
+			directionality: 'rtl',
+			menubar: false,
+			toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+			plugins: 'lists',
+			content_style: "body { font-family:Arial,sans-serif; font-size:14px }"
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			// Preview the uploaded Logo before submission
+			$('#ContractImage').change(function (e) {
+				const file = e.target.files[0];
+				const reader = new FileReader();
+
+				reader.onload = function (event) {
+					$('#ContractImageView')
+						.attr('src', event.target.result)
+						.show();
+				}
+				if (file) {
+					reader.readAsDataURL(file);
+				}
+			});
+		});
+	</script>
 
 	<partial name="_ValidationScriptsPartial"></partial>
 

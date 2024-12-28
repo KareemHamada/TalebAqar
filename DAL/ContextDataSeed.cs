@@ -55,12 +55,7 @@ namespace DAL
 
                     var StatusesData = await File.ReadAllTextAsync(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Data", "DataSeed", "statuses.json"));
 
-                    //read statueses from file as string
-                    //var StatusesData = await File.ReadAllTextAsync(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "/Data/DataSeed/statuses.json"));
-
-
-                    //var StatusesData = await File.ReadAllTextAsync("../wwwroot/Data/DataSeed/statuses.json");
-
+                   
                     // transform into C# objects
                     var Statuses = JsonSerializer.Deserialize<List<TbStatus>>(StatusesData);
 

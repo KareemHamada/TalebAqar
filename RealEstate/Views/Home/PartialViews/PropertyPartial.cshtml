@@ -35,25 +35,38 @@
 						</div>
 					</div>
 					<div class="product-info">
-						<div class="product-price">
-							<span>@item.Price <label> /جنية</label></span>
+
+						<div class="d-flex align-items-center justify-content-between">
+
+							<h2 class="product-price"><a href="/home/PropertyDetails/@item.PropertyId" tabindex="0">@item.Type?.TypeName</a></h2>
+
+							<div class="product-price">
+								<span>@item.Price <label> /جنية</label></span>
+							</div>
 						</div>
-						<h2 class="product-title"><a href="/home/PropertyDetails/@item.PropertyId" tabindex="0">@item.Type?.TypeName</a></h2>
+
+
 
 						<div class="product-description">
 							<a href="/home/PropertyDetails/@item.PropertyId">@Html.Raw(item.TruncatedDescription)</a>
-							
+
 						</div>
 
 						<ul class="ltn__list-item-2 ltn__list-item-2-before">
-							<li>
-								<span>@item.Bedrooms <i class="flaticon-bed"></i></span>
-								غرف
-							</li>
-							<li>
-								<span>@item.Bathrooms <i class="flaticon-clean"></i></span>
-								حمام
-							</li>
+							@if (item.Bedrooms.HasValue)
+							{
+								<li>
+									<span>@item.Bedrooms <i class="flaticon-bed"></i></span>
+									غرف
+								</li>
+							}
+							@if (item.Bathrooms.HasValue){
+								<li>
+									<span>@item.Bathrooms <i class="flaticon-clean"></i></span>
+									حمام
+								</li>
+							}
+							
 							<li>
 								<span>@item.Area <i class="flaticon-square-shape-design-interface-tool-symbol"></i></span>
 								المساحة

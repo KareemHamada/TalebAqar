@@ -1635,6 +1635,8 @@ D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Admin\plugins\toas
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\css\site.css
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Custom\css\pagination.css
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Custom\js\pagination.js
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Data\DataSeed\setting.json
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Data\DataSeed\statuses.json
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\favicon.ico
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Frontend\css\custom.css
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Frontend\css\elements\_portfoli.css
@@ -1768,11 +1770,21 @@ D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\DefaultIma
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\DefaultImages\Error.png
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\DefaultImages\favicon.png
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\DefaultImages\logo.png
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Owners\National ID copy back_8eea77dd-95ae-4364-8eb2-a1ac1e26451b.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Owners\National ID copy front_f5349d56-d94e-48f3-9a86-9c2b2a2e1353.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Owners\٢٠١٨٠١٠٤_١١٣٨٠٢ - Copy_19c61366-9ac7-48f7-8fd9-5258a2d2e5e8_e9d3552b-40c6-424c-84d1-b96dd9f32ed0.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Owners\٢٠١٨٠٢٠٢_١٣٤٥٠٣_4790fcce-acc4-476f-a685-00181193792e_28cca6a6-b1e7-45fc-83b9-312f7bc27fcf.jpg
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\130223183-240x180_ae3ca89a-fe7c-4629-9250-1c2dd8904a91_539a7deb-9ab9-4b99-98c7-7785a2825e6f.webp
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\130223185-800x600_3f26b278-07d5-42f9-b966-929964d1234a_8d9ff5ce-3fac-4422-8832-a4c510951995.webp
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\130223189-800x600_5415284d-a78c-4e74-82ae-f4a9344fced3_0ddf8003-7993-4500-b3dd-1d5467788fb7.webp
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\breno-assis-r3WAWU5Fi5Q-unsplash_71ec6870-5683-4032-9765-5037fb3165c6_de0c2e16-34b8-4be0-ad0f-313efb427b9d.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\brian-babb-XbwHrt87mQ0-unsplash_e2d024d2-045d-4ee8-96e1-3edf5c1885d0_826ec167-2446-43d5-8ec4-5db740ca6194.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\brian-babb-XbwHrt87mQ0-unsplash_e2d024d2-045d-4ee8-96e1-3edf5c1885d0_87e54ba5-f4be-448d-94bd-656b4ef43d3b.jpg
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\brian-babb-XbwHrt87mQ0-unsplash_e2d024d2-045d-4ee8-96e1-3edf5c1885d0_aca4ae6f-24c0-4e06-9560-50e07a9d69f3.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\cole-ankney-ZdJ6eIKN3G0-unsplash_b3c62c59-6dce-401e-bb96-d570768b020b_479e87c4-5c39-49fb-ae21-e1409dbf3221.jpg
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\cole-ankney-ZdJ6eIKN3G0-unsplash_b3c62c59-6dce-401e-bb96-d570768b020b_5ea6af5b-1dd8-40f0-8bc7-0f3549b22b5f.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\cole-ankney-ZdJ6eIKN3G0-unsplash_b3c62c59-6dce-401e-bb96-d570768b020b_911df4e7-bc17-4a4c-860d-ee986a3d0254.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\frames-for-your-heart-2d4lAQAlbDA-unsplash_58edb1c5-6f5f-4045-a4b7-54b4bfbf2957_54628292-47ad-4983-886a-92255ed9d678.jpg
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\frames-for-your-heart-2d4lAQAlbDA-unsplash_58edb1c5-6f5f-4045-a4b7-54b4bfbf2957_76acb1dc-d0c4-4524-9aaa-a89306a2e12b.jpg
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\frames-for-your-heart-2d4lAQAlbDA-unsplash_58edb1c5-6f5f-4045-a4b7-54b4bfbf2957_f1f01721-df69-4cb8-8518-a60753752485.jpg
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\jessica-furtney-YOoucEImrKw-unsplash_2fca9e88-8011-435f-8dec-7b3a6a13efaa_c0a871bd-c6fb-45f1-86ff-c919df6fb52b.jpg
@@ -1780,42 +1792,28 @@ D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\OIP (1)_66c71127-24e1-4a89-8245-b29244dcf56d_0e08be23-a4c5-4d5b-bd82-bba9afc5a0c2.jfif
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\OIP_0c8bf42a-329a-48ad-b5e7-5028d87dd0ac_31d28b1c-33a8-4e41-9177-9007bf01630e.jfif
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\pexels-curtis-adams-1694007-3288103_e43ed9e6-9f66-451d-a18d-68ee3ad4ad51_cc51a126-0cb1-4359-98ee-4fcc70528342.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\pexels-expect-best-79873-323780_0f1e594a-195b-4e28-adc1-5f1c805c10bd_acf024c0-bb97-483d-a142-371d2cdf1adc.jpg
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\pexels-photo-5071140_c9c8e4a4-9428-42b9-90c6-a28e43c4dc4e_3fc026a6-193a-4ffa-9db0-05e9c03daec5.jpeg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\pexels-photo-5071140_c9c8e4a4-9428-42b9-90c6-a28e43c4dc4e_54afa672-525d-4a1b-9165-86c0ec33ffa5.jpeg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\pexels-photo-5071140_c9c8e4a4-9428-42b9-90c6-a28e43c4dc4e_88df47c0-c787-429e-b241-6213c5be2788.jpeg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_008c4670-00ca-47b1-b200-d6073536e188.jpg
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_01a973f5-c5da-4ccc-b2ec-62a1f22078bf.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_2b3adacd-e737-49e4-94b0-8569fa983e38.jpg
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_8204f654-cdcc-4d3a-874a-1be8e8b30525.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\r-architecture-0tKCSyLXqQM-unsplash_572e9ae4-a966-4169-9bd1-83759d78b8ba_53c88bed-f1d9-4d15-9188-bbd213dbb688.jpg
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\r-architecture-0tKCSyLXqQM-unsplash_572e9ae4-a966-4169-9bd1-83759d78b8ba_f74bcdae-cefe-4efe-a299-e3940ec77559.jpg
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\r-architecture-oGmf8o53LeE-unsplash_8b1a64b2-cf87-4c57-952f-2a71ba9e0324_db3eea4d-baf5-4252-969b-50adc3991e12.jpg
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\ronnie-george-z11gbBo13ro-unsplash_f64961d6-1599-4525-9e0a-fcb8d9b9e285_27bb6986-1abf-4485-b085-beeaaf686d88.jpg
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\zac-gudakov-wwqZ8CM21gg-unsplash_adf950f3-3f4c-43f0-ae64-9e24c36fe789_289441d6-ca13-4cf5-8672-f7b626bbb4f7.jpg
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\11_16111c6c-b48c-470d-8f95-82a960a29dd4.jpg
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\11_1e77e627-c7b9-4f15-95bb-e6ecd351332d.jpg
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\11_1ff36b83-638a-4c37-8916-d24420fb8a7b.jpg
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\11_46ed8366-9c40-417f-9245-62f63cfe8c1e.jpg
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\11_8093631c-b5e2-416a-a676-be3b8f4d3014.jpg
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\11_bbe9747e-7b8f-452e-8ed1-20cc19953ed0.jpg
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\11_bbe9747e-7b8f-452e-8ed1-20cc19953ed0_c0c6df09-bf82-4eca-83fe-f186af7b9d67.jpg
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\14_2e76c8ce-5cc1-4ecd-a8e8-41c59def2821.jpg
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\14_5031bc76-f895-4cd7-b4ae-51585db1f7a9.jpg
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\14_83717336-ca9c-478a-8681-f3ba36058d20.jpg
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\14_b0180786-58db-4338-955a-7987c5dcb1b7.jpg
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\14_b379f1ac-47c8-4deb-b7f1-bb2dbce78991.jpg
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\Golden and White Architecture Logo with Blue Background (3)_272ad0f7-6111-4c6b-9735-a0b8163a1205.jpg
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\Golden and White Architecture Logo with Blue Background (3)_9f42079d-2cbc-42ab-b030-593c66f1f4ed.png
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\Golden_and_White_Architecture_Logo_with_Blue_Background__1_-removebg-preview_f246fc5c-6ed5-4918-9cc5-e9eb7e31dcd6.png
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\ll__1_-removebg-preview_33700b5a-c052-4836-98aa-3ae22e17de8c.png
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\logo_10789a76-13ea-41e2-87cc-e25bca102bc1.png
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\logo_10789a76-13ea-41e2-87cc-e25bca102bc1_5d0fb3be-3dd1-4462-9778-49c4d06be839.png
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\logo_9282c7fd-84fd-4d96-88ad-8338938eeca8.png
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\logo_9282c7fd-84fd-4d96-88ad-8338938eeca8_17a3bbb4-ada9-4519-89c3-d5b29154669c.png
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\logo_98279d96-4beb-4a40-9ad7-f987bab16289.png
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\logo_c83654cd-f1a4-46a1-b180-7e3730aedbf7.png
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\logo_c83654cd-f1a4-46a1-b180-7e3730aedbf7_185a912c-608d-4fbe-b063-f23ea469adb7.png
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\logo_edffc635-da7f-472c-9b08-5509f1547b02.png
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\rsz_1rsz_golden_and_white_architecture_logo_with_blue_background__1_-removebg-preview_64889061-49e0-4ab6-ba21-c8cc81841b6b.png
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\rsz_golden_and_white_architecture_logo_with_blue_background__1_-removebg-preview_462a849f-62f1-4342-94ad-a60b95c18402.png
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\rsz_golden_and_white_architecture_logo_with_blue_background__1_-removebg-preview_596fa988-ea91-4b80-945a-e8ad2950745d.png
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\Untitled_97840882-1fbf-4f8c-84be-9771f636aed4.png
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\٢٠١٨٠٢٠٢_١٣٤٥٠٣ - Copy_287e52ba-90fe-49fa-835d-c2e2bc310f5a_0cbbaf84-6813-403b-a08b-63bd7f98d091.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\11_46ed8366-9c40-417f-9245-62f63cfe8c1e_e2c70e20-82de-4444-90ee-7824b3c4aa7c.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\14_5031bc76-f895-4cd7-b4ae-51585db1f7a9_81f02f5e-b64d-4068-8bde-90acf9424eb7.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Settings\Untitled_c0bd92a7-f4e6-4e45-b305-de4c39ce964b.png
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Types\11_bbe9747e-7b8f-452e-8ed1-20cc19953ed0_f4d391a3-e46b-4835-aee0-b2e2a37f8d78.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Types\National ID copy front_3dfcab53-06f6-4368-aab2-b735a00f6a2a.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Types\pexels-charlotte-may-5825527_864cc3f0-e268-463f-909c-5651d485e8ea_b25e7f64-82c9-4154-9668-3ec3df5c1e06.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Types\pexels-charlotte-may-5825527_864cc3f0-e268-463f-909c-5651d485e8ea_b25e7f64-82c9-4154-9668-3ec3df5c1e06_d9d0ff81-a704-41e7-ad65-0ce277f46f67.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Types\pexels-pixabay-302769_40fd2f14-289d-4f65-a388-e19de2b62df8_b224656f-1300-4f6c-8aaa-521c23bd3f99.jpg
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\RealEstate.exe
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\RealEstate.deps.json
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\RealEstate.runtimeconfig.json
@@ -2194,6 +2192,7 @@ D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\NuGet.Packaging.dll
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\NuGet.ProjectModel.dll
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\NuGet.Protocol.dll
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\NuGet.Versioning.dll
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\SixLabors.ImageSharp.dll
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\System.CodeDom.dll
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\System.Composition.AttributedModel.dll
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\System.Composition.Convention.dll
@@ -2364,6 +2363,8 @@ D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\DAL.dll
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\BLL.pdb
 D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\DAL.pdb
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\RealEstate.csproj.AssemblyReference.cache
+D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\RealEstate.Properties.Resources.resources
+D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\RealEstate.csproj.GenerateResource.cache
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\RealEstate.GeneratedMSBuildEditorConfig.editorconfig
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\RealEstate.AssemblyInfoInputs.cache
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\RealEstate.AssemblyInfo.cs
@@ -2373,6 +2374,7 @@ D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\RealEstate.MvcApplicationP
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\RealEstate.RazorAssemblyInfo.cache
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\RealEstate.RazorAssemblyInfo.cs
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\RealEstate.sourcelink.json
+D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\scopedcss\Areas\AdminArea289\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\scopedcss\bundle\RealEstate.styles.css
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\scopedcss\projectbundle\RealEstate.bundle.scp.css
@@ -2392,10 +2394,13 @@ D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\refint\RealEstate.dll
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\RealEstate.pdb
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\RealEstate.genruntimeconfig.cache
 D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\ref\RealEstate.dll
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Types\pexels-pixabay-302769_40fd2f14-289d-4f65-a388-e19de2b62df8_b224656f-1300-4f6c-8aaa-521c23bd3f99.jpg
-D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\RealEstate.Properties.Resources.resources
-D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\RealEstate.csproj.GenerateResource.cache
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\SixLabors.ImageSharp.dll
-D:\TalebAqar\RealEstate\RealEstate\obj\Release\net8.0\scopedcss\Areas\AdminArea289\Views\Shared\_Layout.cshtml.rz.scp.css
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Data\DataSeed\setting.json
-D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Data\DataSeed\statuses.json
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\466734173_1073716501099789_1988329194698863886_n_d6bf753a-1dd0-45a8-b236-dd34043cc637.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\466963583_1073716421099797_5647748690836067878_n_c6bf0f6e-a771-4983-976a-f868fd98f489.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\466974032_1073716624433110_8917673410670677544_n_48d2b218-a1a7-42a7-8038-6c95bc11c877.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\467311955_1073716457766460_8103500289564301779_n_0d807edb-d505-4f8f-8915-ff3265c5eaad.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\467421368_1073716547766451_4111926433378919899_n_a03b8ade-ed3a-412c-bc51-db9e3ec3f3d6 (1).jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\467421368_1073716547766451_4111926433378919899_n_a03b8ade-ed3a-412c-bc51-db9e3ec3f3d6.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Custom\js\custom.js
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Custom\css\custom.css
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\بيت_36a10328-80ca-42a6-8a92-6ba468f04556.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Release\net8.0\wwwroot\Uploads\Properties\منزل_d14d352f-e71d-4988-907a-2a75688f3a4f.png

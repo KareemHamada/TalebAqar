@@ -15,6 +15,7 @@ public partial class TbProperty : IHasCurrentState
 
     public int CostPrice { get; set; }
 
+    public string? PropertyContractImage { get; set; }
 
     public bool Negotiable { get; set; }
 
@@ -29,7 +30,12 @@ public partial class TbProperty : IHasCurrentState
 	public string? UpdatedBy { get; set; } // Changed to string
 
 	public DateTime? UpdatedDate { get; set; }
-	public bool IsSoldOrRenteled { get; set; }
+
+
+    public int PostDays { get; set; }
+
+
+    public bool IsSoldOrRenteled { get; set; }
 	public DateTime? SoldOrRenteledDate { get; set; }
 
     public string? Description { get; set; }

@@ -1,5 +1,9 @@
 ﻿
 
+using System;
+using NuGet.Configuration;
+using RealEstate.Areas.AdminArea289.ViewModels;
+
 namespace RealEstate.AdminArea289.AdminArea289.Controllers
 {
     [Authorize(Roles = "Admin,Data Entry")]
@@ -28,12 +32,14 @@ namespace RealEstate.AdminArea289.AdminArea289.Controllers
 
 		public IActionResult Create()
 		{
-			return View();
+            var owner = new OwnerVM();
+
+            return View(owner);
 		}
 
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public async Task<IActionResult> Create(OwnerVM ownerVM)
+		public async Task<IActionResult> Create(OwnerVM ownerVM, IFormFile? CardImage)
 		{
 
 			ModelState.Remove("OwnerId");
@@ -42,7 +48,12 @@ namespace RealEstate.AdminArea289.AdminArea289.Controllers
 			if (!ModelState.IsValid)
 				return View(ownerVM);
 
-			var owner = _mapper.Map<OwnerVM, TbOwner>(ownerVM);
+
+            if (CardImage != null)
+                ownerVM.CardIdImage = await Helper.SaveingImageAsync(CardImage, "Owners");
+
+
+            var owner = _mapper.Map<OwnerVM, TbOwner>(ownerVM);
 
 			await _unitOfWork.Owners.AddAsync(owner);
 			await _unitOfWork.SaveChangesAsync();
@@ -56,7 +67,7 @@ namespace RealEstate.AdminArea289.AdminArea289.Controllers
 
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public async Task<IActionResult> Edit([FromRoute] int id, OwnerVM ownerVM)
+		public async Task<IActionResult> Edit([FromRoute] int id, OwnerVM ownerVM, IFormFile? CardImage)
 		{
 			if (id != ownerVM.OwnerId)
 			{
@@ -71,7 +82,47 @@ namespace RealEstate.AdminArea289.AdminArea289.Controllers
 			{
 				try
 				{
-					var owner = _mapper.Map<OwnerVM, TbOwner>(ownerVM);
+
+                    var OwnerForImage = await _unitOfWork.Owners.GetAsync(id);
+                    if (OwnerForImage == null)
+                    {
+                        ModelState.AddModelError("", "The types does not exist.");
+                        return View(ownerVM);
+                    }
+
+                    if (CardImage != null)
+                    {
+                        if (OwnerForImage.CardIdImage != null)
+                        {
+                            // Delete Existing logo
+
+                            // Get the full path to the image file
+                            string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", OwnerForImage.CardIdImage.TrimStart('/'));
+
+                            // Delete the image file if it exists
+                            if (System.IO.File.Exists(imagePath))
+                            {
+                                System.IO.File.Delete(imagePath);
+                            }
+                        }
+
+                        ownerVM.CardIdImage = await Helper.SaveingImageAsync(CardImage, "Owners");
+                    }
+                    else
+                    {
+                        ownerVM.CardIdImage = OwnerForImage.CardIdImage;
+                    }
+
+                    //ownerVM.CardIdImage = CardImage != null ? await Helper.SaveingImageAsync(CardImage, "Owners") : OwnerForImage.CardIdImage;
+
+
+
+
+                    _unitOfWork.Owners.Detach(OwnerForImage);
+
+
+
+                    var owner = _mapper.Map<OwnerVM, TbOwner>(ownerVM);
 
 
 					_unitOfWork.Owners.Update(owner);
@@ -122,7 +173,22 @@ namespace RealEstate.AdminArea289.AdminArea289.Controllers
 
 			try
 			{
-				_unitOfWork.Owners.Delete(owner);
+                // Get the full path to the image file
+
+                if (!string.IsNullOrEmpty(owner.CardIdImage))
+                {
+                    string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", owner.CardIdImage.TrimStart('/'));
+
+                    // Delete the image file if it exists
+                    if (System.IO.File.Exists(imagePath))
+                    {
+                        System.IO.File.Delete(imagePath);
+                    }
+                }
+
+               
+
+                _unitOfWork.Owners.Delete(owner);
 				await _unitOfWork.SaveChangesAsync();
 				return RedirectToAction(nameof(Index));
 			}

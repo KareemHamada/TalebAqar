@@ -88,7 +88,7 @@
                 .ToListAsync();
 
 
-        public async Task<IEnumerable<TbProperty>> PropertiesInTheSameGovernorate(int? govornorate) => await _dbSet.Where(x => x.GovernorateId == govornorate && x.CurrentState == true)
+        public async Task<IEnumerable<TbProperty>> PropertiesInTheSameGovernorate(int? govornorate,int propertyId) => await _dbSet.Where(x => x.GovernorateId == govornorate && x.CurrentState == true && x.PropertyId != propertyId)
                .Take(5)
                .Include(p => p.Address)
                .Include(p => p.City)
