@@ -25,6 +25,7 @@ namespace DAL.Data
 
         public virtual DbSet<TbType> TbTypes { get; set; }
         public virtual DbSet<TbSetting> TbSettings { get; set; }
+        public virtual DbSet<TbCurrency> TbCurrencies { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -40,6 +41,7 @@ namespace DAL.Data
             modelBuilder.ApplyConfiguration(new Configurations.TbStatusConfiguration());
             modelBuilder.ApplyConfiguration(new Configurations.TbTypeConfiguration());
             modelBuilder.ApplyConfiguration(new Configurations.TbSettingConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.TbCurrencyConfiguration());
 
             OnModelCreatingPartial(modelBuilder);
         }

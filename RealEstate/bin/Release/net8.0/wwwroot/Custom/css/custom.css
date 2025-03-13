@@ -5,3 +5,30 @@
 .hidePagination {
     display: none; /* Hide the element */
 }
+
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+    .whatsapp-float:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+    }
+
+    .whatsapp-float img {
+        width: 40px;
+        height: 40px;
+    }

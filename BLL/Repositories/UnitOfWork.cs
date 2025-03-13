@@ -13,6 +13,8 @@ namespace BLL.Repositories
 		private readonly Lazy<IPropertyImagesRepository> _propertyImagesRepository;
         private readonly Lazy<ISettingRepository> _settingRepository;
 
+        private readonly Lazy<ICurrencyRepository> _currencyRepository;
+
 
         private readonly RealEstateContext _dataContext;
 
@@ -35,6 +37,9 @@ namespace BLL.Repositories
 			_propertyImagesRepository = new Lazy<IPropertyImagesRepository>(() => new PropertyImagesRepository(dataContext));
 
             _settingRepository = new Lazy<ISettingRepository>(() => new SettingRepository(dataContext));
+            _currencyRepository = new Lazy<ICurrencyRepository>(() => new CurrencyRepository(dataContext));
+
+
 
             _dataContext = dataContext;
         }
@@ -49,6 +54,8 @@ namespace BLL.Repositories
 
 		public IPropertyImagesRepository PropertyImages => _propertyImagesRepository.Value;
         public ISettingRepository Settings => _settingRepository.Value;
+
+        public ICurrencyRepository Currencies => _currencyRepository.Value;
 
         public async Task<int> SaveChangesAsync() => await _dataContext.SaveChangesAsync();
     }

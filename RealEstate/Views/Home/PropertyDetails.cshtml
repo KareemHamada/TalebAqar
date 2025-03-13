@@ -121,7 +121,7 @@
                             {
                                 <li><label>الحمامات:</label> <span>@Model.propertyVM.Bathrooms</span></li>
                             }
-                            <li><label>السعر:</label> <span>@Model.propertyVM.Price</span></li>
+                            <li><label>السعر:</label> <span>@Model.propertyVM.Price / @Model.propertyVM.Currency?.CurrencyName</span></li>
                             <li><label>قابل للتفاوض:</label>
                                 @if (Model.propertyVM.Negotiable)
                                 {
@@ -144,7 +144,7 @@
                                 }
                                 @if (Model.propertyVM.Insurance.HasValue)
                                 {
-                                <li><label>التأمين:</label> <span>@Model.propertyVM.Insurance</span></li>
+                                <li><label>التأمين:</label> <span>@Model.propertyVM.Insurance / @Model.propertyVM.Currency?.CurrencyName</span></li>
                                 }
  
                                 <li><label>للتواصل:</label> <span>@Model.propertyVM.Owner?.PhoneNumber</span></li>

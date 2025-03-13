@@ -1,6 +1,4 @@
-﻿using static System.Net.Mime.MediaTypeNames;
-
-namespace DAL
+﻿namespace DAL
 {
     public static class ContextDataSeed
     {
@@ -38,7 +36,7 @@ namespace DAL
                         EmailConfirmed = true
                     };
 
-                    var result = await userManager.CreateAsync(adminUser, "Kareem289!@#289!@#!");
+                    var result = await userManager.CreateAsync(adminUser, "");
 
                     if (result.Succeeded)
                     {

@@ -247,6 +247,13 @@
 					<span class="text-danger" class="text-danger" asp-validation-for="PostDays"></span>
 				</div>
 
+				<div class="form-group">
+					<label asp-for="CurrencyId" for="exampleInputText">العملة</label>
+
+					<select asp-for="CurrencyId" asp-items="ViewBag.Currencies" class="custom-select" id="exampleInputText" disabled>
+						<option value="@null" class="text-center">اختر نوع العملة</option>
+					</select>
+				</div>
 
 				<div class="form-group">
 					<label for="ContractImage">الصورة</label>

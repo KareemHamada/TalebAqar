@@ -65,7 +65,6 @@ namespace RealEstate
             var LoggerFactory = Services.GetRequiredService<ILoggerFactory>();
             try
             {
-
                 // Ask CLR for creating object from DbContext Explicitly
                 var dbContext = Services.GetRequiredService<RealEstateContext>();
                 // Update-database

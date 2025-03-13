@@ -368,6 +368,8 @@ namespace RealEstate.Areas.AdminArea289.Controllers
             ViewBag.Statuses = new SelectList(await _unitOfWork.Statuses.GetAllAsync(), "StatusId", "StatusName");
             ViewBag.Types = new SelectList(await _unitOfWork.Types.GetAllAsync(), "TypeId", "TypeName");
             ViewBag.Addresses = new SelectList(await _unitOfWork.Addresses.GetAllAsync(), "AddressId", "AddressName");
+            ViewBag.Currencies = new SelectList(await _unitOfWork.Currencies.GetAllAsync(), "CurrencyId", "CurrencyName");
+
         }
     }
 }

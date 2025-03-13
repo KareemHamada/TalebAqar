@@ -11,6 +11,7 @@
         public ITypeRepository Types { get; }
 		public IPropertyImagesRepository PropertyImages { get; }
         public ISettingRepository Settings { get; }
+        public ICurrencyRepository Currencies { get; }
 
         public Task<int> SaveChangesAsync();
 

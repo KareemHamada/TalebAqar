@@ -287,7 +287,7 @@
 							</div>
 							<div class="product-info-bottom">
 								<div class="product-price">
-									<span>@item.Price  <label>/جنية</label></span>
+									<span>@item.Price  <label>/@item.Currency?.CurrencyName</label></span>
 								</div>
 							</div>
 						</div>
@@ -336,7 +336,7 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col-md-3 col-sm-6 align-self-center">
+			<div class="col-md-6 col-sm-6 align-self-center">
 				<div class="ltn__counterup-item text-color-white---">
 					<div class="counter-icon">
 						<i class="flaticon-office"></i>
@@ -346,7 +346,7 @@
 				</div>
 			</div>
 
-			<div class="col-md-3 col-sm-6 align-self-center">
+			<div class="col-md-6 col-sm-6 align-self-center">
 				<div class="ltn__counterup-item text-color-white---">
 					<div class="counter-icon">
 						<i class="flaticon-office"></i>
@@ -357,7 +357,7 @@
 			</div>
 
 
-			<div class="col-md-3 col-sm-6 align-self-center">
+			@* <div class="col-md-3 col-sm-6 align-self-center">
 				<div class="ltn__counterup-item text-color-white---">
 					<div class="counter-icon">
 						<i class="flaticon-office"></i>
@@ -376,7 +376,7 @@
 					<h1><span class="counter animated fadeInDownBig">@Model.NumOfRealySold</span><span class="counterUp-icon">+</span> </h1>
 					<h6>عدد العقارات التى تم تأجيرها</h6>
 				</div>
-			</div>
+			</div> *@
 
 		</div>
 	</div>

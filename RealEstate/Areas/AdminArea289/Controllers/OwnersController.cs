@@ -1,10 +1,4 @@
-﻿
-
-using System;
-using NuGet.Configuration;
-using RealEstate.Areas.AdminArea289.ViewModels;
-
-namespace RealEstate.AdminArea289.AdminArea289.Controllers
+﻿namespace RealEstate.AdminArea289.AdminArea289.Controllers
 {
     [Authorize(Roles = "Admin,Data Entry")]
     [Area("AdminArea289")]

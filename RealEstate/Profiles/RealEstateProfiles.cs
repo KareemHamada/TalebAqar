@@ -13,7 +13,9 @@ namespace RealEstate.Profiles
 			CreateMap<TbProperty, PropertyVM>().ReverseMap();
             CreateMap<TbGovernorate, GovernorateVM>().ReverseMap();
             CreateMap<TbSetting, SettingVM>().ReverseMap();
-			//CreateMap<TbProperty, PropertyDTO>().ReverseMap();
+            CreateMap<TbCurrency, CurrencyVM>().ReverseMap();
+
+            //CreateMap<TbProperty, PropertyDTO>().ReverseMap();
 
         }
     }

@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="~/Frontend/css/style.css">
     <!-- Responsive css -->
     <link rel="stylesheet" href="~/Frontend/css/responsive.css">
+    <link rel="stylesheet" href="~/Custom/css/custom.css">
 
 
     @RenderSection("Styles", required: false)
@@ -270,7 +271,9 @@
                                                 <span id="modal-product-id" class="d-none"></span>
 
                                             <div class="product-price">
-                                                    <span id="modal-product-price"></span>
+                                                    <span id="modal-product-price"></span> / 
+                                                    <span id="modal-product-currency"></span>
+
                                             </div>
                                             <hr>
                                             <div class="modal-product-brief">
@@ -342,6 +345,8 @@
     </div>
     <!-- MODAL AREA END -->
 
+
+
 </div>
 <!-- Body main wrapper end -->
 
@@ -366,6 +371,11 @@
 
     
     @RenderSection("Scripts", required: false)
+
+
+    <a href="@($"https://wa.me/+20{SiteSettings.Value.ContactNumber}")" target="_blank" class="whatsapp-float" title="Chat with us on WhatsApp">
+        <img src="~/Uploads/DefaultImages/whatsapp-icon.png" alt="WhatsApp" />
+    </a>
 
 </body>
 </html>

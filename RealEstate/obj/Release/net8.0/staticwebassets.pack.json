@@ -6833,6 +6833,10 @@
       "PackagePath": "staticwebassets\\Uploads\\DefaultImages\\logo.png"
     },
     {
+      "Id": "D:\\TalebAqar\\RealEstate\\RealEstate\\wwwroot\\Uploads\\DefaultImages\\whatsapp-icon.png",
+      "PackagePath": "staticwebassets\\Uploads\\DefaultImages\\whatsapp-icon.png"
+    },
+    {
       "Id": "D:\\TalebAqar\\RealEstate\\RealEstate\\wwwroot\\Uploads\\Owners\\National ID copy back_8eea77dd-95ae-4364-8eb2-a1ac1e26451b.jpg",
       "PackagePath": "staticwebassets\\Uploads\\Owners\\National ID copy back_8eea77dd-95ae-4364-8eb2-a1ac1e26451b.jpg"
     },
@@ -6933,8 +6937,16 @@
       "PackagePath": "staticwebassets\\Uploads\\Properties\\frames-for-your-heart-2d4lAQAlbDA-unsplash_58edb1c5-6f5f-4045-a4b7-54b4bfbf2957_f1f01721-df69-4cb8-8518-a60753752485.jpg"
     },
     {
+      "Id": "D:\\TalebAqar\\RealEstate\\RealEstate\\wwwroot\\Uploads\\Properties\\frames-for-your-heart-2d4lAQAlbDA-unsplash_58edb1c5-6f5f-4045-a4b7-54b4bfbf2957_f1f01721-df69-4cb8-8518-a60753752485_96dd649e-9d60-4aec-9797-e1084fdd71a1.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Properties\\frames-for-your-heart-2d4lAQAlbDA-unsplash_58edb1c5-6f5f-4045-a4b7-54b4bfbf2957_f1f01721-df69-4cb8-8518-a60753752485_96dd649e-9d60-4aec-9797-e1084fdd71a1.jpg"
+    },
+    {
       "Id": "D:\\TalebAqar\\RealEstate\\RealEstate\\wwwroot\\Uploads\\Properties\\jessica-furtney-YOoucEImrKw-unsplash_2fca9e88-8011-435f-8dec-7b3a6a13efaa_c0a871bd-c6fb-45f1-86ff-c919df6fb52b.jpg",
       "PackagePath": "staticwebassets\\Uploads\\Properties\\jessica-furtney-YOoucEImrKw-unsplash_2fca9e88-8011-435f-8dec-7b3a6a13efaa_c0a871bd-c6fb-45f1-86ff-c919df6fb52b.jpg"
+    },
+    {
+      "Id": "D:\\TalebAqar\\RealEstate\\RealEstate\\wwwroot\\Uploads\\Properties\\jessica-furtney-YOoucEImrKw-unsplash_2fca9e88-8011-435f-8dec-7b3a6a13efaa_c0a871bd-c6fb-45f1-86ff-c919df6fb52b_fbca0aea-a9c7-4df1-8ac4-0fb02148c5e0.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Properties\\jessica-furtney-YOoucEImrKw-unsplash_2fca9e88-8011-435f-8dec-7b3a6a13efaa_c0a871bd-c6fb-45f1-86ff-c919df6fb52b_fbca0aea-a9c7-4df1-8ac4-0fb02148c5e0.jpg"
     },
     {
       "Id": "D:\\TalebAqar\\RealEstate\\RealEstate\\wwwroot\\Uploads\\Properties\\jessica-furtney-YOoucEImrKw-unsplash_2fca9e88-8011-435f-8dec-7b3a6a13efaa_d84bda83-12ca-4e82-bce3-b842cc12206c.jpg",
@@ -6971,6 +6983,10 @@
     {
       "Id": "D:\\TalebAqar\\RealEstate\\RealEstate\\wwwroot\\Uploads\\Properties\\pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_2b3adacd-e737-49e4-94b0-8569fa983e38.jpg",
       "PackagePath": "staticwebassets\\Uploads\\Properties\\pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_2b3adacd-e737-49e4-94b0-8569fa983e38.jpg"
+    },
+    {
+      "Id": "D:\\TalebAqar\\RealEstate\\RealEstate\\wwwroot\\Uploads\\Properties\\pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_2b3adacd-e737-49e4-94b0-8569fa983e38_5754ccd4-3f40-4495-a249-82745661e6bf.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\Properties\\pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_2b3adacd-e737-49e4-94b0-8569fa983e38_5754ccd4-3f40-4495-a249-82745661e6bf.jpg"
     },
     {
       "Id": "D:\\TalebAqar\\RealEstate\\RealEstate\\wwwroot\\Uploads\\Properties\\pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_8204f654-cdcc-4d3a-874a-1be8e8b30525.jpg",

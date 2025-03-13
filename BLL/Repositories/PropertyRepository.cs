@@ -24,6 +24,7 @@
                .Include(p => p.Status)
                .Include(p => p.PropertyImages)
                .Include(p => p.Type)
+               .Include(p => p.Currency)
 		       .ToListAsync();
 
         public async Task<IEnumerable<TbProperty>> GetAllDeletedWithNamesAsync() => await _dbSet.Where(x => x.CurrentState == false).Include(p => p.Address)
@@ -41,7 +42,9 @@
 				.Include(p => p.Governorate)
 				.Include(p => p.Owner)
 				.Include(p => p.Status)
-				.Include(p => p.PropertyImages)
+                           .Include(p => p.Currency)
+
+                .Include(p => p.PropertyImages)
 				.Include(p => p.CreatedByUser)
 			   .Include(p => p.UpdatedByUser)
 				.Include(p => p.Type).FirstOrDefaultAsync();
@@ -73,7 +76,8 @@
 				.Include(p => p.Status)
 				.Include(p => p.PropertyImages)
 				.Include(p => p.Type)
-				.ToListAsync();
+                .Include(p => p.Currency)
+                .ToListAsync();
 
         public async Task<IEnumerable<TbProperty>> LatestPropertiesAsync(int count) => await _dbSet.Where(x => x.CurrentState == true)
                 .OrderByDescending(p => p.CreatedDate)  // Randomize order
@@ -85,6 +89,7 @@
                 .Include(p => p.Status)
                 .Include(p => p.PropertyImages)
                 .Include(p => p.Type)
+                .Include(p => p.Currency)
                 .ToListAsync();
 
 
@@ -97,6 +102,7 @@
                .Include(p => p.Status)
                .Include(p => p.PropertyImages)
                .Include(p => p.Type)
+               .Include(p => p.Currency)
                .ToListAsync();
 
     }

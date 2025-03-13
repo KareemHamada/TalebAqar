@@ -1,0 +1,13 @@
+﻿@model CurrencyVM
+
+<div class="card-body">
+
+	<input type="hidden" asp-for="CurrencyId" />
+	<input type="hidden" asp-for="CurrentState" />
+
+	<div class="form-group">
+		<label for="exampleInputText">العملة</label>
+		<input asp-for="CurrencyName" type="text" class="form-control" id="exampleInputText" placeholder="أدخل اسم العملة">
+		<span class="text-danger" class="text-danger" asp-validation-for="CurrencyName"></span>
+	</div>
+</div>

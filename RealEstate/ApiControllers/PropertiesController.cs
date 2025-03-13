@@ -60,6 +60,7 @@
                 Address = p.Address.AddressName,
                 City = p.City.CityName,
                 Governorate = p.Governorate.GovernorateName,
+                Currency = p.Currency.CurrencyName,
                 Image = p.PropertyImages.FirstOrDefault().ImageUrl,
                 ShortDescription = p.Description.Length > 40 ? p.Description.Substring(0, 40) + "..." : p.Description
 
@@ -89,6 +90,7 @@
                     Address = p.Address.AddressName,
                     City = p.City.CityName,
                     Governorate = p.Governorate.GovernorateName,
+                    Currency = p.Currency.CurrencyName,
                     Image = p.PropertyImages.FirstOrDefault().ImageUrl,
                     ShortDescription = p.Description.Length > 40 ? p.Description.Substring(0, 40) + "..." : p.Description,
 
@@ -129,6 +131,7 @@
                     Address = p.Address.AddressName,
                     City = p.City.CityName,
                     Governorate = p.Governorate.GovernorateName,
+                    Currency = p.Currency.CurrencyName,
                     Image = p.PropertyImages.FirstOrDefault().ImageUrl,
                     ShortDescription = p.Description.Length > 40 ? p.Description.Substring(0, 40) + "..." : p.Description
 

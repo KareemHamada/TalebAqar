@@ -23,9 +23,10 @@
 
 			entity.HasOne(d => d.Type).WithMany(p => p.TbProperties).HasForeignKey(f => f.TypeId);
 
+            entity.HasOne(d => d.Currency).WithMany(p => p.TbProperties).HasForeignKey(f => f.CurrencyId);
 
 
-			entity.HasOne(p => p.CreatedByUser).WithMany().HasForeignKey(p => p.CreatedBy);
+            entity.HasOne(p => p.CreatedByUser).WithMany().HasForeignKey(p => p.CreatedBy);
 
 			entity.HasOne(p => p.UpdatedByUser).WithMany().HasForeignKey(p => p.UpdatedBy);
 

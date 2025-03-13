@@ -6,6 +6,7 @@
     var propertyDescription = button.data('property-description');
     var propertyImage = button.data('property-image');
     var propertyStatus = button.data('property-status');
+    var propertyCurrency = button.data('property-currency');
 
     // Update modal content
     $('#modal-product-type').text(propertyType);
@@ -14,7 +15,9 @@
     // Determine the class to add based on the value of propertyStatus
     var statusClass = propertyStatus === "للبيع" ? "sale-badge bg-green--- p-1" : "sale-badge bg-green p-1";
     $('#modal-product-status').text(propertyStatus);
-    $('#modal-product-price').text(propertyPrice + " جنية");
+    $('#modal-product-price').text(propertyPrice);
+    $('#modal-product-currency').text(propertyCurrency);
+
     $('#modal-product-image').attr('src', propertyImage);
     $('#modal-product-link').attr('href', "/home/PropertyDetails/" + propertyId);
     $('#modal-product-id').text(propertyId);
@@ -30,10 +33,11 @@ function addItemToWishlist() {
     const price = document.getElementById("modal-product-price").innerHTML;
     const status = document.getElementById("modal-product-status").innerHTML;
     const type = document.getElementById("modal-product-type").innerHTML;
-    addToWishlist(propertyId, imageUrl, price, status, type);
-}
-function addToWishlist(propertyId, imageUrl, price, status, type) {
+    const currency = document.getElementById("modal-product-currency").innerHTML;
 
+    addToWishlist(propertyId, imageUrl, price, status, type, currency);
+}
+function addToWishlist(propertyId, imageUrl, price, status, type, currency) {
 
     // Retrieve current wishlist from local storage
     let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
@@ -45,7 +49,8 @@ function addToWishlist(propertyId, imageUrl, price, status, type) {
             image: imageUrl,
             price: price,
             status: status,
-            type: type
+            type: type,
+            currency: currency
         });
 
         // Save updated wishlist back to local storage
@@ -75,7 +80,7 @@ function loadWishlist() {
                         <td class="cart-product-image"><a href="/home/propertyDetails/${item.id}"><img src="${item.image}" alt="image"></a></td>
                         <td class="cart-product-type">${item.type} </td>
                         <td class="cart-product-status">${item.status} </td>
-                        <td class="cart-product-price">${item.price} جنية</td>
+                        <td class="cart-product-price">${item.price} / ${item.currency}</td>
                     </tr>
                 `;
             tableBody.innerHTML += row;

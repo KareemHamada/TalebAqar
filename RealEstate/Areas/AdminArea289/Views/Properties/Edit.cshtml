@@ -347,6 +347,16 @@
 										</div>
 
 										<div class="form-group">
+											<label asp-for="CurrencyId" for="exampleInputText">العملة</label>
+
+											<select asp-for="CurrencyId" asp-items="ViewBag.Currencies" class="custom-select" id="exampleInputText">
+												<option value="@null" class="text-center">اختر العملة</option>
+											</select>
+											<span class="text-danger" asp-validation-for="CurrencyId"></span>
+										</div>
+
+
+										<div class="form-group">
 											<label for="ContractImage">الصورة</label>
 											<input type="file" name="ContractImage" id="ContractImage" accept="image/*" class="form-control-file" />
 										</div>

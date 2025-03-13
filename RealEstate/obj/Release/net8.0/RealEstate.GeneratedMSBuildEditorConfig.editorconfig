@@ -84,6 +84,34 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhMjg5XFZpZXdzXENpdGllc1xQYXJ0aWFsVmlld3NcRGV0YWlsc0RlbGV0ZVBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/TalebAqar/RealEstate/RealEstate/Areas/AdminArea289/Views/Currencies/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhMjg5XFZpZXdzXEN1cnJlbmNpZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TalebAqar/RealEstate/RealEstate/Areas/AdminArea289/Views/Currencies/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhMjg5XFZpZXdzXEN1cnJlbmNpZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TalebAqar/RealEstate/RealEstate/Areas/AdminArea289/Views/Currencies/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhMjg5XFZpZXdzXEN1cnJlbmNpZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TalebAqar/RealEstate/RealEstate/Areas/AdminArea289/Views/Currencies/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhMjg5XFZpZXdzXEN1cnJlbmNpZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TalebAqar/RealEstate/RealEstate/Areas/AdminArea289/Views/Currencies/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhMjg5XFZpZXdzXEN1cnJlbmNpZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TalebAqar/RealEstate/RealEstate/Areas/AdminArea289/Views/Currencies/PartialViews/CreateEditPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhMjg5XFZpZXdzXEN1cnJlbmNpZXNcUGFydGlhbFZpZXdzXENyZWF0ZUVkaXRQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/TalebAqar/RealEstate/RealEstate/Areas/AdminArea289/Views/Currencies/PartialViews/DetailsDeletePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhMjg5XFZpZXdzXEN1cnJlbmNpZXNcUGFydGlhbFZpZXdzXERldGFpbHNEZWxldGVQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/TalebAqar/RealEstate/RealEstate/Areas/AdminArea289/Views/Governorates/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhMjg5XFZpZXdzXEdvdmVybm9yYXRlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

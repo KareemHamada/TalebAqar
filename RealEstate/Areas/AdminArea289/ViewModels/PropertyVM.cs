@@ -68,6 +68,8 @@ namespace RealEstate.Areas.AdminArea289.ViewModels
         public int? FloorNum { get; set; }
 
         public bool Furnished { get; set; }
+        public int? CurrencyId { get; set; }
+
 
         public int? Insurance { get; set; }
 
@@ -77,8 +79,10 @@ namespace RealEstate.Areas.AdminArea289.ViewModels
 
         public virtual TbCity? City { get; set; }
 
+
         public virtual TbGovernorate? Governorate { get; set; }
 
+        public virtual TbCurrency? Currency { get; set; }
         public virtual TbOwner? Owner { get; set; }
 
         public virtual TbStatus? Status { get; set; }

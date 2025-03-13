@@ -8,7 +8,9 @@
 			   data-property-description="@Html.Raw(Model.TruncatedDescription)"
 			   data-property-image="@Model.PropertyImages.FirstOrDefault()?.ImageUrl"
 			   data-property-type="@Model.Type?.TypeName"
-			   data-property-status="@Model.Status?.StatusName">
+			   data-property-status="@Model.Status?.StatusName"
+				data-property-currency="@Model.Currency?.CurrencyName">
+
 				<i class="flaticon-expand"></i>
 			</a>
 		</li>
@@ -19,7 +21,8 @@
 			   data-price="@Model.Price"
 			   data-status="@Model.Status?.StatusName"
 			   data-type="@Model.Type?.TypeName"
-			   onclick="addToWishlist(this.dataset.id,this.dataset.image,this.dataset.price,this.dataset.status,this.dataset.type)">
+			   data-currency="@Model.Currency?.CurrencyName"
+			   onclick="addToWishlist(this.dataset.id,this.dataset.image,this.dataset.price,this.dataset.status,this.dataset.type,this.dataset.currency)">
 				<i class="flaticon-heart-1"></i>
 			</a>
 		</li>

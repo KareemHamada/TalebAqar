@@ -229,7 +229,8 @@ var ClsProperties = {
 			                               data-property-description="${item.shortDescription}"
 			                               data-property-image="${imageUrl}"
 			                               data-property-type="${item.type}"
-			                               data-property-status="${item.status}">
+			                               data-property-status="${item.status}"
+                                           data-property-currency="${item.currency}">
 				                            <i class="flaticon-expand"></i>
 			                            </a>
 		                            </li>
@@ -240,7 +241,8 @@ var ClsProperties = {
 			                               data-price="${item.price}"
 			                               data-status="${item.status}"
 			                               data-type="${item.type}"
-			                               onclick="addToWishlist(this.dataset.id,this.dataset.image,this.dataset.price,this.dataset.status,this.dataset.type)">
+                                           data-currency="${item.currency}"
+			                               onclick="addToWishlist(this.dataset.id,this.dataset.image,this.dataset.price,this.dataset.status,this.dataset.type,this.dataset.currency)">
 				                            <i class="flaticon-heart-1"></i>
 			                            </a>
 		                            </li>
@@ -256,7 +258,7 @@ var ClsProperties = {
                     </div>
                     <div class="product-info-bottom">
                         <div class="product-price">
-                            <span>${item.price}  <label>/جنية</label></span>
+                            <span>${item.price}  <label>/${item.currency}</label></span>
                         </div>
                     </div>
                 </div>
@@ -285,7 +287,7 @@ var ClsProperties = {
                             </ul>
                         </div>
                         <div class="product-price">
-                            <span>${item.price}  <label>/جنية</label></span>
+                            <span>${item.price}  <label>/${item.currency}</label></span>
                         </div>
                     </div>
             
@@ -335,7 +337,8 @@ var ClsProperties = {
 			                       data-property-description="${item.shortDescription}"
 			                       data-property-image="${imageUrl}"
 			                       data-property-type="${item.type}"
-			                       data-property-status="${item.status}">
+			                       data-property-status="${item.status}"
+                                   data-property-currency="${item.currency}">
 				                    <i class="flaticon-expand"></i>
 			                    </a>
 		                    </li>
@@ -346,7 +349,9 @@ var ClsProperties = {
 			                       data-price="${item.price}"
 			                       data-status="${item.status}"
 			                       data-type="${item.type}"
-			                       onclick="addToWishlist(this.dataset.id,this.dataset.image,this.dataset.price,this.dataset.status,this.dataset.type)">
+                                   data-currency="${item.currency}"
+			                       onclick="addToWishlist(this.dataset.id,this.dataset.image,this.dataset.price,this.dataset.status,this.dataset.type,this.dataset.currency)"
+                                   >
 				                    <i class="flaticon-heart-1"></i>
 			                    </a>
 		                    </li>

@@ -2404,3 +2404,7 @@ D:\TalebAqar\RealEstate\RealEstate\bin\Debug\net8.0\wwwroot\Custom\js\custom.js
 D:\TalebAqar\RealEstate\RealEstate\bin\Debug\net8.0\wwwroot\Custom\css\custom.css
 D:\TalebAqar\RealEstate\RealEstate\bin\Debug\net8.0\wwwroot\Uploads\Properties\بيت_36a10328-80ca-42a6-8a92-6ba468f04556.jpg
 D:\TalebAqar\RealEstate\RealEstate\bin\Debug\net8.0\wwwroot\Uploads\Properties\منزل_d14d352f-e71d-4988-907a-2a75688f3a4f.png
+D:\TalebAqar\RealEstate\RealEstate\bin\Debug\net8.0\wwwroot\Uploads\DefaultImages\whatsapp-icon.png
+D:\TalebAqar\RealEstate\RealEstate\bin\Debug\net8.0\wwwroot\Uploads\Properties\frames-for-your-heart-2d4lAQAlbDA-unsplash_58edb1c5-6f5f-4045-a4b7-54b4bfbf2957_f1f01721-df69-4cb8-8518-a60753752485_96dd649e-9d60-4aec-9797-e1084fdd71a1.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Debug\net8.0\wwwroot\Uploads\Properties\jessica-furtney-YOoucEImrKw-unsplash_2fca9e88-8011-435f-8dec-7b3a6a13efaa_c0a871bd-c6fb-45f1-86ff-c919df6fb52b_fbca0aea-a9c7-4df1-8ac4-0fb02148c5e0.jpg
+D:\TalebAqar\RealEstate\RealEstate\bin\Debug\net8.0\wwwroot\Uploads\Properties\pexels-pixabay-280221_2704706f-a803-45f5-9911-b8de7d82bfe0_2b3adacd-e737-49e4-94b0-8569fa983e38_5754ccd4-3f40-4495-a249-82745661e6bf.jpg

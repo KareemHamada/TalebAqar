@@ -56,6 +56,7 @@ public partial class TbProperty : IHasCurrentState
     public int? GovernorateId { get; set; }
 
     public int NumOfViews { get; set; }
+    public int? CurrencyId { get; set; }
 
     public int NumOfAdvertisement { get; set; }
 
@@ -104,9 +105,12 @@ public partial class TbProperty : IHasCurrentState
     public virtual TbType? Type { get; set; }
 
 
+    [ForeignKey("CurrencyId")]
+    [InverseProperty("TbProperties")]
+    public virtual TbCurrency? Currency { get; set; }
 
-	// Navigation properties to ApplicationUser
-	public virtual ApplicationUser? CreatedByUser { get; set; }
+    // Navigation properties to ApplicationUser
+    public virtual ApplicationUser? CreatedByUser { get; set; }
 	public virtual ApplicationUser? UpdatedByUser { get; set; }
 
 

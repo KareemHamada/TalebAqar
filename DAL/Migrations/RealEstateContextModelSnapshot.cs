@@ -147,6 +147,27 @@ namespace DAL.Migrations
                     b.ToTable("TbCities");
                 });
 
+            modelBuilder.Entity("DAL.Models.TbCurrency", b =>
+                {
+                    b.Property<int>("CurrencyId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CurrencyId"));
+
+                    b.Property<string>("CurrencyName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<bool>("CurrentState")
+                        .HasColumnType("bit");
+
+                    b.HasKey("CurrencyId");
+
+                    b.ToTable("TbCurrencies");
+                });
+
             modelBuilder.Entity("DAL.Models.TbGovernorate", b =>
                 {
                     b.Property<int>("GovernorateId")
@@ -240,6 +261,9 @@ namespace DAL.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("CurrencyId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("CurrentState")
                         .HasColumnType("bit");
 
@@ -325,6 +349,8 @@ namespace DAL.Migrations
                     b.HasIndex("CityId");
 
                     b.HasIndex("CreatedBy");
+
+                    b.HasIndex("CurrencyId");
 
                     b.HasIndex("GovernorateId");
 
@@ -649,6 +675,10 @@ namespace DAL.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("DAL.Models.TbCurrency", "Currency")
+                        .WithMany("TbProperties")
+                        .HasForeignKey("CurrencyId");
+
                     b.HasOne("DAL.Models.TbGovernorate", "Governorate")
                         .WithMany("TbProperties")
                         .HasForeignKey("GovernorateId");
@@ -674,6 +704,8 @@ namespace DAL.Migrations
                     b.Navigation("City");
 
                     b.Navigation("CreatedByUser");
+
+                    b.Navigation("Currency");
 
                     b.Navigation("Governorate");
 
@@ -764,6 +796,11 @@ namespace DAL.Migrations
                 {
                     b.Navigation("TbAddresses");
 
+                    b.Navigation("TbProperties");
+                });
+
+            modelBuilder.Entity("DAL.Models.TbCurrency", b =>
+                {
                     b.Navigation("TbProperties");
                 });
 
